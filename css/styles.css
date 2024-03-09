@@ -17,7 +17,11 @@
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
 }
 
-@media (min-width: 480px) {
+*{
+    box-sizing: border-box;
+}
+
+@media (min-width: 1px) {
 
 #skip {
     position: absolute;
@@ -42,7 +46,7 @@ header a{
 header h1 {
     grid-area: title;
     font-size: 5vw;
-    margin: 10px 20px;
+    margin: 20px 20px 10px 20px;
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
     text-align: center;
 }
@@ -57,7 +61,7 @@ nav {
     font-family: 'Saira Condensed', san-serif;
     font-size: 1.25rem;
     text-transform: uppercase;
-    margin-top: 15px;
+    margin-top: 10px;
     justify-self: end;
     color: var(--brown);
 }
@@ -122,17 +126,28 @@ form input[type="submit"] {
 @media (min-width: 768px) {
 
     header {
-        grid-template-columns: 1fr 1fr; 
-        grid-template-areas: 'title title' 'menu menu';
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    h1 {
+        text-align: center;
+        flex-basis: 100%;
     }
     nav{
-    justify-self: start;  
+        order: 2;
+        margin-top: 0;
+        width: 100%;
+        text-align: right;
     }
     #menu {
         display: flex;
-        justify-content: space-evenly;
+        flex-wrap: wrap;
+        justify-content: flex-end;
         list-style: none;
         padding: 0;
+        margin-top: 0;
         border: none;
         width: 100%;
     }
@@ -146,13 +161,13 @@ form input[type="submit"] {
         margin: 0;
         padding: 0;
         border-top: none;
+        flex-grow: 1;
     }
     #menu a {
         background-color: var(--white);
         color: var(--brown);
         text-decoration: none;
         padding: 20px 20px;
-        width: 85px;
         text-align: center;
         transition: background-color 0.3s ease;
     }
