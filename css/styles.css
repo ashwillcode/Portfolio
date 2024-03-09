@@ -1,0 +1,118 @@
+
+/* custom font */
+@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* main code */
+
+
+:root{
+    --orange: #FFA500;
+    --brown: #4D3025;
+    --white: #ffffff;
+    --black: #000000;
+    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
+}
+
+body {
+    
+}
+
+@media (max-width: 480px) { 
+    #skip {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+    #home-main {
+        background-color: var(--orange);
+    }
+    header {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 'title menu';
+        align-items: center;
+    }
+    header a{
+        text-decoration: none;
+    }
+    header h1 {
+        grid-area: title;
+        font-size: 5vw;
+        margin: 10px 20px;
+        font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
+        text-align: center;
+    }
+    #mainh1 {
+        display: none;
+    }
+    .sr-only {
+        display: none;
+    }
+    nav {
+        grid-area: menu;
+        font-family: 'Saira Condensed', san-serif;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        margin-top: 15px;
+        justify-self: end;
+        color: var(--brown);
+    }
+    #toggle {
+        display: none;
+    }
+    label[for="toggle"] {
+        cursor: pointer; 
+        background-color: var(--white);
+        border-color: var(--brown);
+        padding: 30px 24px 16px 25px;
+        
+        font-size: 1.25rem;
+        transition: background-color 0.3s ease;
+    }
+    label[for="toggle"]:hover {
+        background-color: var(--orange);
+    }
+    #menu {
+        display: none;
+        list-style: none;
+        position: absolute;
+        padding: 0px;
+        margin-top: 0px;
+        background-color: var(--white);
+        border: 2px solid var(--brown);
+        border-top: none;
+        box-sizing: border-box;
+    }
+    #toggle:checked + label + #menu {
+        display: block;
+        margin-top: 20px;
+    }
+    #toggle:checked + label {
+        background-color: var(--brown);
+        color: var(--white);
+    }
+    #menu li {
+        border-top: 1px solid var(--brown);
+    }
+    #menu a {
+        color: var(--brown);
+        text-decoration: none;
+        padding: 10px;
+        text-align: center;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+    #menu a:hover {
+        background-color: var(--orange);
+        opacity: 85%;
+    }
+}
+
+
