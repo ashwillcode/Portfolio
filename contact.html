@@ -35,11 +35,15 @@
                 <h2 class="sr-only">Main Navigation</h2>
                 <input name="toggle" id="toggle" type="checkbox">
                 <label for="toggle">Menu</label>
-                <ul id="menu">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul id="menu" role="menubar">
+                    <li class="active" role="presentation">
+                        <a href="index.html" role="menuitem">Home</a></li>
+                    <li role="presentation">
+                        <a href="about.html" role="menuitem">About</a></li>
+                    <li role="presentation">
+                        <a href="projects.html" role="menuitem">Projects</a></li>
+                    <li role="presentation">
+                        <a href="contact.html" role="menuitem">Contact</a></li>
                 </ul>
             </div>
         </nav> 
@@ -55,6 +59,18 @@
         <img src="images/134146_mail_email_icon.svg" alt="email icon">
         <p>Email</p>
         <a href="mailto:ashleymwilliams928@gmail.com">ashleymwilliams928@gmail.com</a>
+        <form action="" method="post">
+            <label class="formlabel" for="contact-email">E-mail<span class="required">*</span></label>
+            <input type="email" name="contact-email" id="contact-email" placeholder="E-Mail" required>
+          
+            <label class="formlabel" for="contact-phone">Phone Number</label>
+            <input type="tel" name="contact-phone" id="contact-phone" placeholder="Phone Number">
+          
+            <label class="formlabel" for="contact-message">Message<span class="required">*</span></label>
+            <textarea maxlength="240" name="contact-message" id="contact-message" placeholder="Message" required></textarea>
+          
+            <input type="submit" value="Send message!">
+        </form>
     </main>
     <footer>
         <a href="#"><img src="images/1161953_instagram_icon.svg" alt="instagram icon"></a>
@@ -62,5 +78,6 @@
         <br>
         <a href="#">Back to top</a>
     </footer>
+    <script src="js/tota11y.min.js"></script>
 </body>
 </html>
