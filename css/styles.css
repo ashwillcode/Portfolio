@@ -123,7 +123,7 @@ form input[type="submit"] {
 }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
 
     header {
         display: flex;
