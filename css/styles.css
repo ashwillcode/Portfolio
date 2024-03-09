@@ -17,10 +17,6 @@
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
 }
 
-body {
-    
-}
-
 @media (min-width: 480px) {
 
 #skip {
@@ -113,6 +109,13 @@ label[for="toggle"]:hover {
 #menu a:hover {
     background-color: var(--orange);
     opacity: 85%;
+}
+form input[type="submit"] {
+    background-color: var(--orange);
+    text-align: center;
+    border-radius: 8px;
+    padding:10px;
+
 }
 }
 
