@@ -35,6 +35,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    position: relative;
 }
 header {
     display: flex;
@@ -119,25 +120,30 @@ label[for="toggle"]:hover {
     background-color: var(--orange);
 }
 h2 {
-    font-family: 'Allison';
-    color: var(--white);
-    font-size: 20vw;
-    margin: 0px;
-
+    font-family: 'Bebas Neue';
+    color: var(--brown);
+    font-size: 10vw;
+    margin: 0;
 }
 #home-main img {
     flex-basis: 100%;
     width: 100%;
     height: auto;
 }
+#quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end
+}
 #quote p {
-    font-size:3vw;
-    line-height: 0px;
+    font-size: 3vw;
+    color: var(--brown);
+    margin: 0;
+    align-items: flex-end;
 }
-#quote p:first-child {
-   padding-top:40px;
+#home-main a {
+    flex-basis: 100%;
 }
-
 form input[type="submit"] {
     background-color: var(--orange);
     text-align: center;
