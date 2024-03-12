@@ -1,6 +1,6 @@
 
 /* custom font */
-@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -21,8 +21,6 @@
     box-sizing: border-box;
 }
 
-@media (min-width: 1px) {
-
 #skip {
     position: absolute;
     left: -9999px;
@@ -33,37 +31,43 @@
 }
 #home-main {
     background-color: var(--orange);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 header {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: 'title menu';
+    display: flex;
     align-items: center;
 }
 header a{
     text-decoration: none;
 }
 header h1 {
-    grid-area: title;
     font-size: 5vw;
     margin: 20px 20px 10px 20px;
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
     text-align: center;
 }
 #mainh1 {
-    display: none;
+   visibility: hidden;
+   font-size: 29px;
 }
 .sr-only {
     display: none;
 }
 nav {
-    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     font-family: 'Saira Condensed', san-serif;
     font-size: 1.25rem;
     text-transform: uppercase;
     margin-top: 10px;
-    justify-self: end;
     color: var(--brown);
+    position: absolute;
+    right: 0px;
+    top: 10px;
 }
 #toggle {
     display: none;
@@ -73,7 +77,6 @@ label[for="toggle"] {
     background-color: var(--white);
     border-color: var(--brown);
     padding: 30px 24px 16px 25px;
-    
     font-size: 1.25rem;
     transition: background-color 0.3s ease;
 }
@@ -81,15 +84,17 @@ label[for="toggle"]:hover {
     background-color: var(--orange);
 }
 #menu {
-    display: none;
     list-style: none;
-    position: absolute;
     padding: 0px;
     margin-top: 0px;
     background-color: var(--white);
     border: 2px solid var(--brown);
     border-top: none;
     box-sizing: border-box;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
 }
 #toggle:checked + label + #menu {
     display: block;
@@ -112,18 +117,35 @@ label[for="toggle"]:hover {
 }
 #menu a:hover {
     background-color: var(--orange);
-    opacity: 85%;
 }
+h2 {
+    font-family: 'Allison';
+    color: var(--white);
+    font-size: 20vw;
+    margin: 0px;
+
+}
+#home-main img {
+    flex-basis: 100%;
+    width: 100%;
+    height: auto;
+}
+#quote p {
+    font-size:3vw;
+    line-height: 0px;
+}
+#quote p:first-child {
+   padding-top:40px;
+}
+
 form input[type="submit"] {
     background-color: var(--orange);
     text-align: center;
     border-radius: 8px;
     padding:10px;
-
-}
 }
 
-@media (min-width: 480px) {
+@media scren and (min-width: 480px) {
 
     header {
         display: flex;
