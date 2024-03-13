@@ -1,6 +1,6 @@
 
 /* custom font */
-@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -127,10 +127,12 @@ label[for="toggle"]:hover {
     color: var(--white);
 }
 h2 {
-    font-family: 'Bebas Neue';
+    font-family: 'Krona One';
     color: var(--brown);
-    font-size: 10vw;
-    margin: 0;
+    font-size: 8vw;
+    text-transform: uppercase;
+    margin: 10px 0px 0px 0px;
+    padding: 10px 10px 0px 10px;
 }
 #home-main img {
     flex-basis: 100%;
@@ -151,14 +153,12 @@ h2 {
 }
 .job-title {
     margin: 10px 0px;
+    margin-right: 10px;
+    margin-left: auto;
     color: var(--brown)
 }
 #home-main a {
     flex-basis: 100%;
-}
-#jt-link {
-    display: flex;
-    flex-direction: row;
 }
 #back-top {
     position: fixed; 
@@ -169,9 +169,9 @@ h2 {
     font-family: 'Saira Condensed', san-serif;
     font-size: 12px;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 8px;
     text-decoration: none;
-    border-radius: 5px;
+    border: 2px solid var(--brown);
     transition: background-color 1.5s ease
 }
 #back-top:hover {
@@ -179,13 +179,22 @@ h2 {
     color: var(--white);
     border: 2px solid var(--brown);
 }
-#who-i {
-    color: var(--brown);
+#educationlink {
+    background-color: var(--red);
+    color: var(--white);
+    font-family: 'Saira Condensed', san-serif;
+    text-transform: uppercase;
+    padding: 8px;
+    text-align: center;
     text-decoration: none;
+    border: 2px solid var(--brown);
     transition: background-color 1.5s ease
 }
-#who-i:hover {
-    color: var(--red);
+#educationlink:hover {
+    background-color: var(--white);
+    color: var(--brown);
+    border: 2px solid var(--brown);
+    transition: background-color 1.5s ease
 }
 
 form input[type="submit"] {
@@ -199,20 +208,15 @@ footer {
     flex-direction: column;
     color: var(--brown)
 }
-footer p {
-    font-family: 'Saira Condensed', san-serif;
-    flex-basis: 100%;
-    text-align: center;
-    margin: 10px 0px 5px 0px;
-}
 #social-media {
+    margin: 10px 0px 5px 0px;
     flex-basis: 100%;
     text-align: center;
 }
 footer img {
     width: 5%;
 }
-@media scren and (min-width: 480px) {
+@media screen and (min-width: 480px) {
 
     header {
         display: flex;
@@ -225,6 +229,7 @@ footer img {
         flex-basis: 100%;
     }
     nav{
+        top: 0px;
         order: 2;
         margin-top: 0;
         width: 100%;
@@ -258,10 +263,14 @@ footer img {
         text-decoration: none;
         padding: 20px 20px;
         text-align: center;
-        transition: background-color 0.3s ease;
+        transition: background-color 1.5s ease;
     }
     #menu a:hover {
-        background-color: var(--orange);
+        background-color: var(--red);
 
+    }
+    #home-main img {
+        max-width: 125%;
+        height: auto;
     }
 }
