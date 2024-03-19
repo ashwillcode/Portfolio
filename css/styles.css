@@ -152,6 +152,7 @@ h2 {
     align-items: flex-end;
 }
 .job-title {
+    font-size: 3vw;
     margin: 10px 0px;
     margin-right: 10px;
     margin-left: auto;
@@ -159,6 +160,66 @@ h2 {
 }
 #home-main a {
     flex-basis: 100%;
+}
+#whoami h3 {
+    font-size: 5vw;
+    color: var(--brown);
+    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
+    margin: 20px 30px;
+}
+#whoami p {
+    font-size: 3vw;
+    font-family: 'Saira Condensed', san-serif;
+    color: var(--brown);
+
+    margin: 0 50px 20px 60px;
+}
+#basics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'header header' 'attributes1 attributes2';
+    margin-bottom: 20px;
+}
+#basics h3 {
+    grid-area: header;
+    color: var(--brown);
+    font-size: 5vw;
+    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
+    margin: 5px 30px;
+    flex-basis: 100%;
+}
+#attributes1 {
+    grid-area: attributes1;
+}
+#attributes2 {
+    grid-area: attributes2;
+}
+#basics ul li {
+    font-size: 3vw;
+    color: var(--brown);
+    font-family: 'Saira Condensed', san-serif;
+    margin: 0px 60px;
+    line-height: 2.5;
+}
+#educationlink {
+    display: block;
+    background-color: var(--red);
+    color: var(--white);
+    font-family: 'Saira Condensed', san-serif;
+    font-size:3vw;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--brown);
+    transition: background-color 1.5s ease
+}
+#educationlink:hover {
+    background-color: var(--white);
+    color: var(--brown);
+    border: 2px solid var(--brown);
+    transition: background-color 1.5s ease
 }
 #back-top {
     position: fixed; 
@@ -179,47 +240,6 @@ h2 {
     color: var(--white);
     border: 2px solid var(--brown);
 }
-#educationlink {
-    background-color: var(--red);
-    color: var(--white);
-    font-family: 'Saira Condensed', san-serif;
-    text-transform: uppercase;
-    padding: 8px;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid var(--brown);
-    transition: background-color 1.5s ease
-}
-#basics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'header header' 'attributes1 attributes2';
-}
-#basics h3 {
-    grid-area: header;
-    font-size: 5vw;
-    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    margin: 5px 10px;
-    flex-basis: 100%;
-}
-#attributes1 {
-    grid-area: attributes1;
-}
-#attributes2 {
-    grid-area: attributes2;
-}
-#basics ul li {
-    font-size: 3vw;
-    font-family: 'Saira Condensed', san-serif;
-    margin: 0px 20px;
-    line-height: 2.5;
-}
-#educationlink:hover {
-    background-color: var(--white);
-    color: var(--brown);
-    border: 2px solid var(--brown);
-    transition: background-color 1.5s ease
-}
 form input[type="submit"] {
     background-color: var(--orange);
     text-align: center;
@@ -229,7 +249,8 @@ form input[type="submit"] {
 footer {
     display: flex;
     flex-direction: column;
-    color: var(--brown)
+    color: var(--brown);
+    margin-top: 20px;
 }
 #social-media {
     margin: 10px 0px 5px 0px;
