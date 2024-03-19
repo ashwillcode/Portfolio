@@ -47,11 +47,14 @@ header a{
     text-decoration: none;
 }
 header h1 {
-    font-size: 5vw;
-    margin: 20px 20px 10px 20px;
+    font-size: 25px;
+    margin: 20px 20px 14px 20px;
     color: var(--brown);
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
     text-align: center;
+}
+#index-page header h1 {
+    margin: 20px 20px 10px 20px;
 }
 #mainh1 {
    visibility: hidden;
@@ -246,6 +249,19 @@ form input[type="submit"] {
     border-radius: 8px;
     padding:10px;
 }
+.epc-main h2 {
+    margin-top: 15px;
+    font-size: 6vw;
+    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
+    text-align: right;
+
+}
+#education {
+    background-color: var(--orange);
+    padding-top: 1px;
+}
+
+
 footer {
     display: flex;
     flex-direction: column;
@@ -268,16 +284,27 @@ footer img {
         align-items: center;
         flex-wrap: wrap;
     }
-    h1 {
+    header h1 {
+        font-size: 35px;
         text-align: center;
         flex-basis: 100%;
     }
-    nav{
+    #index-page nav{
         top: 0px;
         order: 2;
-        margin-top: 0;
+        margin-top: 0px;
         width: 100%;
         text-align: right;
+    }
+    #index-page header h1 {
+        margin: 20px 20px 10px 20px;
+    }
+    nav {
+        top: 74px;
+        order: 2;
+        margin-top: 0px;
+        width: 100%;
+        text-align: right; 
     }
     #menu {
         display: flex;
@@ -314,7 +341,10 @@ footer img {
 
     }
     #home-main img {
-        max-width: 125%;
+        max-width: 100%;
         height: auto;
+    }
+    .epc-main h2 {
+        margin-top: 75px;
     }
 }
