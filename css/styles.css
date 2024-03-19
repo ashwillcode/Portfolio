@@ -168,14 +168,13 @@ h2 {
     font-size: 5vw;
     color: var(--brown);
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    margin: 20px 30px;
+    margin: 20px 25px;
 }
 #whoami p {
     font-size: 3vw;
     font-family: 'Saira Condensed', san-serif;
     color: var(--brown);
-
-    margin: 0 50px 20px 60px;
+    margin: 0 50px 20px 40px;
 }
 #basics {
     display: grid;
@@ -188,7 +187,7 @@ h2 {
     color: var(--brown);
     font-size: 5vw;
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    margin: 5px 30px;
+    margin: 5px 25px;
     flex-basis: 100%;
 }
 #attributes1 {
@@ -201,7 +200,7 @@ h2 {
     font-size: 3vw;
     color: var(--brown);
     font-family: 'Saira Condensed', san-serif;
-    margin: 0px 60px;
+    margin: 0px 40px;
     line-height: 2.5;
 }
 #educationlink {
