@@ -223,6 +223,66 @@ h2 {
     border: 2px solid var(--brown);
     transition: background-color 1.5s ease
 }
+#projectslink {
+    display: block;
+    background-color: var(--red);
+    color: var(--white);
+    font-family: 'Saira Condensed', san-serif;
+    font-size:3vw;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--brown);
+    transition: background-color 1.5s ease
+}
+#projectslink:hover {
+    background-color: var(--white);
+    color: var(--brown);
+    border: 2px solid var(--brown);
+    transition: background-color 1.5s ease
+}
+#worklink {
+    display: block;
+    background-color: var(--red);
+    color: var(--white);
+    font-family: 'Saira Condensed', san-serif;
+    font-size:3vw;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--brown);
+    transition: background-color 1.5s ease
+}
+#worklink:hover {
+    background-color: var(--white);
+    color: var(--brown);
+    border: 2px solid var(--brown);
+    transition: background-color 1.5s ease
+}
+#downloadresume {
+    display: block;
+    background-color: var(--red);
+    color: var(--white);
+    font-family: 'Saira Condensed', san-serif;
+    font-size:3vw;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--brown);
+    transition: background-color 1.5s ease
+}
+#downloadresume:hover {
+    background-color: var(--white);
+    color: var(--brown);
+    border: 2px solid var(--brown);
+    transition: background-color 1.5s ease
+}
 #back-top {
     position: fixed; 
     bottom: 10px; 
@@ -253,14 +313,30 @@ form input[type="submit"] {
     font-size: 6vw;
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
     text-align: right;
-
 }
 #education {
     background-color: var(--orange);
     padding-top: 1px;
+    padding-bottom: 20px;
 }
-
-
+.educationicons img {
+    width: 35px;
+    float: left;
+    margin-left: 20px;
+}
+#education p {
+    margin-left: 75px;
+    font-family: 'Saira Condensed', san-serif;
+    line-height: 0.5em;
+    font-size: 24px;
+}
+#university, #bootcamp {
+    color: var(--white);
+    text-shadow: 1px 1px 2px var(--brown);
+}
+.locationtext {
+    padding-top: 45px;
+}
 footer {
     display: flex;
     flex-direction: column;
