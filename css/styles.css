@@ -80,7 +80,7 @@ label[for="toggle"] {
     cursor: pointer; 
     background-color: var(--white);
     border-color: var(--brown);
-    padding: 30px 24px 16px 25px;
+    padding: 30px 29px 16px 31px;
     font-size: 1.25rem;
     transition: background-color 1.5s ease;
 }
@@ -190,13 +190,36 @@ h2 {
     border: 2px solid var(--brown);
     transition: background-color 1.5s ease
 }
+#basics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'header header' 'attributes1 attributes2';
+}
+#basics h3 {
+    grid-area: header;
+    font-size: 5vw;
+    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
+    margin: 5px 10px;
+    flex-basis: 100%;
+}
+#attributes1 {
+    grid-area: attributes1;
+}
+#attributes2 {
+    grid-area: attributes2;
+}
+#basics ul li {
+    font-size: 3vw;
+    font-family: 'Saira Condensed', san-serif;
+    margin: 0px 20px;
+    line-height: 2.5;
+}
 #educationlink:hover {
     background-color: var(--white);
     color: var(--brown);
     border: 2px solid var(--brown);
     transition: background-color 1.5s ease
 }
-
 form input[type="submit"] {
     background-color: var(--orange);
     text-align: center;
