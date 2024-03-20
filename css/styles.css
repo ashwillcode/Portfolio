@@ -447,6 +447,7 @@ th, td {
 }
 #package h2 {
     margin-top: 0;
+    padding-bottom: 5px;
 }
 #package img {
     width: 100%;
