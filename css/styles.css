@@ -302,12 +302,6 @@ h2 {
     color: var(--white);
     border: 2px solid var(--brown);
 }
-form input[type="submit"] {
-    background-color: var(--orange);
-    text-align: center;
-    border-radius: 8px;
-    padding:10px;
-}
 .epc-main h2 {
     margin-top: 15px;
     font-size: 6vw;
@@ -372,7 +366,6 @@ th, td {
     margin-top: 0px;
     margin-bottom: 65px;
 }
-
 #contact-info {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -390,14 +383,43 @@ th, td {
     font-size: 24px;
     font-family: 'Saira Condensed', san-serif;
 }
-
 #contact-info a {
     font-size: 24px;
     font-family: 'Saira Condensed', san-serif;
     text-decoration: none;
     color: var(--brown);
 }
-
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 65px 35px 65px;
+}
+form label {
+    margin-top: 10px;
+    font-size: 24px;
+    color: var(--brown);
+}
+form input, form textarea {
+    font-size: 20px;
+    font-family: 'Saira Condensed', san-serif;
+    color: var(--brown);
+}
+.required {
+    color: var(--orange);
+}
+form input[type="submit"] {
+    background-color: var(--red);
+    color: var(--white);
+    text-align: center;
+    padding:10px;
+    margin-top: 15px
+}
+form input[type="submit"]:hover {
+    background-color: var(--white);
+    color: var(--brown);
+    border: 2px solid var(--brown);
+    transition: background-color 1.5s ease
+}
 footer {
     display: flex;
     flex-direction: column;
