@@ -83,7 +83,7 @@ label[for="toggle"] {
     cursor: pointer; 
     background-color: var(--white);
     border-color: var(--brown);
-    padding: 30px 29px 15px 31px;
+    padding: 30px 29px 14px 31px;
     font-size: 1.25rem;
     transition: background-color 1.5s ease;
 }
