@@ -490,6 +490,10 @@ th, td {
     text-decoration: none;
     color: var(--brown);
 }
+#contact-info a:hover {
+    color: var(--white);
+    text-shadow: 1px 1px 2px var(--brown);
+}
 form {
     display: flex;
     flex-direction: column;
