@@ -405,7 +405,6 @@ th, td {
 }
 #marketing h2 {
     margin: 0px;
-
     grid-column: 1/-1;
 }
 #marketing img {
@@ -415,7 +414,7 @@ th, td {
 .project-business,
 .project-emailers {
     margin-bottom: 10px;
-    padding: 0px 15px;
+    padding: 0px 10px;
 }
 .project-print p,
 .project-business p,
@@ -423,15 +422,14 @@ th, td {
     color:var(--brown);
     font-family: 'Saira Condensed', san-serif;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 12px;
 }
 .project-emailers {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 5px;
 }
-.project-emailers img {
-    padding-right: 15px;
-}
+
 .project-emailers p {
     grid-column: 1/-1;
 }
