@@ -83,7 +83,7 @@ label[for="toggle"] {
     cursor: pointer; 
     background-color: var(--white);
     border-color: var(--brown);
-    padding: 30px 29px 16px 31px;
+    padding: 30px 29px 15px 31px;
     font-size: 1.25rem;
     transition: background-color 1.5s ease;
 }
@@ -384,6 +384,7 @@ th, td {
 }
 .wd-text{
     grid-area: paragraph;
+    
 
 }
 #webdev p {
