@@ -377,6 +377,7 @@ th, td {
 #webdev h2 {
     grid-area: title;
     margin-bottom: 15px;
+    margin-top: 0;
 }
 .wd-text a img {
     width: 45px;
@@ -384,14 +385,12 @@ th, td {
 }
 .wd-text{
     grid-area: paragraph;
-    
-
 }
 #webdev p {
     color: var(--brown);
     margin: 0px 20px 25px 10px;
     font-family: 'Saira Condensed', san-serif;
-    font-size: 18px;
+    font-size: 3vw;
 }
 .webdev-linkicon {
     grid-area: photo;
@@ -406,7 +405,7 @@ th, td {
 }
 #marketing h2 {
     margin: 0px;
-    padding-top: 20px;
+
     grid-column: 1/-1;
 }
 #marketing img {
@@ -441,7 +440,34 @@ th, td {
     color: var(--brown);
     margin: 0px 20px 25px 10px;
     font-family: 'Saira Condensed', san-serif;
-    font-size: 18px;
+    font-size: 3vw;
+}
+#package {
+    background-color: var(--orange);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#package h2 {
+    margin-top: 0;
+}
+#package img {
+    width: 100%;
+    margin-top: 20px;
+}
+.package-panela {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px 10px;
+}
+#package img[src*="CrumbledSausagePouch"],
+#package img[src*="SourCream"] {
+    padding: 0px 10px;
+}
+#package p {
+    color: var(--brown);
+    margin: 20px 20px 25px 10px;
+    font-family: 'Saira Condensed', san-serif;
+    font-size: 3vw;
 }
 #contact-info {
     display: grid;
@@ -583,6 +609,9 @@ footer img {
         margin-top: 75px;
     }
     #workwithme h2 {
-        margin-top: 65px;
+        margin-top: 70px;
+    }
+    #webdev h2 {
+        margin-top: 75px;
     }
 }
