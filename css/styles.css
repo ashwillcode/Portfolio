@@ -369,8 +369,33 @@ th, td {
 }
 #workwithme h2 {
     padding-top: 15px;
-    margin-top: 65px;
+    margin-top: 0px;
     margin-bottom: 65px;
+}
+
+#contact-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    padding-bottom: 25px;
+}
+#contact-info img {
+    width: 35px;
+    margin-right: 20px;
+}
+#contact-info p {
+    margin: 0;
+    color: var(--brown);
+    font-size: 24px;
+    font-family: 'Saira Condensed', san-serif;
+}
+
+#contact-info a {
+    font-size: 24px;
+    font-family: 'Saira Condensed', san-serif;
+    text-decoration: none;
+    color: var(--brown);
 }
 
 footer {
@@ -457,5 +482,8 @@ footer img {
     }
     .epc-main h2 {
         margin-top: 75px;
+    }
+    #workwithme h2 {
+        margin-top: 65px;
     }
 }
