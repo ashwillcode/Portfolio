@@ -47,7 +47,7 @@ header a{
     text-decoration: none;
 }
 header h1 {
-    font-size: 26px;
+    font-size: 24px;
     margin: 20px 20px 14px 20px;
     color: var(--brown);
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
@@ -366,6 +366,34 @@ th, td {
     margin-top: 0px;
     margin-bottom: 65px;
 }
+#webdev {
+    background-color: var(--orange);
+    padding-top: 1px;
+    display: grid;
+    grid-template-columns:auto auto;
+    grid-template-areas: 'title title' 'icon photo' 'paragraph photo';
+    gap: 10px;
+}
+#webdev h2 {
+    grid-area: title;
+    margin-bottom: 15px;
+}
+#webdev a{
+    grid-area: icon;
+    width: 35px;
+    margin: 0px 0px 0px 5px;
+}
+#webdev p {
+    grid-area: paragraph;
+    margin: 0px 20px 25px 10px;
+    font-family: 'Saira Condensed', san-serif;
+}
+#webdev img:last-child {
+    grid-area: photo;
+    width: 100%;
+    padding-right: 10px;
+}
+
 #contact-info {
     display: grid;
     grid-template-columns: auto 1fr;
