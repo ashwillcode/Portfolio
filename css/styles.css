@@ -47,8 +47,8 @@ header a{
     text-decoration: none;
 }
 header h1 {
-    font-size: 25px;
-    margin: 20px 20px 16px 20px;
+    font-size: 20px;
+    margin: 18px 20px 16px 20px;
     color: var(--brown);
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
     text-align: center;
@@ -58,7 +58,7 @@ header h1 {
 }
 #mainh1 {
    visibility: hidden;
-   font-size: 29px;
+   font-size: 24px;
 }
 .sr-only {
     display: none;
@@ -68,7 +68,7 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     font-family: 'Saira Condensed', san-serif;
-    font-size: 1.25rem;
+    font-size: 16px;
     text-transform: uppercase;
     margin-top: 10px;
     color: var(--brown);
@@ -82,22 +82,19 @@ nav {
 label[for="toggle"] {
     cursor: pointer; 
     background-color: var(--white);
-    border-color: var(--brown);
-    padding: 30px 29px 16px 31px;
-    font-size: 1.25rem;
-    transition: background-color 1.5s ease;
+    padding: 30px 27px 16px 26px;
+    font-size: 16px;
+    transition: background-color 3s ease;
 }
 label[for="toggle"]:hover {
     background-color: var(--red);
     color: var(--white);
-    border: 2px solid var(--brown);
 }
 #menu {
     list-style: none;
     padding: 0px;
     margin-top: 0px;
     background-color: var(--white);
-    border: 2px solid var(--brown);
     border-top: none;
     box-sizing: border-box;
     position: absolute;
@@ -112,10 +109,6 @@ label[for="toggle"]:hover {
 #toggle:checked + label {
     background-color: var(--red);
     color: var(--white);
-    border: 2px solid var(--brown);
-}
-#menu li {
-    border-top: 1px solid var(--brown);
 }
 #menu a {
     color: var(--brown);
@@ -123,7 +116,7 @@ label[for="toggle"]:hover {
     padding: 12px;
     text-align: center;
     display: block;
-    transition: background-color 2.0s ease;
+    transition: background-color 3s ease;
 }
 #menu a:hover {
     background-color: var(--red);
@@ -135,7 +128,7 @@ h2 {
     font-size: 8vw;
     text-transform: uppercase;
     margin: 10px 0px 0px 0px;
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px 0px 20px;
 }
 #home-main img {
     flex-basis: 100%;
@@ -155,7 +148,7 @@ h2 {
     align-items: flex-end;
 }
 .job-title {
-    font-size: 3vw;
+    font-size: 16px;
     margin: 10px 0px;
     margin-right: 10px;
     margin-left: auto;
@@ -164,14 +157,18 @@ h2 {
 #home-main a {
     flex-basis: 100%;
 }
+#whoami {
+    background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
+    padding-top: 1px;
+}
 #whoami h3 {
-    font-size: 5vw;
+    font-size: 24px;
     color: var(--brown);
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    margin: 20px 25px;
+    margin: 20px 20px;
 }
 #whoami p {
-    font-size: 3vw;
+    font-size: 16px;
     font-family: 'Saira Condensed', san-serif;
     color: var(--brown);
     margin: 0 50px 20px 40px;
@@ -185,9 +182,9 @@ h2 {
 #basics h3 {
     grid-area: header;
     color: var(--brown);
-    font-size: 5vw;
+    font-size: 24px;
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    margin: 5px 25px;
+    margin: 5px 20px;
     flex-basis: 100%;
 }
 #attributes1 {
@@ -197,116 +194,76 @@ h2 {
     grid-area: attributes2;
 }
 #basics ul li {
-    font-size: 3vw;
+    font-size: 16px;
     color: var(--brown);
     font-family: 'Saira Condensed', san-serif;
     margin: 0px 20px;
     line-height: 2.5;
 }
-#educationlink {
-    display: block;
-    background-color: var(--red);
-    color: var(--white);
+button {
     font-family: 'Saira Condensed', san-serif;
-    font-size:3vw;
     text-transform: uppercase;
-    width: 100%;
-    padding: 8px;
-    text-align: center;
+    font-size: 16px;
+    border: none;
+    background-color: var(--orange);
+    padding: 10px;
+    margin: 5px 0px 25px 20px;
+    transition: background-color 3s ease
+}
+button a {
     text-decoration: none;
-    border: 2px solid var(--brown);
-    transition: background-color 1.5s ease
-}
-#educationlink:hover {
-    background-color: var(--white);
     color: var(--brown);
-    border: 2px solid var(--brown);
-    transition: background-color 1.5s ease
 }
-#projectslink {
-    display: block;
-    background-color: var(--red);
-    color: var(--white);
-    font-family: 'Saira Condensed', san-serif;
-    font-size:3vw;
-    text-transform: uppercase;
-    width: 100%;
-    padding: 8px;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid var(--brown);
-    transition: background-color 1.5s ease
-}
-#projectslink:hover {
+button:hover {
     background-color: var(--white);
-    color: var(--brown);
-    border: 2px solid var(--brown);
-    transition: background-color 1.5s ease
-}
-#worklink {
-    display: block;
-    background-color: var(--red);
-    color: var(--white);
-    font-family: 'Saira Condensed', san-serif;
-    font-size:3vw;
-    text-transform: uppercase;
-    width: 100%;
-    padding: 8px;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid var(--brown);
-    transition: background-color 1.5s ease
-}
-#worklink:hover {
-    background-color: var(--white);
-    color: var(--brown);
-    border: 2px solid var(--brown);
-    transition: background-color 1.5s ease
+    color: var(--red);
+    font-weight: bold;
 }
 #downloadresume {
-    display: block;
-    background-color: var(--red);
-    color: var(--white);
+    position: fixed; 
+    bottom: 10px; 
+    right: 10px;
+    background-color: var(--orange);
+    color: var(--brown);
     font-family: 'Saira Condensed', san-serif;
-    font-size:3vw;
+    font-size:14px;
     text-transform: uppercase;
-    width: 100%;
     padding: 8px;
     text-align: center;
     text-decoration: none;
-    border: 2px solid var(--brown);
-    transition: background-color 1.5s ease
+    padding: 10px;
+    margin-left: 66px;
+    transition: background-color 3s ease
 }
 #downloadresume:hover {
     background-color: var(--white);
     color: var(--brown);
-    border: 2px solid var(--brown);
-    transition: background-color 1.5s ease
+    font-weight: bold;
 }
 #back-top {
     position: fixed; 
     bottom: 10px; 
     right: 10px;
-    background-color: var(--brown);
-    color: var(--white);
+    background-color: var(--orange);
+    color: var(--brown);
     font-family: 'Saira Condensed', san-serif;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     padding: 8px;
     text-decoration: none;
-    border: 2px solid var(--brown);
-    transition: background-color 1.5s ease
+    transition: background-color 3s ease
 }
 #back-top:hover {
-    background-color: var(--red);
-    color: var(--white);
-    border: 2px solid var(--brown);
+    background-color: var(--white);
+    color: var(--red);
+    font-weight: bold;
 }
 .epc-main h2 {
     margin-top: 15px;
-    font-size: 6vw;
+    margin-bottom: 30px;
+    font-size: 24px;
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    text-align: right;
+    text-align: left;
 }
 #education {
     background-color: var(--orange);
@@ -323,38 +280,42 @@ h2 {
     margin-left: 75px;
     font-family: 'Saira Condensed', san-serif;
     line-height: 0.5em;
-    font-size: 24px;
+    font-size: 16px;
 }
 #university, #bootcamp {
     color: var(--white);
     text-shadow: 1px 1px 2px var(--brown);
 }
 .locationtext {
-    padding-top: 10px;
+    padding-top: 12px;
 }
 .datetext {
     padding-top: 10px;
 }
+#experience {
+    background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
+}
 #experience h2 {
-    margin-top: 0;
+    margin-top: 0px;
+    margin-left: 0px;
     padding-top: 30px;
 }
 table {
-    width: 98%;
+    width: 90%;
     border: 2px solid var(--brown);
     border-collapse: collapse;
-    margin: 20px auto 35px auto;
+    margin: 20px auto 15px auto;
 }
 th, td {
     text-align: center;
-    font-size: 24px;
+    font-size: 16px;
     padding: 8px;
     border: 2px solid var(--brown);
     font-family: 'Saira Condensed', san-serif;
     color: var(--brown);
 }
 #workwithme img {
-    width: 35px;
+    width: 30px;
     margin-left: 20px;
 }
 #workwithme {
@@ -366,7 +327,11 @@ th, td {
     margin-top: 0px;
     margin-bottom: 65px;
 }
-#webdev {
+#resume-form {
+    background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
+    padding-top: 10px;
+}
+#asu {
     background-color: var(--orange);
     padding-top: 1px;
     display: grid;
@@ -374,40 +339,47 @@ th, td {
     grid-template-areas: 'title title' 'paragraph photo';
     gap: 10px;
 }
-#webdev h2 {
+#asu h2 {
     grid-area: title;
     margin-bottom: 15px;
     margin-top: 0;
 }
 .wd-text a img {
-    width: 45px;
-    margin: 0px 0px 0px 5px;
+    width: 30px;
+    margin: 0px 0px 0px 20px;
 }
 .wd-text{
     grid-area: paragraph;
+    padding-top: 30px;
+    margin: 0px 0px 0px 15px;
 }
-#webdev p {
+#asu p {
     color: var(--brown);
     margin: 0px 20px 25px 10px;
     font-family: 'Saira Condensed', san-serif;
-    font-size: 3vw;
+    font-size: 16px;
 }
-.webdev-linkicon {
+.asu-linkicon {
     grid-area: photo;
     width: 100%;
     padding-right: 10px;
     padding-bottom: 15px;
+    padding-top: 45px;
 }
-#marketing {
+#ashole {
+    background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
+    padding-top: 1px;
+}
+#serendipit {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-#marketing h2 {
+#serendipit h2 {
     margin: 0px;
     grid-column: 1/-1;
 }
-#marketing img {
+#serendipit img {
     width: 100%;
 }
 .project-print,
@@ -433,23 +405,23 @@ th, td {
 .project-emailers p {
     grid-column: 1/-1;
 }
-#marketing p:last-child {
+#serendipit p:last-child {
     grid-column: 1/-1;
     color: var(--brown);
     margin: 0px 20px 25px 10px;
     font-family: 'Saira Condensed', san-serif;
     font-size: 3vw;
 }
-#package {
-    background-color: var(--orange);
+#sigma {
+    background-color: var(--white);
     display: grid;
     grid-template-columns: 1fr;
 }
-#package h2 {
+#sigma h2 {
     margin-top: 0;
     padding-bottom: 5px;
 }
-#package img {
+#sigma img {
     width: 100%;
     margin-top: 20px;
 }
@@ -458,11 +430,11 @@ th, td {
     grid-template-columns: repeat(2, 1fr);
     padding: 0px 10px;
 }
-#package img[src*="CrumbledSausagePouch"],
-#package img[src*="SourCream"] {
+#sigma img[src*="CrumbledSausagePouch"],
+#sigma img[src*="SourCream"] {
     padding: 0px 10px;
 }
-#package p {
+#sigma p {
     color: var(--brown);
     margin: 20px 20px 25px 10px;
     font-family: 'Saira Condensed', san-serif;
@@ -476,17 +448,17 @@ th, td {
     padding-bottom: 25px;
 }
 #contact-info img {
-    width: 35px;
+    width: 30px;
     margin-right: 20px;
 }
 #contact-info p {
     margin: 0;
     color: var(--brown);
-    font-size: 24px;
+    font-size: 16px;
     font-family: 'Saira Condensed', san-serif;
 }
 #contact-info a {
-    font-size: 24px;
+    font-size: 16px;
     font-family: 'Saira Condensed', san-serif;
     text-decoration: none;
     color: var(--brown);
@@ -502,29 +474,32 @@ form {
 }
 form label {
     margin-top: 10px;
-    font-size: 24px;
+    font-size: 20px;
     color: var(--brown);
 }
 form input, form textarea {
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Saira Condensed', san-serif;
     color: var(--brown);
 }
 .required {
-    color: var(--orange);
+    color: var(--red);
 }
 form input[type="submit"] {
-    background-color: var(--red);
-    color: var(--white);
+    background-color: var(--orange);
+    color: var(--brown);
     text-align: center;
     padding:10px;
-    margin-top: 15px
+    margin-top: 15px;
+    border: none;
+    font-family: 'Saira Condensed', san-serif; 
+    text-transform: uppercase;
 }
 form input[type="submit"]:hover {
     background-color: var(--white);
     color: var(--brown);
-    border: 2px solid var(--brown);
-    transition: background-color 1.5s ease
+    font-weight: bold;
+    transition: background-color 3s ease
 }
 footer {
     display: flex;
@@ -598,7 +573,7 @@ footer img {
         text-decoration: none;
         padding: 20px 20px;
         text-align: center;
-        transition: background-color 1.5s ease;
+        transition: background-color 3s ease;
     }
     #menu a:hover {
         background-color: var(--red);
@@ -614,7 +589,7 @@ footer img {
     #workwithme h2 {
         margin-top: 70px;
     }
-    #webdev h2 {
+    #asu h2 {
         margin-top: 75px;
     }
 }
