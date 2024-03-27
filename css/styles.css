@@ -48,7 +48,7 @@ header a{
 }
 header h1 {
     font-size: 20px;
-    margin: 18px 20px 16px 20px;
+    margin: 19px 20px 16px 20px;
     color: var(--brown);
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
     text-align: center;
@@ -335,8 +335,8 @@ th, td {
     background-color: var(--orange);
     padding-top: 1px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'title title' 'paragraph photo';
+    grid-template-columns: 1fr;
+    grid-template-areas: 'title' 'photo' 'paragraph';
     gap: 10px;
 }
 #asu h2 {
@@ -350,7 +350,7 @@ th, td {
 }
 .wd-text{
     grid-area: paragraph;
-    padding-top: 30px;
+    padding-top: 15px;
     margin: 0px 0px 0px 15px;
 }
 #asu p {
@@ -362,9 +362,7 @@ th, td {
 .asu-linkicon {
     grid-area: photo;
     width: 100%;
-    padding-right: 10px;
-    padding-bottom: 15px;
-    padding-top: 45px;
+    padding: 0px 20px 15px 20px;
 }
 #ashole {
     background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
