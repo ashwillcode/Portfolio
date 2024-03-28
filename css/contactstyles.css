@@ -1,0 +1,255 @@
+
+/* custom font */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* main code */
+
+:root{
+    --orange: #FFA500;
+    --brown: #4D3025;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #853335; 
+    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
+}
+*{
+    box-sizing: border-box;
+}
+script {
+    display: none;
+}
+#skip {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+header {
+    display: flex;
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+}
+header h1 {
+    font-size: 20px;
+    margin: 19px 20px 16px 20px;
+    color: var(--brown);
+    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
+    text-align: center;
+}
+#index-page header h1 {
+    margin: 20px 20px 10px 20px;
+}
+#mainh1 {
+   visibility: hidden;
+   font-size: 24px;
+}
+.sr-only {
+    display: none;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Saira Condensed', san-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: var(--brown);
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+#toggle {
+    display: none;
+}
+label[for="toggle"] {
+    cursor: pointer; 
+    background-color: var(--white);
+    padding: 30px 27px 16px 26px;
+    font-size: 16px;
+    transition: background-color 3s ease;
+}
+label[for="toggle"]:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+#menu {
+    list-style: none;
+    padding: 0px;
+    margin-top: 0px;
+    background-color: var(--white);
+    border-top: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+}
+#toggle:checked + label + #menu {
+    display: block;
+    margin-top: 20px;
+}
+#toggle:checked + label {
+    background-color: var(--red);
+    color: var(--white);
+}
+#menu a {
+    color: var(--brown);
+    text-decoration: none;
+    padding: 12px;
+    text-align: center;
+    display: block;
+    transition: background-color 3s ease;
+}
+#menu a:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+button {
+    font-family: 'Saira Condensed', san-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: none;
+    background-color: var(--orange);
+    padding: 10px;
+    margin: 5px 0px 25px 20px;
+    transition: background-color 3s ease
+}
+button a {
+    text-decoration: none;
+    color: var(--brown);
+}
+button:hover {
+    background-color: var(--white);
+    color: var(--red);
+    font-weight: bold;
+}
+#downloadresume {
+    position: fixed; 
+    bottom: 10px; 
+    right: 10px;
+    background-color: var(--orange);
+    color: var(--brown);
+    font-family: 'Saira Condensed', san-serif;
+    font-size:14px;
+    text-transform: uppercase;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 66px;
+    transition: background-color 3s ease
+}
+#downloadresume:hover {
+    background-color: var(--white);
+    color: var(--brown);
+    font-weight: bold;
+}
+.epc-main h2 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
+    text-align: left;
+}
+#workwithme img {
+    width: 30px;
+    margin-left: 20px;
+}
+#workwithme {
+    background-color: var(--orange);
+    padding-top: 1px;
+}
+#workwithme h2 {
+    padding-top: 15px;
+    margin-top: 0px;
+    margin-bottom: 65px;
+}
+#resume-form {
+    background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
+    padding-top: 10px;
+}
+#contact-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    padding-bottom: 25px;
+}
+#contact-info img {
+    width: 30px;
+    margin-right: 20px;
+}
+#contact-info p {
+    margin: 0;
+    color: var(--brown);
+    font-size: 16px;
+    font-family: 'Saira Condensed', san-serif;
+}
+#contact-info a {
+    font-size: 16px;
+    font-family: 'Saira Condensed', san-serif;
+    text-decoration: none;
+    color: var(--brown);
+}
+#contact-info a:hover {
+    color: var(--white);
+    text-shadow: 1px 1px 2px var(--brown);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 65px 35px 65px;
+}
+form label {
+    margin-top: 10px;
+    font-size: 20px;
+    color: var(--brown);
+}
+form input, form textarea {
+    font-size: 16px;
+    font-family: 'Saira Condensed', san-serif;
+    color: var(--brown);
+}
+.required {
+    color: var(--red);
+}
+form input[type="submit"] {
+    background-color: var(--orange);
+    color: var(--brown);
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 0px;
+    border: none;
+    font-family: 'Saira Condensed', san-serif; 
+    text-transform: uppercase;
+}
+form input[type="submit"]:hover {
+    background-color: var(--white);
+    color: var(--brown);
+    font-weight: bold;
+    transition: background-color 3s ease
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    color: var(--brown);
+    margin-top: 20px;
+}
+#social-media {
+    margin: 10px 0px 5px 0px;
+    flex-basis: 100%;
+    text-align: center;
+}
+footer img {
+    width: 5%;
+}

@@ -1,0 +1,287 @@
+
+/* custom font */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* main code */
+
+:root{
+    --orange: #FFA500;
+    --brown: #4D3025;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #853335; 
+    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
+}
+*{
+    box-sizing: border-box;
+}
+script {
+    display: none;
+}
+#skip {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+header {
+    display: flex;
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+}
+header h1 {
+    font-size: 20px;
+    margin: 19px 20px 16px 20px;
+    color: var(--brown);
+    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
+    text-align: center;
+}
+#index-page header h1 {
+    margin: 20px 20px 10px 20px;
+}
+#mainh1 {
+   visibility: hidden;
+   font-size: 24px;
+}
+.sr-only {
+    display: none;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Saira Condensed', san-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: var(--brown);
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+#toggle {
+    display: none;
+}
+label[for="toggle"] {
+    cursor: pointer; 
+    background-color: var(--white);
+    padding: 30px 27px 16px 26px;
+    font-size: 16px;
+    transition: background-color 3s ease;
+}
+label[for="toggle"]:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+#menu {
+    list-style: none;
+    padding: 0px;
+    margin-top: 0px;
+    background-color: var(--white);
+    border-top: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+}
+#toggle:checked + label + #menu {
+    display: block;
+    margin-top: 20px;
+}
+#toggle:checked + label {
+    background-color: var(--red);
+    color: var(--white);
+}
+#menu a {
+    color: var(--brown);
+    text-decoration: none;
+    padding: 12px;
+    text-align: center;
+    display: block;
+    transition: background-color 3s ease;
+}
+#menu a:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+button {
+    font-family: 'Saira Condensed', san-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: none;
+    background-color: var(--orange);
+    padding: 10px;
+    margin: 5px 0px 25px 20px;
+    transition: background-color 3s ease
+}
+button a {
+    text-decoration: none;
+    color: var(--brown);
+}
+button:hover {
+    background-color: var(--white);
+    color: var(--red);
+    font-weight: bold;
+}
+#back-top {
+    position: fixed; 
+    bottom: 10px; 
+    right: 10px;
+    background-color: var(--orange);
+    color: var(--brown);
+    font-family: 'Saira Condensed', san-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px;
+    text-decoration: none;
+    transition: background-color 3s ease
+}
+#back-top:hover {
+    background-color: var(--white);
+    color: var(--red);
+    font-weight: bold;
+}
+.epc-main h2 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
+    text-align: left;
+}
+#education {
+    background-color: var(--orange);
+    padding-top: 1px;
+    padding-bottom: 20px;
+}
+.educationicons img {
+    width: 35px;
+    float: left;
+    margin-left: 20px;
+    padding-top: 2px;
+}
+#education p {
+    margin-left: 75px;
+    font-family: 'Saira Condensed', san-serif;
+    line-height: 0.5em;
+    font-size: 16px;
+}
+#university, #bootcamp {
+    color: var(--white);
+    text-shadow: 1px 1px 2px var(--brown);
+}
+.locationtext {
+    padding-top: 12px;
+}
+.datetext {
+    padding-top: 10px;
+}
+#experience {
+    background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
+}
+#experience h2 {
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-top: 30px;
+}
+table {
+    width: 90%;
+    border: 2px solid var(--brown);
+    border-collapse: collapse;
+    margin: 20px auto 15px auto;
+}
+th, td {
+    text-align: center;
+    font-size: 16px;
+    padding: 8px;
+    border: 2px solid var(--brown);
+    font-family: 'Saira Condensed', san-serif;
+    color: var(--brown);
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    color: var(--brown);
+    margin-top: 20px;
+}
+#social-media {
+    margin: 10px 0px 5px 0px;
+    flex-basis: 100%;
+    text-align: center;
+}
+footer img {
+    width: 5%;
+}                                   
+@media screen and (min-width: 480px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    header h1 {
+        font-size: 35px;
+        text-align: center;
+        flex-basis: 100%;
+    }
+    #index-page nav{
+        top: 0px;
+        order: 2;
+        margin-top: 0px;
+        width: 100%;
+        text-align: right;
+    }
+    #index-page header h1 {
+        margin: 20px 20px 10px 20px;
+    }
+    nav {
+        top: 74px;
+        order: 2;
+        margin-top: 0px;
+        width: 100%;
+        text-align: right; 
+    }
+    #menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+        border: none;
+        width: 100%;
+    }
+    #toggle {
+        display: none;
+    }
+    label[for="toggle"] {
+        display: none;
+    }
+    #menu li {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+        flex-grow: 1;
+    }
+    #menu a {
+        background-color: var(--white);
+        color: var(--brown);
+        text-decoration: none;
+        padding: 20px 20px;
+        text-align: center;
+        transition: background-color 3s ease;
+    }
+    #menu a:hover {
+        background-color: var(--red);
+
+    }
+}

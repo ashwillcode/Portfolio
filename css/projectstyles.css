@@ -8,7 +8,6 @@
 
 /* main code */
 
-
 :root{
     --orange: #FFA500;
     --brown: #4D3025;
@@ -17,7 +16,6 @@
     --red: #853335; 
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
 }
-
 *{
     box-sizing: border-box;
 }
@@ -31,13 +29,6 @@ script {
     width: 1px;
     height: 1px;
     overflow: hidden;
-}
-#home-main {
-    background-color: var(--orange);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
 }
 header {
     display: flex;
@@ -122,84 +113,6 @@ label[for="toggle"]:hover {
     background-color: var(--red);
     color: var(--white);
 }
-h2 {
-    font-family: 'Krona One';
-    color: var(--brown);
-    font-size: 8vw;
-    text-transform: uppercase;
-    margin: 10px 0px 0px 0px;
-    padding: 10px 10px 0px 20px;
-}
-#home-main img {
-    flex-basis: 100%;
-    width: 100%;
-    height: auto;
-}
-#quote {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end
-}
-#quote p {
-    font-size: 3vw;
-    font-family: 'Saira Condensed', san-serif;
-    color: var(--brown);
-    margin: 0;
-    align-items: flex-end;
-}
-.job-title {
-    font-size: 16px;
-    margin: 10px 0px;
-    margin-right: 10px;
-    margin-left: auto;
-    color: var(--brown)
-}
-#home-main a {
-    flex-basis: 100%;
-}
-#whoami {
-    background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
-    padding-top: 1px;
-}
-#whoami h3 {
-    font-size: 24px;
-    color: var(--brown);
-    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    margin: 20px 20px;
-}
-#whoami p {
-    font-size: 16px;
-    font-family: 'Saira Condensed', san-serif;
-    color: var(--brown);
-    margin: 0 50px 20px 40px;
-}
-#basics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'header header' 'attributes1 attributes2';
-    margin-bottom: 20px;
-}
-#basics h3 {
-    grid-area: header;
-    color: var(--brown);
-    font-size: 24px;
-    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    margin: 5px 20px;
-    flex-basis: 100%;
-}
-#attributes1 {
-    grid-area: attributes1;
-}
-#attributes2 {
-    grid-area: attributes2;
-}
-#basics ul li {
-    font-size: 16px;
-    color: var(--brown);
-    font-family: 'Saira Condensed', san-serif;
-    margin: 0px 20px;
-    line-height: 2.5;
-}
 button {
     font-family: 'Saira Condensed', san-serif;
     text-transform: uppercase;
@@ -217,27 +130,6 @@ button a {
 button:hover {
     background-color: var(--white);
     color: var(--red);
-    font-weight: bold;
-}
-#downloadresume {
-    position: fixed; 
-    bottom: 10px; 
-    right: 10px;
-    background-color: var(--orange);
-    color: var(--brown);
-    font-family: 'Saira Condensed', san-serif;
-    font-size:14px;
-    text-transform: uppercase;
-    padding: 8px;
-    text-align: center;
-    text-decoration: none;
-    padding: 10px;
-    margin-left: 66px;
-    transition: background-color 3s ease
-}
-#downloadresume:hover {
-    background-color: var(--white);
-    color: var(--brown);
     font-weight: bold;
 }
 #back-top {
@@ -264,72 +156,6 @@ button:hover {
     font-size: 24px;
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
     text-align: left;
-}
-#education {
-    background-color: var(--orange);
-    padding-top: 1px;
-    padding-bottom: 20px;
-}
-.educationicons img {
-    width: 35px;
-    float: left;
-    margin-left: 20px;
-    padding-top: 2px;
-}
-#education p {
-    margin-left: 75px;
-    font-family: 'Saira Condensed', san-serif;
-    line-height: 0.5em;
-    font-size: 16px;
-}
-#university, #bootcamp {
-    color: var(--white);
-    text-shadow: 1px 1px 2px var(--brown);
-}
-.locationtext {
-    padding-top: 12px;
-}
-.datetext {
-    padding-top: 10px;
-}
-#experience {
-    background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
-}
-#experience h2 {
-    margin-top: 0px;
-    margin-left: 0px;
-    padding-top: 30px;
-}
-table {
-    width: 90%;
-    border: 2px solid var(--brown);
-    border-collapse: collapse;
-    margin: 20px auto 15px auto;
-}
-th, td {
-    text-align: center;
-    font-size: 16px;
-    padding: 8px;
-    border: 2px solid var(--brown);
-    font-family: 'Saira Condensed', san-serif;
-    color: var(--brown);
-}
-#workwithme img {
-    width: 30px;
-    margin-left: 20px;
-}
-#workwithme {
-    background-color: var(--orange);
-    padding-top: 1px;
-}
-#workwithme h2 {
-    padding-top: 15px;
-    margin-top: 0px;
-    margin-bottom: 65px;
-}
-#resume-form {
-    background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
-    padding-top: 10px;
 }
 #asu {
     background-color: var(--orange);
@@ -426,9 +252,6 @@ th, td {
         opacity: 0;
     }
 }
-
-
-
 
 .pic-ctn2 {
     position: relative;
@@ -547,68 +370,6 @@ th, td {
     font-family: 'Saira Condensed', san-serif;
     font-size: 3vw;
 }
-#contact-info {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-gap: 10px;
-    align-items: center;
-    padding-bottom: 25px;
-}
-#contact-info img {
-    width: 30px;
-    margin-right: 20px;
-}
-#contact-info p {
-    margin: 0;
-    color: var(--brown);
-    font-size: 16px;
-    font-family: 'Saira Condensed', san-serif;
-}
-#contact-info a {
-    font-size: 16px;
-    font-family: 'Saira Condensed', san-serif;
-    text-decoration: none;
-    color: var(--brown);
-}
-#contact-info a:hover {
-    color: var(--white);
-    text-shadow: 1px 1px 2px var(--brown);
-}
-form {
-    display: flex;
-    flex-direction: column;
-    margin: 25px 65px 35px 65px;
-}
-form label {
-    margin-top: 10px;
-    font-size: 20px;
-    color: var(--brown);
-}
-form input, form textarea {
-    font-size: 16px;
-    font-family: 'Saira Condensed', san-serif;
-    color: var(--brown);
-}
-.required {
-    color: var(--red);
-}
-form input[type="submit"] {
-    background-color: var(--orange);
-    color: var(--brown);
-    text-align: center;
-    padding: 10px;
-    margin-top: 15px;
-    border-radius: 0px;
-    border: none;
-    font-family: 'Saira Condensed', san-serif; 
-    text-transform: uppercase;
-}
-form input[type="submit"]:hover {
-    background-color: var(--white);
-    color: var(--brown);
-    font-weight: bold;
-    transition: background-color 3s ease
-}
 footer {
     display: flex;
     flex-direction: column;
@@ -622,82 +383,4 @@ footer {
 }
 footer img {
     width: 5%;
-}
-@media screen and (min-width: 480px) {
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    header h1 {
-        font-size: 35px;
-        text-align: center;
-        flex-basis: 100%;
-    }
-    #index-page nav{
-        top: 0px;
-        order: 2;
-        margin-top: 0px;
-        width: 100%;
-        text-align: right;
-    }
-    #index-page header h1 {
-        margin: 20px 20px 10px 20px;
-    }
-    nav {
-        top: 74px;
-        order: 2;
-        margin-top: 0px;
-        width: 100%;
-        text-align: right; 
-    }
-    #menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        list-style: none;
-        padding: 0;
-        margin-top: 0;
-        border: none;
-        width: 100%;
-    }
-    #toggle {
-        display: none;
-    }
-    label[for="toggle"] {
-        display: none;
-    }
-    #menu li {
-        margin: 0;
-        padding: 0;
-        border-top: none;
-        flex-grow: 1;
-    }
-    #menu a {
-        background-color: var(--white);
-        color: var(--brown);
-        text-decoration: none;
-        padding: 20px 20px;
-        text-align: center;
-        transition: background-color 3s ease;
-    }
-    #menu a:hover {
-        background-color: var(--red);
-
-    }
-    #home-main img {
-        max-width: 100%;
-        height: auto;
-    }
-    .epc-main h2 {
-        margin-top: 75px;
-    }
-    #workwithme h2 {
-        margin-top: 70px;
-    }
-    #asu h2 {
-        margin-top: 75px;
-    }
 }
