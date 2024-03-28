@@ -368,6 +368,115 @@ th, td {
     background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
     padding-top: 1px;
 }
+#ashole img {
+    width: 175px;
+    height: auto;
+}
+.pic-ctn {
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+.pic-ctn > img {
+    position: absolute;
+    left: calc(50% - 100px);
+    opacity: 0;
+    animation: display1 40s infinite;
+} 
+.pic-ctn img:nth-child(2) {
+    animation-delay: 5s;
+}
+.pic-ctn img:nth-child(3) {
+    animation-delay: 10s;
+}
+.pic-ctn img:nth-child(4) {
+    animation-delay: 15s;
+}
+.pic-ctn img:nth-child(5) {
+    animation-delay: 20s;
+}
+.pic-ctn img:nth-child(6) {
+    animation-delay: 25s;
+}
+.pic-ctn img:nth-child(7) {
+    animation-delay: 30s;
+}
+.pic-ctn img:nth-child(8) {
+    animation-delay: 35s;
+}
+@keyframes display1 {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    6.25% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    31.25% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    37.5% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
+
+
+
+
+.pic-ctn2 {
+    position: relative;
+    width: 100%;
+    height: 250px;
+} 
+.pic-ctn2 > img {
+    position: absolute;
+    left: calc(50% - 100px);
+    opacity: 0;
+    animation: display2 25s infinite;
+} 
+.pic-ctn2 img:nth-child(2) {
+    animation-delay: 5s;
+}
+.pic-ctn2 img:nth-child(3) {
+    animation-delay: 10s;
+}
+.pic-ctn2 img:nth-child(4) {
+    animation-delay: 15s;
+}
+.pic-ctn2 img:nth-child(5) {
+    animation-delay: 20s;
+}
+
+@keyframes display2 {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+}
+
 #serendipit {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -487,8 +596,9 @@ form input[type="submit"] {
     background-color: var(--orange);
     color: var(--brown);
     text-align: center;
-    padding:10px;
+    padding: 10px;
     margin-top: 15px;
+    border-radius: 0px;
     border: none;
     font-family: 'Saira Condensed', san-serif; 
     text-transform: uppercase;
