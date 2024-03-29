@@ -253,3 +253,71 @@ footer {
 footer img {
     width: 5%;
 }
+@media screen and (min-width: 480px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    header h1 {
+        font-size: 35px;
+        text-align: center;
+        flex-basis: 100%;
+    }
+    #index-page nav{
+        top: 0px;
+        order: 2;
+        margin-top: 0px;
+        width: 100%;
+        text-align: right;
+    }
+    #index-page header h1 {
+        margin: 20px 20px 10px 20px;
+    }
+    nav {
+        top: 74px;
+        order: 2;
+        margin-top: 0px;
+        width: 100%;
+        text-align: right; 
+    }
+    #menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+        border: none;
+        width: 100%;
+    }
+    #toggle {
+        display: none;
+    }
+    label[for="toggle"] {
+        display: none;
+    }
+    #menu li {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+        flex-grow: 1;
+    }
+    #menu a {
+        background-color: var(--white);
+        color: var(--brown);
+        text-decoration: none;
+        padding: 20px 20px;
+        text-align: center;
+        transition: background-color 3s ease;
+    }
+    #menu a:hover {
+        background-color: var(--red);
+
+    }
+    #workwithme h2 {
+        margin-top: 70px;
+    }
+}

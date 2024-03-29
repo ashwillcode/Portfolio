@@ -284,4 +284,8 @@ footer img {
         background-color: var(--red);
 
     }
+    .epc-main h2 {
+        margin-top: 75px;
+    }
+
 }
