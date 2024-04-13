@@ -46,20 +46,6 @@ header {
 header a{
     text-decoration: none;
 }
-header h1 {
-    font-size: 20px;
-    margin: 19px 20px 16px 20px;
-    color: var(--brown);
-    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    text-align: center;
-}
-#index-page header h1 {
-    margin: 20px 20px 10px 20px;
-}
-#mainh1 {
-   visibility: hidden;
-   font-size: 24px;
-}
 .sr-only {
     display: none;
 }
@@ -122,7 +108,7 @@ label[for="toggle"]:hover {
     background-color: var(--red);
     color: var(--white);
 }
-h2 {
+h1 {
     font-family: 'Krona One';
     color: var(--brown);
     font-size: 8vw;
