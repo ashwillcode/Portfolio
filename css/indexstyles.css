@@ -34,7 +34,7 @@ script {
     overflow: hidden;
 }
 #home-main {
-    background-image: url('../images/IMG_0265.JPG') ;
+    background-image: url('../images/IMG_0329.JPG') ;
     background-size: cover;
     padding-bottom: 200px;
 }
@@ -67,20 +67,18 @@ header a{
     right: 0;
 }
 nav {
-    padding: 16px;
     display: flex;
-    background-color: var(--white);
 }
 .hamburger-menu {
     height: 50px;
-    width: 50px;
-    margin-left: auto;
+    width: 40px;
+    margin-right: auto;
     position: relative;  
 }
 .hamburger-menu span {
     height: 5px;
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--brown);
     border-radius: 25px;
     position: absolute;
     top: 50%;
