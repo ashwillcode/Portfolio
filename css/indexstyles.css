@@ -36,6 +36,7 @@ script {
 }
 #home-main {
     position: relative;
+    padding-bottom: 5px;
 }
 header {
     display: flex;
@@ -130,7 +131,7 @@ nav li {
     width: 100%;
     flex-direction: row;
     position: absolute;
-    top: 31vh;
+    top: 31vh;  
 }
 #title-quote p:nth-child(1) {
     margin-left: 10px;
@@ -141,12 +142,13 @@ nav li {
 }
 #title-quote p:nth-child(2) {
     margin-top: 20px;
-    margin-left: 70px;
+    margin-left: 60px;
     font-family: 'Saira Condensed', san-serif;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: bold;
     text-align: right;
+
 }
 
 h1 {
