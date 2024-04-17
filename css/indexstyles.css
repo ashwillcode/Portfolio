@@ -16,6 +16,7 @@
     --black: #000000;
     --red: #853335; 
     --green: #013220;
+    --cream: #fff1cb;
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
 }
 
@@ -34,9 +35,7 @@ script {
     overflow: hidden;
 }
 #home-main {
-    background-image: url('../images/IMG_0329.JPG') ;
-    background-size: cover;
-    padding-bottom: 200px;
+    position: relative;
 }
 header {
     display: flex;
@@ -48,17 +47,19 @@ header a{
 .sr-only {
     display: none;
 }
+nav {
+    z-index: 100;
+}
 .off-screen-menu {
     background-color: var(--green);
-    height: 100vh;
+    height:100vh;
     width: 100%;
-    max-width: 450px;
-    top: 0;
+    max-width:300px;
+    top: 0px;
     right: -450px;
     display: flex;
     position: fixed;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 16px;
@@ -74,18 +75,21 @@ header a{
     height: 50px;
     width: 40px;
     margin-right: auto;
-    position: relative;  
+    position: absolute; 
+    top: 10px;
+    right: 20px;
 }
 .hamburger-menu span {
     height: 5px;
     width: 100%;
-    background-color: var(--brown);
+    background-color: var(--cream);
     border-radius: 25px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: .5s ease;
+
 }
 .hamburger-menu span:nth-child(1) {
     top: 25%;
@@ -104,10 +108,31 @@ header a{
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
+nav ul {
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    color: var(--cream);
+    font-family: 'Saira Condensed', san-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+nav li {
+    
+    padding:50px 30px;
+}
+.lrg-index-picture {
+    display: none;
+}
+#title-quote {
+    position: absolute;
+    top: 22vh;
+}
 h1 {
     font-family: 'Krona One';
     color: var(--brown);
-    font-size: 8vw;
+    font-size: 45px;
     text-transform: uppercase;
     margin: 10px 0px 0px 0px;
     padding: 10px 10px 0px 20px;
@@ -117,9 +142,7 @@ h1 {
     width: 100%;
     height: auto;
 }
-#title-quote {
 
-}
 #title-quote p {
     font-size: 3vw;
     font-family: 'Saira Condensed', san-serif;
