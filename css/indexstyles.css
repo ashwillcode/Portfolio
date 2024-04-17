@@ -40,7 +40,7 @@ script {
 }
 header {
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
 }
 header a{
     text-decoration: none;
@@ -56,6 +56,7 @@ header a{
     top: 0;
     right: -450px;
     display: flex;
+    position: fixed;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -66,7 +67,7 @@ header a{
 .off-screen-menu.active {
     right: 0;
 }
-nav {
+.nav {
     display: flex;
 }
 .hamburger-menu {
