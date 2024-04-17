@@ -142,7 +142,7 @@ nav li {
 }
 #title-quote p:nth-child(2) {
     margin-top: 20px;
-    margin-left: 60px;
+    margin-left: 50px;
     font-family: 'Saira Condensed', san-serif;
     text-transform: uppercase;
     font-size: 16px;
@@ -279,7 +279,7 @@ footer {
 footer img {
     width: 5%;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 485px) {
 
     
 }
