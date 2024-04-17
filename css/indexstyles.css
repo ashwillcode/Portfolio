@@ -76,8 +76,8 @@ nav {
     width: 40px;
     margin-right: auto;
     position: absolute; 
-    top: 10px;
-    right: 20px;
+    top: 5px;
+    right: 15px;
 }
 .hamburger-menu span {
     height: 5px;
@@ -126,16 +126,39 @@ nav li {
     display: none;
 }
 #title-quote {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
     position: absolute;
-    top: 22vh;
+    top: 31vh;
 }
+#title-quote p:nth-child(1) {
+    margin-left: 10px;
+    font-family: 'Saira Condensed', san-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+#title-quote p:nth-child(2) {
+    margin-top: 20px;
+    margin-left: 70px;
+    font-family: 'Saira Condensed', san-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+}
+
 h1 {
     font-family: 'Krona One';
     color: var(--brown);
     font-size: 45px;
     text-transform: uppercase;
     margin: 10px 0px 0px 0px;
-    padding: 10px 10px 0px 20px;
+    padding: 10px 10px 0px 10px;
+    position: absolute;
+    top: 22vh;
+
 }
 #home-main img {
     flex-basis: 100%;
