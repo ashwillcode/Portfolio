@@ -144,7 +144,7 @@ nav li {
 }
 #title-quote p:nth-child(2) {
     margin-top: 19px;
-    margin-left: 30px;
+    margin-left: 28px;
     font-family: 'Saira Condensed', san-serif;
     text-transform: uppercase;
     color: var(--green);
@@ -208,7 +208,7 @@ h1 {
     -webkit-text-stroke: 1px #013220;
     letter-spacing: 3px;
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    margin: 50px 0px 10px 10px;
+    margin: 35px 0px 10px 10px;
 }
 #whoami p {
     font-size: 16px;
