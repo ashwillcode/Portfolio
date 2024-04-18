@@ -133,7 +133,7 @@ nav li {
     width: 100%;
     flex-direction: row;
     position: absolute;
-    top: 31vh;  
+    top: 32vh;  
 }
 #title-quote p:nth-child(1) {
     margin-left: 10px;
