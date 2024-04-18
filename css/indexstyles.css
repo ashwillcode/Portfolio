@@ -194,7 +194,7 @@ h1 {
     flex-direction: column;
 }
 #whoami img {
-    width: 70%;
+    width: 100%;
     height: auto;
     margin: auto;
     position: absolute;
@@ -208,7 +208,7 @@ h1 {
     -webkit-text-stroke: 1px #013220;
     letter-spacing: 3px;
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    margin: 35px 0px 10px 10px;
+    margin: 20px 0px 10px 10px;
 }
 #whoami p {
     font-size: 16px;
@@ -217,7 +217,7 @@ h1 {
     margin: 0 50px 20px 20px;
 }
 .whoami-text {
-    width: 200px;
+    width: 250px;
 }
 #basics {
     display: grid;
