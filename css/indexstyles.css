@@ -137,7 +137,7 @@ h1 {
     margin: 5px 0px 0px 15px;
     padding: 10px 10px 0px 0px;
     position: absolute;
-    top: 25vh;
+    top: 20vh;
     -webkit-text-stroke: 2px #013220;
 }
 #title {
@@ -145,7 +145,7 @@ h1 {
     width: 100%;
     flex-direction: column;
     position: absolute;
-    top: 40vh;  
+    top: 35vh;  
 }
 #title p{
     margin-left: 15px;
@@ -154,7 +154,6 @@ h1 {
     color: var(--brown);
     font-size: 18px;
     font-weight: bold;
-    padding-bottom: 20px;
 }
 #home-main img {
     flex-basis: 100%;
