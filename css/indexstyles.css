@@ -167,11 +167,11 @@ h1 {
     flex-direction: column;
 }
 #whoami img {
-    width: 100%;
+    width: 120%;
     height: auto;
     margin: auto;
     position: absolute;
-    top: 52vh;
+    top: 75vh;
     right: 0vh;
 }
 #whoami h2 {
