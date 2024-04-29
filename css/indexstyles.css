@@ -128,64 +128,38 @@ nav li {
 .lrg-index-picture {
     display: none;
 }
-#title-quote {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    position: absolute;
-    top: 35vh;  
-}
-#title-quote p:nth-child(1) {
-    margin-left: 10px;
-    font-family: 'Saira Condensed', san-serif;
-    text-transform: uppercase;
-    font-size: 16px;
-
-}
-#title-quote p:nth-child(2) {
-    margin-top: 19px;
-    margin-left: 28px;
-    font-family: 'Saira Condensed', san-serif;
-    text-transform: uppercase;
-    color: var(--green);
-    font-size: 16px;
-    font-weight: bold;
-    text-align: right;
-}
 h1 {
     font-family: 'Krona One';
     color:transparent;
     letter-spacing: 3px;
-    font-size: 45px;
+    font-size: 42px;
     text-transform: uppercase;
-    margin: 5px 0px 0px 10px;
+    margin: 5px 0px 0px 15px;
     padding: 10px 10px 0px 0px;
     position: absolute;
-    top: 24vh;
+    top: 25vh;
     -webkit-text-stroke: 2px #013220;
+}
+#title {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 40vh;  
+}
+#title p{
+    margin-left: 15px;
+    font-family: 'Saira Condensed', san-serif;
+    text-transform: uppercase;
+    color: var(--brown);
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 20px;
 }
 #home-main img {
     flex-basis: 100%;
     width: 100%;
     height: auto;
-}
-
-#title-quote p {
-    font-size: 3vw;
-    font-family: 'Saira Condensed', san-serif;
-    color: var(--brown);
-    margin: 0;
-
-}
-.job-title {
-    font-size: 16px;
-    margin: 10px 0px;
-    margin-right: 10px;
-    margin-left: auto;
-    color: var(--brown)
-}
-#home-main a {
-    flex-basis: 100%;
 }
 #whoami {
     background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
@@ -200,15 +174,14 @@ h1 {
     position: absolute;
     top: 52vh;
     right: 0vh;
-
 }
 #whoami h2 {
-    font-size: 55px;
+    font-size: 34px;
     color: transparent;
     -webkit-text-stroke: 1px #013220;
     letter-spacing: 3px;
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    margin: 20px 0px 10px 10px;
+    margin: 40px 0px 10px 15px;
 }
 #whoami p {
     font-size: 16px;
