@@ -138,14 +138,14 @@ h1 {
     padding: 15px 10px 0px 0px;
     position: absolute;
     top: 22vh;
-    -webkit-text-stroke: 1px #013220;
+    -webkit-text-stroke: 1.5px #013220;
 }
 #title {
     display: flex;
     width: 100%;
     flex-direction: column;
     position: absolute;
-    top: 35vh;  
+    top: 33vh;  
 }
 #title p{
     margin-left: 15px;
@@ -177,7 +177,7 @@ h1 {
 #whoami h2 {
     font-size: 30px;
     color: transparent;
-    -webkit-text-stroke: .5px #013220;
+    -webkit-text-stroke: 1px #013220;
     letter-spacing: 3px;
     font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
     margin: 40px 0px 10px 15px;
