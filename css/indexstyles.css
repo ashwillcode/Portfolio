@@ -171,7 +171,7 @@ h1 {
     height: auto;
     margin: auto;
     position: absolute;
-    top: 75vh;
+    top: 78vh;
     right: 0vh;
 }
 #whoami h2 {
@@ -227,14 +227,14 @@ button {
     text-transform: uppercase;
     font-size: 16px;
     border: none;
-    background-color: var(--orange);
+    background-color: var(--green);
     padding: 10px;
-    margin: 5px 0px 25px 20px;
+    margin: 20px 0px 25px 20px;
     transition: background-color 3s ease
 }
 button a {
     text-decoration: none;
-    color: var(--brown);
+    color: var(--cream);
 }
 button:hover {
     background-color: var(--white);
