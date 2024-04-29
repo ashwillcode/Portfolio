@@ -132,12 +132,12 @@ h1 {
     font-family: 'Krona One';
     color:transparent;
     letter-spacing: 3px;
-    font-size: 42px;
+    font-size: 40px;
     text-transform: uppercase;
     margin: 5px 0px 0px 15px;
     padding: 10px 10px 0px 0px;
     position: absolute;
-    top: 20vh;
+    top: 24vh;
     -webkit-text-stroke: 2px #013220;
 }
 #title {
@@ -145,7 +145,7 @@ h1 {
     width: 100%;
     flex-direction: column;
     position: absolute;
-    top: 35vh;  
+    top: 37vh;  
 }
 #title p{
     margin-left: 15px;
@@ -175,7 +175,7 @@ h1 {
     right: 0vh;
 }
 #whoami h2 {
-    font-size: 34px;
+    font-size: 30px;
     color: transparent;
     -webkit-text-stroke: 1px #013220;
     letter-spacing: 3px;
