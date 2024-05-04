@@ -32,86 +32,90 @@ script {
 }
 header {
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
 }
 header a{
     text-decoration: none;
-}
-header h1 {
-    font-size: 20px;
-    margin: 19px 20px 16px 20px;
-    color: var(--brown);
-    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    text-align: center;
-}
-#index-page header h1 {
-    margin: 20px 20px 10px 20px;
-}
-#mainh1 {
-   visibility: hidden;
-   font-size: 24px;
 }
 .sr-only {
     display: none;
 }
 nav {
+    z-index: 100;
+}
+.off-screen-menu {
+    background-color: var(--green);
+    height:100vh;
+    width: 100%;
+    max-width:300px;
+    top: 0px;
+    right: -450px;
     display: flex;
+    position: fixed;
     flex-direction: column;
-    justify-content: space-around;
-    font-family: 'Saira Condensed', san-serif;
-    font-size: 16px;
-    text-transform: uppercase;
-    margin-top: 10px;
-    color: var(--brown);
-    position: absolute;
-    right: 0px;
-    top: 10px;
-}
-#toggle {
-    display: none;
-}
-label[for="toggle"] {
-    cursor: pointer; 
-    background-color: var(--white);
-    padding: 30px 27px 16px 26px;
-    font-size: 16px;
-    transition: background-color 3s ease;
-}
-label[for="toggle"]:hover {
-    background-color: var(--red);
-    color: var(--white);
-}
-#menu {
-    list-style: none;
-    padding: 0px;
-    margin-top: 0px;
-    background-color: var(--white);
-    border-top: none;
-    box-sizing: border-box;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    display: none;
-}
-#toggle:checked + label + #menu {
-    display: block;
-    margin-top: 20px;
-}
-#toggle:checked + label {
-    background-color: var(--red);
-    color: var(--white);
-}
-#menu a {
-    color: var(--brown);
-    text-decoration: none;
-    padding: 12px;
+    align-items: center;
     text-align: center;
-    display: block;
-    transition: background-color 3s ease;
+    font-size: 16px;
+    transition: .5s ease;
 }
-#menu a:hover {
-    background-color: var(--red);
-    color: var(--white);
+.off-screen-menu.active {
+    right: 0;
+}
+.nav {
+    display: flex;
+}
+.hamburger-menu {
+    height: 50px;
+    width: 40px;
+    margin-right: auto;
+    position: absolute; 
+    top: 5px;
+    right: 15px;
+}
+.hamburger-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: var(--cream);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+
+}
+.hamburger-menu span:nth-child(1) {
+    top: 25%;
+}
+.hamburger-menu span:nth-child(3) {
+    top: 75%;
+}
+.hamburger-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.hamburger-menu.active span:nth-child(2) {
+   opacity: 0;
+}
+.hamburger-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+nav ul {
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    color: var(--cream);
+    font-family: 'Saira Condensed', san-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+nav li:nth-child(1) {
+    margin-top: 55px;
+}
+nav li {
+    padding:20px 0;
 }
 button {
     font-family: 'Saira Condensed', san-serif;
@@ -222,70 +226,6 @@ footer img {
 }                                   
 @media screen and (min-width: 480px) {
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    header h1 {
-        font-size: 35px;
-        text-align: center;
-        flex-basis: 100%;
-    }
-    #index-page nav{
-        top: 0px;
-        order: 2;
-        margin-top: 0px;
-        width: 100%;
-        text-align: right;
-    }
-    #index-page header h1 {
-        margin: 20px 20px 10px 20px;
-    }
-    nav {
-        top: 74px;
-        order: 2;
-        margin-top: 0px;
-        width: 100%;
-        text-align: right; 
-    }
-    #menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        list-style: none;
-        padding: 0;
-        margin-top: 0;
-        border: none;
-        width: 100%;
-    }
-    #toggle {
-        display: none;
-    }
-    label[for="toggle"] {
-        display: none;
-    }
-    #menu li {
-        margin: 0;
-        padding: 0;
-        border-top: none;
-        flex-grow: 1;
-    }
-    #menu a {
-        background-color: var(--white);
-        color: var(--brown);
-        text-decoration: none;
-        padding: 20px 20px;
-        text-align: center;
-        transition: background-color 3s ease;
-    }
-    #menu a:hover {
-        background-color: var(--red);
 
-    }
-    .epc-main h2 {
-        margin-top: 75px;
-    }
 
 }

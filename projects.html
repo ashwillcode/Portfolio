@@ -31,10 +31,8 @@
     <header>
         <!-- <img src="" alt="LOGO"> -->
         <nav>
-            <div id="menu-toggle">
-                <h2 class="sr-only">Main Navigation</h2>
-                <input name="toggle" id="toggle" type="checkbox">
-                <label for="toggle">Menu</label>
+            <h2 class="sr-only">Main Navigation</h2>
+             <div class="off-screen-menu">
                 <ul id="menu" role="menubar">
                     <li class="active" role="presentation">
                         <a href="index.html" role="menuitem">Home</a></li>
@@ -43,8 +41,15 @@
                     <li role="presentation">
                         <a href="projects.html" role="menuitem">Projects</a></li>
                     <li role="presentation">
-                        <a href="contact.html" role="menuitem">Contact</a></li>
+                            <a href="contact.html" role="menuitem">Contact</a></li>
                 </ul>
+            </div>
+            <div class="nav">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav> 
     </header>
@@ -104,6 +109,7 @@
         </div>
         <a href="#" id="back-top">Back to top</a>
     </footer>
+    <script src="js/script.js"></script>
     <script src="js/tota11y.min.js"></script>
 </body>
 </html>
