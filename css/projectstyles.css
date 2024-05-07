@@ -1,0 +1,179 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* main code */
+
+
+:root{
+    --purple: #746492;
+    --brown: #4D3025;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #c25451;
+    --pink: #ff8983; 
+    --green: #013220;
+    --cream: #fff1cb;
+    font-family: Impact, Trebuchet MS, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+script {
+    display: none;
+}
+#skip {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+#home-main {
+    position: relative;
+    padding-bottom: 5px;
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+}
+header a{
+    text-decoration: none;
+}
+.sr-only {
+    display: none;
+}
+nav {
+    z-index: 100;
+}
+.off-screen-menu {
+    background-color: var(--green);
+    height:100vh;
+    width: 100%;
+    max-width:300px;
+    top: 0px;
+    right: -450px;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    transition: .5s ease;
+}
+.off-screen-menu.active {
+    right: 0;
+}
+.nav {
+    display: flex;
+}
+.hamburger-menu {
+    height: 50px;
+    width: 40px;
+    margin-right: auto;
+    position: absolute; 
+    top: 5px;
+    right: 15px;
+}
+.hamburger-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: var(--cream);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+
+}
+.hamburger-menu span:nth-child(1) {
+    top: 25%;
+}
+.hamburger-menu span:nth-child(3) {
+    top: 75%;
+}
+.hamburger-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.hamburger-menu.active span:nth-child(2) {
+   opacity: 0;
+}
+.hamburger-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+nav ul {
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    color: var(--cream);
+    font-family: Trebuchet MS, san-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+nav li:nth-child(1) {
+    margin-top: 55px;
+}
+nav li {
+    padding:20px 0;
+}
+.lrg-index-picture {
+    display: none;
+}
+
+@media screen and (min-width: 485px) {
+
+    
+}

@@ -53,14 +53,15 @@ table {
 
 
 :root{
-    --orange: #FFA500;
+    --purple: #746492;
     --brown: #4D3025;
     --white: #ffffff;
     --black: #000000;
-    --red: #853335; 
+    --red: #c25451;
+    --pink: #ff8983; 
     --green: #013220;
     --cream: #fff1cb;
-    font-family: Impact, Arial, sans-serif;
+    font-family: Impact, Verdana, sans-serif;
 }
 
 *{
@@ -158,7 +159,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--cream);
-    font-family: 'Saira Condensed', san-serif;
+    font-family: Trebuchet MS, san-serif;
     font-size: 24px;
     text-transform: uppercase;
 }
@@ -171,134 +172,7 @@ nav li {
 .lrg-index-picture {
     display: none;
 }
-h1 {
-    font-family: 'Krona One';
-    color:transparent;
-    letter-spacing: 3px;
-    font-size: 36px;
-    text-transform: uppercase;
-    margin: 5px 0px 0px 15px;
-    padding: 15px 10px 0px 0px;
-    position: absolute;
-    top: 22vh;
-    -webkit-text-stroke: 1.5px #013220;
-}
-#title {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    position: absolute;
-    top: 34vh;  
-}
-#title p{
-    margin-left: 15px;
-    font-family: 'Saira Condensed', san-serif;
-    text-transform: uppercase;
-    color: var(--brown);
-    font-size: 16px;
-    font-weight: bold;
-}
-#home-main img {
-    flex-basis: 100%;
-    width: 100%;
-    height: auto;
-}
-#whoami {
-    background-image: linear-gradient(to bottom, #FFA500, #ffffff 45%);
-    padding-top: 1px;
-    display: flex;
-    flex-direction: column;
-}
-#whoami img {
-    width: 120%;
-    height: auto;
-    margin: auto;
-    position: absolute;
-    top: 90vh;
-    right: 0vh;
-}
-#whoami h2 {
-    font-size: 24px;
-    color: transparent;
-    -webkit-text-stroke: .75px #013220;
-    letter-spacing: 3px;
-    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    margin: 40px 0px 10px 15px;
-}
-#whoami p {
-    font-size: 16px;
-    font-family: 'Saira Condensed', san-serif;
-    color: var(--brown);
-    margin: 25px 50px 20px 20px;
-}
-.whoami-text {
-    width: 240px;
-}
-#basics {
-    background-color: var(--cream);
-    width: 90%;
-    z-index: 100;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'header header' 'attributes1 attributes2';
-    margin: auto;
-    margin-top: 160px;
-}
-#basics h3 {
-    grid-area: header;
-    color: var(--brown);
-    font-size: 24px;
-    font-family: 'Bebas Neue', 'Saira Condensed', san-serif;
-    margin: 10px 10px;
-    flex-basis: 100%;
-}
-#attributes1 {
-    grid-area: attributes1;
-}
-#attributes2 {
-    grid-area: attributes2;
-}
-#basics ul li {
-    font-size: 16px;
-    color: var(--brown);
-    font-family: 'Saira Condensed', san-serif;
-    margin: 0px 20px;
-    line-height: 2.5;
-}
-button {
-    font-family: 'Saira Condensed', san-serif;
-    text-transform: uppercase;
-    font-size: 16px;
-    border: none;
-    background-color: var(--green);
-    padding: 10px;
-    margin: 20px 0px 25px 20px;
-    transition: background-color 3s ease
-}
-button a {
-    text-decoration: none;
-    color: var(--cream);
-}
-button:hover {
-    background-color: var(--white);
-    color: var(--red);
-    font-weight: bold;
-}
 
-footer {
-    display: flex;
-    flex-direction: column;
-    color: var(--brown);
-    margin-top: 20px;
-}
-#social-media {
-    margin: 10px 0px 5px 0px;
-    flex-basis: 100%;
-    text-align: center;
-}
-footer img {
-    width: 5%;
-}
 @media screen and (min-width: 485px) {
 
     
