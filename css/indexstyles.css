@@ -201,6 +201,17 @@ h1 {
 #home-title img {
     width: 100%;
     height: auto;
+    margin-bottom: 65px;
+}
+
+/*home-bio code */
+
+#home-bio h2 {
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 35px;
+    -webkit-text-stroke: 1.25px #013220;
+    color: transparent;
+    margin-left: 25px;
 }
 
 /* carousel code */
