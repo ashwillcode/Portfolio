@@ -7,39 +7,20 @@ hamMenu.addEventListener("click", () => {
   offScreenMenu.classList.toggle("active");
 });
 
-document.querySelectorAll(".carousel").forEach((carousel) => {
-  const items = carousel.querySelectorAll(".carousel__item");
-  const buttonsHtml = Array.from(items, () => {
-    return `<span class="carousel__button"></span>`;
-  });
+/*carousel code*/
 
-  carousel.insertAdjacentHTML(
-    "beforeend",
-    `
-		<div class="carousel__nav">
-			${buttonsHtml.join("")}
-		</div>
-	`
-  );
+var imgs = document.querySelectorAll('.slider img');
+var dots = document.querySelectorAll('.dot');
+var currentImg = 0; // index of the first image 
+const interval = 3000; // duration(speed) of the slide
+function changeSlide(n) {
+  for (var i = 0; i < imgs.length; i++) { // reset
+    imgs[i].style.opacity = 0;
+    dots[i].className = dots[i].className.replace(' active', '');
+  }
 
-  const buttons = carousel.querySelectorAll(".carousel__button");
+  currentImg = n;
 
-  buttons.forEach((button, i) => {
-    button.addEventListener("click", () => {
-      // un-select all the items
-      items.forEach((item) =>
-        item.classList.remove("carousel__item--selected")
-      );
-      buttons.forEach((button) =>
-        button.classList.remove("carousel__button--selected")
-      );
-
-      items[i].classList.add("carousel__item--selected");
-      button.classList.add("carousel__button--selected");
-    });
-  });
-
-  // Select the first item on page load
-  items[0].classList.add("carousel__item--selected");
-  buttons[0].classList.add("carousel__button--selected");
-});
+  imgs[currentImg].style.opacity = 1;
+  dots[currentImg].className += ' active';
+}
