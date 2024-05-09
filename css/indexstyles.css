@@ -130,7 +130,7 @@ nav {
 .hamburger-menu span {
     height: 5px;
     width: 100%;
-    background-color: var(--cream);
+    background-color: var(--pink);
     border-radius: 25px;
     position: absolute;
     top: 50%;
@@ -161,8 +161,8 @@ nav ul {
 }
 nav a {
     text-decoration: none;
-    color: var(--cream);
-    font-family: Trebuchet MS, san-serif;
+    color: var(--pink);
+    font-family: Trebuchet MS, sans-serif;
     font-size: 24px;
     text-transform: uppercase;
 }
@@ -173,51 +173,79 @@ nav li {
     padding:20px 0;
 }
 
+/* home-title */
+
+.hello {
+    font-family: Impact, Trebuchet MS, sans-serif;
+    font-size: 150px;
+    -webkit-text-stroke: 2px #013220;
+    color: transparent;
+
+}
+.name {
+    font-family: Impact, Trebuchet MS, sans-serif;
+    font-size: 65px;
+    padding-left: 65px;
+    color: var(--green);
+}
+h1 {
+    padding: 150px 0px 15px 25px;
+}
+#home-title p {
+    font-family: trebuchet MS, sans-serif;
+    font-size: 24px;
+    color: var(--green);
+    padding-left: 25px;
+    padding-bottom: 20px;
+}
+#home-title img {
+    width: 100%;
+    height: auto;
+}
+
 /* carousel code */
 
-.carousel {
-    position: relative;
-  }
-  
-  .carousel__item {
-    height: 300px;
-    background: grey;
-    padding: 1em;
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    font-size: 2em;
-    color: #ffffff;
-    display: none;
-    overflow: hidden;
-  }
-  
-  .carousel__item--selected {
-    display: block;
-  }
-  
-  .carousel__nav {
+.slider {
     width: 100%;
-    padding: 20px 0;
+    height: 225px;
+    position: relative;
+}
+  
+.slider img {
+    width: 100%;
+    height: auto;
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
+}
+  
+.slider img:first-child {
+    z-index: 1;
+}
+  
+.slider img:nth-child(2) {
+    z-index: 0;
+}
+.navigation-button {
     text-align: center;
-  }
+    position: relative;
+}
   
-  .carousel__button {
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    margin: 0 5px;
+.dot {
     cursor: pointer;
-  }
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
   
-  .carousel__button--selected {
-    background: rgba(255, 255, 255, 0.5);
-  }
-  
+.navigation-button.active,
+.dot:hover {
+    background-color: var(--pink);
+}
+
 
 @media screen and (min-width: 485px) {
 
