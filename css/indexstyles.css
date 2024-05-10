@@ -53,7 +53,7 @@ table {
 
 
 :root{
-    --purple: #746492;
+    --purple: #d0b4f1;
     --brown: #4D3025;
     --white: #ffffff;
     --black: #000000;
@@ -201,18 +201,84 @@ h1 {
 #home-title img {
     width: 100%;
     height: auto;
-    margin-bottom: 65px;
+    margin-bottom: 35px;
 }
 
 /*home-bio code */
 
 #home-bio h2 {
-    font-family: Trebuchet MS, sans-serif;
-    font-size: 35px;
-    -webkit-text-stroke: 1.25px #013220;
-    color: transparent;
-    margin-left: 25px;
+    font-family: Impact, Trebuchet MS, sans-serif;
+    font-size: 24px;
+    color: var(--green);
+    text-align: center;
 }
+.bio {
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 18px;
+    color: var(--green);
+    background-color:;
+    padding: 25px;
+    text-align: center;
+}
+.bio-photoquote {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+.bio-photoquote p {
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 28px;
+    -webkit-text-stroke: 1px #013220;
+    color: transparent;
+    margin: 45px 0 25px 25px;
+}
+.bio-portrait {
+    width: 35%;
+    height: 35%;
+    margin-top: 25px;
+    position: relative;
+    right: 20px;
+    z-index: 2;
+    padding: 10px;
+
+}
+.bio-shape1 {
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    left: 305px;
+    top: 71em;
+    z-index: 1;
+}
+.bio-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bio-button button {
+    font-size: 18px;
+    font-family: Trebuchet MS, sans-serif;
+    text-transform: uppercase;
+    background-color: var(--pink);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 35px;
+    transition: background-color 3s ease
+}
+.bio-button button a {
+    text-decoration: none;
+    color: var(--green);
+}
+.bio-button button:hover {
+    background-color: var(--purple);
+
+}
+
+/* client review code */
+
+
 
 /* carousel code */
 
@@ -220,28 +286,24 @@ h1 {
     width: 100%;
     height: 225px;
     position: relative;
-}
-  
+} 
 .slider img {
     width: 100%;
     height: auto;
     position: absolute;
     top: 0;
     left: 0;
-}
-  
+}  
 .slider img:first-child {
     z-index: 1;
-}
-  
+} 
 .slider img:nth-child(2) {
     z-index: 0;
 }
 .navigation-button {
     text-align: center;
     position: relative;
-}
-  
+} 
 .dot {
     cursor: pointer;
     height: 15px;
@@ -250,9 +312,8 @@ h1 {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-}
-  
-.navigation-button.active,
+} 
+.dot:active,
 .dot:hover {
     background-color: var(--pink);
 }
