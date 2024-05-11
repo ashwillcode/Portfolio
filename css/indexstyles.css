@@ -333,13 +333,13 @@ h1 {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: var(--pink);
     border-radius: 50%;
     display: inline-block;
 } 
 .dot:active,
 .dot:hover {
-    background-color: var(--pink);
+    background-color: var(--purple);
 }
 
 /*footer code*/
