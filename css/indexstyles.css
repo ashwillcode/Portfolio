@@ -201,7 +201,7 @@ h1 {
 #home-title img {
     width: 100%;
     height: auto;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
 }
 
 /*home-bio code */
@@ -223,14 +223,14 @@ h1 {
 .bio-photoquote {
     display: flex;
     flex-direction: row;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .bio-photoquote p {
     font-family: Trebuchet MS, sans-serif;
     font-size: 28px;
     -webkit-text-stroke: 1px #013220;
     color: transparent;
-    margin: 45px 0 25px 25px;
+    margin: 35px 0 25px 25px;
 }
 .bio-portrait {
     width: 35%;
@@ -264,8 +264,8 @@ h1 {
     padding: 10px;
     border: none;
     border-radius: 0 0px 0px 15px;
-    margin-bottom: 35px;
-    transition: background-color 3s ease
+    margin-bottom: 55px;
+    transition: background-color 2s ease
 }
 .bio-button button a {
     text-decoration: none;
@@ -288,14 +288,20 @@ h1 {
     text-decoration: none;
     z-index: 3;
     border-radius: 0 15px 15px 15px;
-    transition: background-color 3s ease
+    transition: background-color 2s ease
 }
 #bio-resume:hover {
     background-color: var(--purple);
 }
+
 /* client review code */
 
-
+#home-carousel h3 {
+    font-family: Impact, Trebuchet MS, sans-serif;
+    font-size: 24px;
+    color: var(--green);
+    text-align: center;
+}
 
 /* carousel code */
 
@@ -334,6 +340,44 @@ h1 {
 .dot:active,
 .dot:hover {
     background-color: var(--pink);
+}
+
+/*footer code*/
+
+footer p {
+    font-family: Impact, Trebuchet MS, sans-serif;
+    font-size: 18px;
+    color: var(--green);
+    text-align: center;
+    margin-top: 45px;
+}
+#social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 75px 0;
+}
+#social-media svg {
+    margin: 0 10px 0 10px;
+}
+#social-media path {
+    transition: fill 2s ease;
+    cursor: pointer;
+}
+#social-media path:hover {
+    fill: var(--purple);
+}
+@keyframes rotate-hover {
+    from {
+        transform: rotate(0deg); /* Start the rotation from 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* Rotate the element by 360 degrees */
+    }
+}
+.social-icon:hover {
+    animation: rotate-hover 3s linear infinite; /* Apply the rotation animation */
 }
 
 
