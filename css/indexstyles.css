@@ -256,22 +256,20 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-.bio-button button {
+.bio-button a {
     font-size: 18px;
     font-family: Trebuchet MS, sans-serif;
     text-transform: uppercase;
     background-color: var(--pink);
+    text-decoration: none;
+    color: var(--green);
     padding: 10px;
     border: none;
     border-radius: 0 0px 0px 15px;
     margin-bottom: 55px;
     transition: background-color 2s ease
 }
-.bio-button button a {
-    text-decoration: none;
-    color: var(--green);
-}
-.bio-button button:hover {
+.bio-button a:hover {
     background-color: var(--purple);
 
 }
