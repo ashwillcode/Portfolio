@@ -243,7 +243,7 @@ h1 {
     font-size: 28px;
     -webkit-text-stroke: 1px #013220;
     color: transparent;
-    margin: 35px 0 25px 25px;
+    margin: 35px 5px 25px 25px;
 }
 .bio-portrait {
     width: 35%;
@@ -397,7 +397,35 @@ footer p {
 }
 
 
-@media screen and (min-width: 485px) {
+@media screen and (max-width: 720px) and (min-width: 445px) {
 
+    .off-screen-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+    .nav {
+        display: none;
+    }
+    nav ul {
+        list-style: none;
+        overflow: visible;
+    }
+    nav a {
+        text-decoration: none;
+        color: var(--pink);
+        font-family: Trebuchet MS, sans-serif;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    nav li {
+        padding:20px 0;
+    }
+    nav a:hover {
+        color:var(--purple);
+        font-weight: bold;
+    }
+    
     
 }
