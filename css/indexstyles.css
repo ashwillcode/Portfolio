@@ -63,10 +63,13 @@ table {
     --cream: #fff1cb;
     font-family: Impact, Trebuchet MS, sans-serif;
 }
-
+body {
+    min-width: 445px;
+}
 *{
     box-sizing: border-box;
 }
+
 script {
     display: none;
 }
