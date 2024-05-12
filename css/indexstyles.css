@@ -95,14 +95,18 @@ header a{
 
 /* navigation code */
 
+header {
+    background-color: var(--cream);
+    height: 100px;
+}
 nav {
     z-index: 100;
 }
 .off-screen-menu {
     background-color: var(--green);
-    height:100vh;
+    height:150vh;
     width: 100%;
-    max-width:300px;
+    max-width:235px;
     top: 0px;
     right: -450px;
     display: flex;
@@ -124,7 +128,7 @@ nav {
     width: 40px;
     margin-right: auto;
     position: absolute; 
-    top: 5px;
+    top: 20px;
     right: 15px;
 }
 .hamburger-menu span {
@@ -148,6 +152,7 @@ nav {
 .hamburger-menu.active span:nth-child(1) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
+    background-color: var(--purple);
 }
 .hamburger-menu.active span:nth-child(2) {
    opacity: 0;
@@ -155,6 +160,7 @@ nav {
 .hamburger-menu.active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: var(--purple);
 }
 nav ul {
     list-style: none;
@@ -167,10 +173,14 @@ nav a {
     text-transform: uppercase;
 }
 nav li:nth-child(1) {
-    margin-top: 55px;
+    margin-top: 65px;
 }
 nav li {
     padding:20px 0;
+}
+nav a:hover {
+    color:var(--purple);
+    font-weight: bold;
 }
 
 /* home-title */
@@ -189,7 +199,7 @@ nav li {
     color: var(--green);
 }
 h1 {
-    padding: 150px 0px 15px 25px;
+    padding: 35px 0px 15px 25px;
 }
 #home-title p {
     font-family: trebuchet MS, sans-serif;
@@ -325,6 +335,7 @@ h1 {
 .navigation-button {
     text-align: center;
     position: relative;
+    margin-bottom: 25px;
 } 
 .dot {
     cursor: pointer;
@@ -342,12 +353,16 @@ h1 {
 
 /*footer code*/
 
+footer {
+    background-color: var(--cream);
+    padding: 1px;
+}
 footer p {
     font-family: Impact, Trebuchet MS, sans-serif;
     font-size: 18px;
     color: var(--green);
     text-align: center;
-    margin-top: 45px;
+    margin-top: 25px;
 }
 #social-media {
     display: flex;
