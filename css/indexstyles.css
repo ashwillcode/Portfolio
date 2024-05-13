@@ -396,20 +396,20 @@ footer p {
 }
 
 
-@media screen and (min-width: 445px) {
+@media screen and (min-width: 575px) {
 
   /* navigation code */
   
   /* home-bio code */
 
   #home-title img {
-    width: 75%;
-    position: absolute;
-    top: 345px;
-    left: 165px;
+    width: 70%;
+    position: relative;
+    top: -125px;
+    left: 225px;
   }
   #home-title p {
-    margin-bottom: 375px;
+    margin-bottom: px;
   }
 
 }
