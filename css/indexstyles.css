@@ -229,7 +229,6 @@ h1 {
     font-family: Trebuchet MS, sans-serif;
     font-size: 18px;
     color: var(--green);
-    background-color:;
     padding: 25px;
     text-align: center;
 }
@@ -397,35 +396,29 @@ footer p {
 }
 
 
-@media screen and (max-width: 720px) and (min-width: 445px) {
+@media screen and (min-width: 445px) {
 
-    .off-screen-menu {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        text-align: center;
-    }
-    .nav {
-        display: none;
-    }
-    nav ul {
-        list-style: none;
-        overflow: visible;
-    }
-    nav a {
-        text-decoration: none;
-        color: var(--pink);
-        font-family: Trebuchet MS, sans-serif;
-        font-size: 24px;
-        text-transform: uppercase;
-    }
-    nav li {
-        padding:20px 0;
-    }
-    nav a:hover {
-        color:var(--purple);
-        font-weight: bold;
-    }
-    
-    
+  /* navigation code */
+  
+  /* home-bio code */
+
+  #home-title img {
+    width: 75%;
+    position: absolute;
+    top: 345px;
+    left: 165px;
+  }
+  #home-title p {
+    margin-bottom: 375px;
+  }
+
 }
+
+@media screen and (min-width: 768px) {
+
+    /* navigation code */
+    
+    /* home-bio code */
+  
+  
+  }
