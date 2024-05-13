@@ -63,9 +63,6 @@ table {
     --cream: #fff1cb;
     font-family: Impact, Trebuchet MS, sans-serif;
 }
-body {
-    mn-width: 445px;
-}
 *{
     box-sizing: border-box;
 }
@@ -453,7 +450,7 @@ footer p {
   
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 920px) {
 
     /* navigation code */
 
@@ -461,11 +458,9 @@ footer p {
 
     #home-title {
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 25px;
     }
     .hello {
         font-size: 165px;
@@ -473,14 +468,20 @@ footer p {
     }
     .name {
         font-size: 70px;
+        
+    }
+    .name-title {
+        padding-right: 550px;
     }
     #home-title p {
-        font-size: 36px;
+        font-size: 32px;
     }
     #home-title img {
+        position: relative;
+        top: -30px;
+        margin-bottom: 10px;
         width: 60%;
         height: auto;
-        margin-top: 25px;
     }
 
     /* home-bio code */
