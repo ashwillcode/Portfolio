@@ -401,7 +401,7 @@ footer p {
 
   /* navigation code */
   
-  /* home-bio code */
+  /* home-title code */
 
   #home-title img {
     width: 75%;
@@ -448,9 +448,15 @@ footer p {
     left: 345px;
     top: 65em;
   }
+
+  /* cta code */ 
+
   .cta-button p {
     margin-top: 30px;
   }
+
+  /* carousel code */
+
   .slider {
     height: 375px;
   }
