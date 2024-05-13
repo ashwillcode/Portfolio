@@ -1,4 +1,3 @@
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -53,7 +52,7 @@ table {
 
 
 :root{
-    --purple: #746492;
+    --purple: #d0b4f1;
     --brown: #4D3025;
     --white: #ffffff;
     --black: #000000;
@@ -63,10 +62,10 @@ table {
     --cream: #fff1cb;
     font-family: Impact, Trebuchet MS, sans-serif;
 }
-
 *{
     box-sizing: border-box;
 }
+
 script {
     display: none;
 }
@@ -78,28 +77,24 @@ script {
     height: 1px;
     overflow: hidden;
 }
-#home-main {
-    position: relative;
-    padding-bottom: 5px;
-}
-header {
-    display: flex;
-    justify-content: flex-end;
-}
-header a{
-    text-decoration: none;
-}
 .sr-only {
     display: none;
+}
+
+/* navigation code */
+
+header {
+    background-color: var(--cream);
+    height: 100px;
 }
 nav {
     z-index: 100;
 }
 .off-screen-menu {
     background-color: var(--green);
-    height:100vh;
+    height:150vh;
     width: 100%;
-    max-width:300px;
+    max-width:235px;
     top: 0px;
     right: -450px;
     display: flex;
@@ -108,7 +103,7 @@ nav {
     align-items: center;
     text-align: center;
     font-size: 16px;
-    transition: .5s ease;
+    transition: 1s ease;
 }
 .off-screen-menu.active {
     right: 0;
@@ -121,19 +116,19 @@ nav {
     width: 40px;
     margin-right: auto;
     position: absolute; 
-    top: 5px;
+    top: 20px;
     right: 15px;
 }
 .hamburger-menu span {
     height: 5px;
     width: 100%;
-    background-color: var(--cream);
+    background-color: var(--pink);
     border-radius: 25px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: .5s ease;
+    transition: 1s ease;
 
 }
 .hamburger-menu span:nth-child(1) {
@@ -145,6 +140,7 @@ nav {
 .hamburger-menu.active span:nth-child(1) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
+    background-color: var(--purple);
 }
 .hamburger-menu.active span:nth-child(2) {
    opacity: 0;
@@ -152,28 +148,26 @@ nav {
 .hamburger-menu.active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: var(--purple);
 }
 nav ul {
     list-style: none;
 }
 nav a {
     text-decoration: none;
-    color: var(--cream);
-    font-family: Trebuchet MS, san-serif;
+    color: var(--pink);
+    font-family: Trebuchet MS, sans-serif;
     font-size: 24px;
     text-transform: uppercase;
+    transition: color 2s ease;
 }
 nav li:nth-child(1) {
-    margin-top: 55px;
+    margin-top: 65px;
 }
 nav li {
     padding:20px 0;
 }
-.lrg-index-picture {
-    display: none;
-}
-
-@media screen and (min-width: 485px) {
-
-    
+nav a:hover {
+    color:var(--purple);
+    font-weight: bold;
 }
