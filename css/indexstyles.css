@@ -215,7 +215,7 @@ h1 {
 #home-title img {
     width: 100%;
     height: auto;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 }
 
 /*home-bio code */
@@ -397,16 +397,6 @@ footer p {
   /* navigation code */
   
   /* home-title code */
-
-  #home-title img {
-    width: 75%;
-    position: absolute;
-    top: 315px;
-    left: 180px;
-  }
-  #home-title p {
-    margin-bottom: 400px;
-  }
   
   /* home-bio code */ 
 
@@ -415,7 +405,6 @@ footer p {
   }
   .bio-main {
     max-width: 300px;
-    margin-top: 30px;
     margin-left: 25px;
     padding: 0px 10px;
     border: 5px solid var(--pink);
@@ -431,6 +420,7 @@ footer p {
   }
   .bio-photoquote p {
     margin-bottom: 0px;
+    margin-top: 0px;
   }
   .bio-portrait {
     width: 85%;
