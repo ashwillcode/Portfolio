@@ -164,7 +164,7 @@ nav li:nth-child(1) {
     margin-top: 65px;
 }
 nav li {
-    padding:20px 0;
+    padding: 20px 0;
 }
 nav a:hover {
     color:var(--purple);
@@ -205,9 +205,9 @@ nav a:hover {
     align-items: center;
 }
 .monsteraleaves {
-    width: 110%;
+    width: 115%;
     padding-top: 15px;
-    margin-top: 75px;
+    margin-top: 100px;
 }
 .educationicons img {
     width: 25px;
@@ -236,18 +236,15 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* hobbies code*/
-
 
 /* experience/table code */
 
-#experience h2 {
+.experience h2 {
     font-family: Impact, Trebuchet MS, sans-serif;
     font-size: 24px;
     color: var(--green);
     margin: 35px 0 35px 25px;
 }
-
 table {
     width: 75%;
     border: none;
@@ -271,22 +268,40 @@ th {
     font-family: Trebuchet MS, sans-serif;
     color: var(--green);
 }
-
 .skill-bar {
     margin-top: 5px;
     width: 100%;
     background-color: #f0f0f0; 
     border-radius: 5px;
 }
-
 .skill-bar-fill {
     height: 15px;
     border-radius: 5px;
 }
+.beginner { 
+    width: 30%; background-color: var(--purple); 
+} 
+.intermediate { 
+    width: 60%; background-color: var(--purple); 
+} 
+.advanced { 
+    width: 90%; background-color: var(--purple); 
+}
 
-.beginner { width: 30%; background-color: var(--purple); } 
-.intermediate { width: 60%; background-color: var(--purple); } 
-.advanced { width: 90%; background-color: var(--purple); }
+/* hobbies code*/
+
+.hobbies {
+    margin-bottom: 35px;
+}
+.hobbies h2 {
+    font-family: Impact, Trebuchet MS, sans-serif;
+    font-size: 24px;
+    color: var(--green);
+    margin: 35px 0 35px 25px;
+}
+.hobbies ul {
+    list-style-type: none;
+  }
 
 /* resume code */
 
