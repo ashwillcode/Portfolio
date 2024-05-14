@@ -181,7 +181,7 @@ nav a:hover {
 
 }
 .education-text {
-    min-width: 350px;
+    min-width: 320px;
 }
 .education-monstera {
     display: flex;
@@ -189,27 +189,28 @@ nav a:hover {
     align-items: center;
 }
 .monsteraleaves {
-    width: 100%;
+    width: 110%;
+    padding-top: 30px;
 }
 .educationicons img {
-    width: 30px;
+    width: 25px;
     float: left;
     margin-left: 25px;
-    padding-top: 10px;
+    padding-top: 14px;
 }
 .education-text p {
     color: var(--green);
-    margin-left: 80px;
+    margin-left: 60px;
     font-family: Trebuchet MS, sans-serif;
     font-size: 18px;
     line-height: 1.25;
 }
 #university, #bootcamp {
     color: var(--green);
-    text-shadow: .5px .5px .5px var(--pink);
+    text-shadow: 1px 1px 1px var(--pink);
 }
 .locationtext {
-    padding-top: 12px;
+    padding-top: 13px;
 }
 .datetext {
     padding-top: 10px;
