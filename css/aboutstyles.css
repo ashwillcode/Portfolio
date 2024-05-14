@@ -171,17 +171,33 @@ nav a:hover {
     font-weight: bold;
 }
 
+/* education section */
 
+.about-main h1 {
+    text-align: center;
+    font-family: Impact, Trebuchet MS, sans-serif;
+    font-size: 36px;
+    color: var(--green);
+    padding: 10px;
+    margin-top: 25px;
+    line-height: 2;
+    border-bottom: 5px solid var(--pink);
+}
 #education {
     padding-bottom: 20px;
 }
 .about-education {
     display: flex;
     flex-direction: row;
-
 }
 .education-text {
     min-width: 320px;
+}
+.education-text h2 {
+    font-family: Impact, Trebuchet MS, sans-serif;
+    font-size: 24px;
+    color: var(--green);
+    margin: 45px 0 35px 25px;
 }
 .education-monstera {
     display: flex;
@@ -190,7 +206,8 @@ nav a:hover {
 }
 .monsteraleaves {
     width: 110%;
-    padding-top: 30px;
+    padding-top: 15px;
+    margin-top: 75px;
 }
 .educationicons img {
     width: 25px;
@@ -207,7 +224,7 @@ nav a:hover {
 }
 #university, #bootcamp {
     color: var(--green);
-    text-shadow: 1px 1px 1px var(--pink);
+    text-transform: uppercase;
 }
 .locationtext {
     padding-top: 13px;
@@ -218,26 +235,58 @@ nav a:hover {
 .bold {
     font-weight: bold;
 }
+
+/* hobbies code*/
+
+
+/* experience/table code */
+
 #experience h2 {
-    margin-top: 0px;
-    margin-left: 0px;
-    padding-top: 30px;
+    font-family: Impact, Trebuchet MS, sans-serif;
+    font-size: 24px;
+    color: var(--green);
+    margin: 35px 0 35px 25px;
 }
+
 table {
-    width: 90%;
-    border: 2px solid var(--pink);
+    width: 75%;
+    border: none;
     border-collapse: collapse;
-    margin: 20px auto 15px auto;
+    margin: 20px auto 35px auto;
 }
-th, td {
-    text-align: center;
-    font-size: 16px;
+td {
+    text-align: right;
+    font-size: 18px;
     padding: 8px;
-    border: 2px solid var(--pink);
+    border: none;
+    font-family: Trebuchet MS, sans-serif;
+    color: var(--green);
+}
+th {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 0px;
+    border: none;
     font-family: Trebuchet MS, sans-serif;
     color: var(--green);
 }
 
+.skill-bar {
+    margin-top: 5px;
+    width: 100%;
+    background-color: #f0f0f0; 
+    border-radius: 5px;
+}
+
+.skill-bar-fill {
+    height: 15px;
+    border-radius: 5px;
+}
+
+.beginner { width: 30%; background-color: var(--purple); } 
+.intermediate { width: 60%; background-color: var(--purple); } 
+.advanced { width: 90%; background-color: var(--purple); }
 
 /* resume code */
 
@@ -292,15 +341,20 @@ footer p {
 }
 @keyframes rotate-hover {
     from {
-        transform: rotate(0deg); /* Start the rotation from 0 degrees */
+        transform: rotate(0deg); 
     }
     to {
-        transform: rotate(360deg); /* Rotate the element by 360 degrees */
+        transform: rotate(360deg); 
     }
 }
 .social-icon:hover {
-    animation: rotate-hover 3s linear infinite; /* Apply the rotation animation */
+    animation: rotate-hover 3s linear infinite; 
 }
+
+
+
+
+
 
 @media screen and (min-width: 575px) {
     /* navigation code */
