@@ -311,7 +311,7 @@ th {
     color:var(--green);
     font-size: 18px;
     text-align: center;
-    padding: 0 8px;
+    padding: 0 0px;
   }
 .hobbies-img {
     width: 45px; 
