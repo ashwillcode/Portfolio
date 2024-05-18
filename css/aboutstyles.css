@@ -183,31 +183,22 @@ nav a:hover {
     line-height: 2;
     border-bottom: 5px solid var(--pink);
 }
-#education {
+#education-experience {
     padding-bottom: 20px;
 }
 .about-education {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .education-text {
     min-width: 320px;
+    margin-bottom: 35px;
 }
 .education-text h2 {
     font-family: Impact, Trebuchet MS, sans-serif;
     font-size: 24px;
     color: var(--green);
     margin: 45px 0 35px 25px;
-}
-.education-monstera {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
-.monsteraleaves {
-    width: 115%;
-    padding-top: 15px;
-    margin-top: 115px;
 }
 .educationicons img {
     width: 25px;
@@ -217,7 +208,7 @@ nav a:hover {
 }
 .education-text p {
     color: var(--green);
-    margin-left: 60px;
+    margin-left: 75px;
     font-family: Trebuchet MS, sans-serif;
     font-size: 18px;
     line-height: 1.25;
@@ -243,13 +234,13 @@ nav a:hover {
     font-family: Impact, Trebuchet MS, sans-serif;
     font-size: 24px;
     color: var(--green);
-    margin: 35px 0 35px 25px;
+    margin: 25px 0 35px 25px;
 }
 table {
     width: 85%;
     border: none;
     border-collapse: collapse;
-    margin: 20px auto 35px auto;
+    margin: 20px auto 10px auto;
 }
 td {
     text-align: right;
@@ -268,6 +259,7 @@ th {
     font-family: Trebuchet MS, sans-serif;
     color: var(--green);
 }
+
 .skill-bar {
     margin-top: 5px;
     width: 100%;
@@ -297,7 +289,7 @@ th {
     font-family: Impact, Trebuchet MS, sans-serif;
     font-size: 24px;
     color: var(--green);
-    margin: 35px 0 35px 25px;
+    margin: 15px 0 35px 25px;
 }
 .hobbies ul {
     list-style-type: none;
@@ -392,19 +384,104 @@ footer p {
 
 
 
-
-
-
 @media screen and (min-width: 575px) {
     /* navigation code */
   
+    .small-column {
+        width: 50%;
+    }
+    .about-education {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .education-text {
+        padding-right: 25px;
+        margin-bottom: 0px;
+    }
+    .education-text h2 {
+        text-align: center;
+        margin-top: 45px;
+    }
+    .experience h2 {
+        text-align: center;
+        margin-top: 45px;
+    }
+    th {
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
 
+    .hobbies h2 {
+        text-align: center;
+    }
+    .hobbies-img {
+        width: 65px; 
+        height: auto;
+    }
+    #hobbies-icons li {
+        padding: 0px 15px;
+      }
+    #hobbies-icons li:nth-child(4) img {
+        width: 85px;
+        height: auto;
+    }
+    #hobbies-icons li:nth-child(5) img {
+        width: 75px;
+        height: auto;
+    }
     
   }
   
   @media screen and (min-width: 920px) {
   
       /* navigation code */
-  
+
+      .about-main h1 {
+        font-size: 42px;
+    }
+
+      .education-text h2 {
+        font-size: 32px;
+      }
+      .education-text p {
+        font-size: 24px;
+      }
+
+      .experience h2 {
+        font-size: 32px;
+      }
+      .experience {
+        width: 40%;
+    }
+    .education-text {
+        width: 40%;
+    }
+
+    td {
+        font-size: 24px;
+    }
+    th {
+        font-size: 24px;
+    }
+
+    .hobbies h2 {
+        font-size: 32px;
+    }
+    #hobbies-icons li {
+        font-size: 24px;
+    }
+    .hobbies-img {
+        width: 85px; 
+        height: auto;
+    }
+    #hobbies-icons li:nth-child(4) img {
+        width: 105px;
+        height: auto;
+    }
+    #hobbies-icons li:nth-child(5) img {
+        width: 95px;
+        height: auto;
+    }
+    
 
     }
