@@ -395,12 +395,16 @@ footer p {
         justify-content: center;
     }
     .education-text {
+        width: 50%;
         padding-right: 25px;
         margin-bottom: 0px;
     }
     .education-text h2 {
         text-align: center;
         margin-top: 45px;
+    }
+    .experience {
+        width: 50%;
     }
     .experience h2 {
         text-align: center;
@@ -442,18 +446,18 @@ footer p {
 
       .education-text h2 {
         font-size: 32px;
-      }
+    }
       .education-text p {
         font-size: 24px;
-      }
+    }
 
       .experience h2 {
         font-size: 32px;
-      }
+    }
       .experience {
         width: 40%;
     }
-    .education-text {
+      .education-text {
         width: 40%;
     }
 
