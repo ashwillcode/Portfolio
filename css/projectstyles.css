@@ -249,7 +249,7 @@ nav a:hover {
 /* carousel code */
 
 .slider {
-    width: 90%;
+    width: 425px;
     height: 610px;
     position: relative;
   }
@@ -259,7 +259,6 @@ nav a:hover {
     height: auto;
     position: absolute;
     top: 0;
-    left: 0;
     padding: 10px;
   }
   
