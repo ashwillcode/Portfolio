@@ -220,6 +220,12 @@ nav a:hover {
     color: var(--green);
     margin: 45px 0 35px 25px;
 }
+#ashole p {
+    color: var(--green);
+    margin: 0 25px 25px 25px;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 18px;
+}
 .ashole-styleguide h3 {
     font-family: Impact, Trebuchet MS, sans-serif;
     font-size: 18px;
@@ -295,7 +301,7 @@ nav a:hover {
     font-family: Impact, Trebuchet MS, sans-serif;
     font-size: 24px;
     color: var(--green);
-    margin: 65px 0 25px 25px;
+    margin: 45px 0 25px 25px;
 }
 .serendipit-flyer h3 {
     font-family: Impact, Trebuchet MS, sans-serif;
