@@ -198,7 +198,8 @@ nav a:hover {
     font-family: Impact, Trebuchet MS, sans-serif;
     font-size: 24px;
     color: var(--green);
-    margin: 45px 0 35px 25px;
+    padding: 0 25px;
+    margin: 45px 0 35px 0;
 }
 .educationicons img {
     width: 25px;
@@ -234,7 +235,8 @@ nav a:hover {
     font-family: Impact, Trebuchet MS, sans-serif;
     font-size: 24px;
     color: var(--green);
-    margin: 25px 0 35px 25px;
+    padding: 0px 25px;
+    margin: 25px 0 35px 0px;
 }
 table {
     width: 85%;
@@ -289,7 +291,8 @@ th {
     font-family: Impact, Trebuchet MS, sans-serif;
     font-size: 24px;
     color: var(--green);
-    margin: 15px 0 35px 25px;
+    padding: 0 25px; 
+    margin: 15px 0 35px 0px;
 }
 .hobbies ul {
     list-style-type: none;
@@ -344,7 +347,8 @@ th {
 
 footer {
     background-color: var(--cream);
-    padding: 1px;
+    padding: 20px;
+    margin-top: 35px;
 }
 footer p {
     font-family: Impact, Trebuchet MS, sans-serif;

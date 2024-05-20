@@ -217,6 +217,7 @@ h1 {
 }
 .text, .cta-text {
     font-family: Trebuchet MS, sans-serif;
+    line-height: 1.15;
     font-size: 18px;
     color: var(--green);
     padding: 25px;
@@ -230,17 +231,20 @@ h1 {
 .bio-photoquote p {
     min-width: 225px;
     font-family: Trebuchet MS, sans-serif;
+    line-height: 1.15;
     font-size: 28px;
     -webkit-text-stroke: 1px #013220;
     color: transparent;
-    margin: 35px 5px 25px 25px;
+    margin: 25px 0px;
+    padding: 0px 5px 0px 25px;
+
 }
 .bio-portrait {
     min-width: 170px;
     width: 30%;
     height: 30%;
     margin-top: 25px;
-    margin-right: 20px;
+    padding-right: 20px;
 
 
 }
@@ -307,8 +311,8 @@ h1 {
 /* carousel code */
 
 .slider {
-    width: 95%;
-    height: 250px;
+    width: 400px;
+    height: 190px;
     position: relative;
 } 
 .slider img {
@@ -348,7 +352,8 @@ h1 {
 
 footer {
     background-color: var(--cream);
-    padding: 1px;
+    padding: 20px;
+    margin-top: 35px;
 }
 footer p {
     font-family: Impact, Trebuchet MS, sans-serif;
@@ -437,7 +442,8 @@ footer p {
   /* carousel code */
 
   .slider {
-    height: 355px;
+    width: 625px;
+    height: 300px;
   }
   
 }
@@ -477,45 +483,48 @@ footer p {
     }
 
     /* home-bio code */
-  
-    .bio-main {
+    
+      .bio-main {
         max-width: 60%;
         border-radius: 0 0 0 35px;
       }
-    #home-bio h2 {
+      #home-bio {
+        padding: 0px 50px;
+      }
+      #home-bio h2 {
         font-size: 32px;
-    }
-    .bio-photoquote {
+      }
+      .bio-photoquote {
         flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-right: 20px;
         margin-bottom: 0px;
-    }
-    .bio-photoquote p {
+      }
+      .bio-photoquote p {
         margin-bottom: 0px;
         margin-top: 0px;
         font-size: 36px;
-    }
-    .bio-portrait {
+      }
+      .bio-portrait {
         width: 75%;
         height: auto;
         margin-left: 0px;
-    }
-    .text, .cta-text {
+      }
+      .text, .cta-text {
         font-size: 24px;
-    }
+      }
 
     /* home-carousel code */
 
-    #home-carousel h3 {
+      #home-carousel h3 {
         font-size: 32px;
-    }
+      }
 
     /* carousel code */
 
-    .slider {
+      .slider {
         width: 775px;
         height: 400px;
-    }
+      }
   }
