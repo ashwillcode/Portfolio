@@ -259,28 +259,24 @@ nav a:hover {
     height: 570px;
     position: relative;
   }
-  
-  .slider img {
+.slider img {
     width: 100%;
     height: auto;
     position: absolute;
     top: 0;
     padding: 10px;
-  }
-  
-  .slider img:first-child {
+} 
+.slider img:first-child {
     z-index: 1;
-  }
-  
-  .slider img:nth-child(2) {
+}
+.slider img:nth-child(2) {
     z-index: 0;
-  }
-  .navigation-button {
+}
+.navigation-button {
     text-align: center;
     position: relative;
-  }
-  
-  .dot {
+}
+.dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -288,10 +284,9 @@ nav a:hover {
     background-color: var(--pink);
     border-radius: 50%;
     display: inline-block;
-  }
-  
-  .dot:active,
-  .dot:hover {
+} 
+.dot:active,
+.dot:hover {
     background-color: var(--purple);
 }
 
@@ -321,11 +316,11 @@ nav a:hover {
     color: var(--green);
     margin: 25px 0 25px 25px;
 }
-.serendipit-businesscards img {
+.businesscards-wrapper img {
     width: 90%;
     margin: 0 25px 25px 25px;
 }
-#serendipit p {
+.serendipit-text p {
     color: var(--green);
     margin: 0 25px 35px 25px;
     font-family: Trebuchet MS, sans-serif;
@@ -419,6 +414,112 @@ footer p {
 @media screen and (min-width: 575px) {
     /* navigation code */
   
+      #asu {
+        padding: 0 25px;
+      }
+      #asu h2 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .asu-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+      }
+      .asu-wrapper {
+        display: flex;
+        flex-direction: row;
+      }
+
+      #ashole {
+        padding: 0 25px;
+      }
+      #ashole h2 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      #ashole p {
+        margin-bottom: 0px;
+        text-align: center;
+      }
+      .ashole-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .slider {
+        width: 325px;
+        height: 465px;
+      }
+      .ashole-styleguide img {
+        width: 275px;
+      }
+      .ashole-styleguide h3 {
+        text-align: center;
+      }
+      .ashole-stickerdesign h3 {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      #serendipit {
+        padding: 0 25px; 
+      }
+      #serendipit h2 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .serendipit-flyer h3, .serendipit-businesscards h3 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .serendipit-flyer img {
+        width: 425px;
+      }
+      .serendipit-wrapper {
+        display: flex;
+        flex-direction: row;
+      }
+      .serendipit-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+      }
+      .serendipit-text p {
+        width: 250px;
+      }
+      .businesscards-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+      }
+      .businesscards-wrapper img {
+        width: 350px;
+        height: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+      } 
+
+
+      #sigma h2 {
+        text-align: center;
+        margin-left: 0; 
+        margin-right: 0;
+      }
+      #sigma p {
+        text-align: center;
+      }
+      .sigma-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
 
     
   }
@@ -426,7 +527,68 @@ footer p {
   @media screen and (min-width: 920px) {
   
       /* navigation code */
-  
+
+      #asu {
+        padding: 0 50px;
+        justify-content: center;
+      }
+      #asu h2 {
+        font-size: 32px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .asu-text a img {
+        width: 50px;
+      }
+      .asu-text p {
+        font-size: 24px;
+        width: 350px;
+      }
+      .asu-photo {
+        width: 100%;
+        padding: 0 25px;
+        margin: 0px;
+      }
+
+      #ashole {
+        padding: 0 50px;
+      }
+      #ashole h2 {
+        font-size: 32px;
+      }
+      #ashole p {
+        font-size: 24px;
+      }
+      .slider {
+        width: 525px;
+        height: 750px;
+        margin-left: 35px;
+    }
+      .ashole-styleguide img {
+        width: 450px;
+        margin-right: 35px;
+    }
+      .ashole-stickerdesign h3, .ashole-styleguide h3 {
+        font-size: 24px;
+    }
+    
+      #serendipit {
+        padding: 0 50px
+    }
+      #serendipit h2 {
+        font-size: 32px;
+      }
+      .serendipit-text p {
+        font-size: 24px;
+      }
+
+
+      #sigma h2 {
+        font-size: 32px;
+      }
+      #sigma p {
+        font-size: 24px;
+      }
 
     }
 
