@@ -171,6 +171,107 @@ nav a:hover {
     font-weight: bold;
 }
 
+/* contact code */
+
+.contact-main h1 {
+    text-align: center;
+    font-family: Impact, Trebuchet MS, sans-serif;
+    font-size: 36px;
+    color: var(--green);
+    padding: 10px;
+    margin-top: 25px;
+    line-height: 2;
+    border-bottom: 5px solid var(--pink);
+}
+
+
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px; 
+    margin: 35px 0;
+}
+.contact-details a, .contact-details p {
+    text-decoration: none;
+    font-family: Trebuchet MS, sans-serif;
+    line-height: 1.25;
+    font-size: 18px;
+    color: var(--green);
+    padding: 3px;
+}
+.contact-details p {
+    text-transform: uppercase;
+}
+.contact-details a {
+    transition: color 2s ease
+}
+.contact-details a:hover {
+    color: var(--purple);
+
+
+}
+#contact-info img {
+    width: 33px;
+}
+.phone-details img, .email-details img {
+    margin-right: 15px;
+}
+.phone-details, .email-details {
+    display: flex;
+    flex-direction: row;
+}
+.phone-details {
+    margin-bottom: 25px;
+}
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+/* form code */
+
+#form {
+    display: flex;
+    justify-content: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 35px 0;
+    width: 400px;
+}
+form label {
+    font-family: Trebuchet MS, sans-serif;
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--green);
+}
+form input, form textarea {
+    font-size: 18px;
+    font-family: Trebuchet MS, sans-serif;
+    color: var(--green);
+}
+.required {
+    color: var(--red);
+}
+form input[type="submit"] {
+    background-color: var(--pink);
+    color: var(--green);
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 0 0px 0px 15px;
+    border: none;
+    font-family: Trebuchet MS, sans-serif;
+    text-transform: uppercase;
+    transition: background-color 2s ease
+}
+form input[type="submit"]:hover {
+    background-color: var(--purple);
+}
+
+
 /* resume code */
 
 #cta-resume {
@@ -196,7 +297,8 @@ nav a:hover {
 
 footer {
     background-color: var(--cream);
-    padding: 1px;
+    padding: 20px;
+    margin-top: 35px;
 }
 footer p {
     font-family: Impact, Trebuchet MS, sans-serif;
@@ -237,14 +339,28 @@ footer p {
 
 @media screen and (min-width: 575px) {
     /* navigation code */
-  
 
+    form {
+        width: 550px;
+    }
     
   }
   
   @media screen and (min-width: 920px) {
   
       /* navigation code */
-  
+
+      .about-main h1 {
+        font-size: 42px;
+    }
+    .contact-details a, .contact-details p {
+        font-size: 24px;
+    }
+    form input, form textarea {
+        font-size: 24px;
 
     }
+    form label {
+        font-size: 24px;
+    }
+}
