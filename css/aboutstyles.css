@@ -86,6 +86,11 @@ header {
     background-color: var(--cream);
     height: 100px;
 }
+
+#menu2{
+    display: none;
+}
+
 nav {
     z-index: 100;
 }
@@ -389,7 +394,6 @@ footer p {
 
 
 @media screen and (min-width: 575px) {
-    /* navigation code */
   
     .small-column {
         width: 50%;
@@ -397,10 +401,10 @@ footer p {
     .about-education {
         flex-direction: row;
         justify-content: center;
+        padding: 0 25px;
     }
     .education-text {
         width: 50%;
-        padding-right: 25px;
         margin-bottom: 0px;
     }
     .education-text h2 {
@@ -444,52 +448,83 @@ footer p {
   
       /* navigation code */
 
+      .nav{
+        display: none;
+      }
+
+      nav li:nth-child(1) {
+        margin-top: 0;
+      }
+
+      #menu2{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 50px;
+        padding-top: 40px;
+        margin-right: 35px;
+      }
+      #menu2 li a {
+        font-family: Impact;
+        font-size: 24px;
+        color: var(--green);
+        padding: 12px;
+      }
+      #menu2 li a:hover {
+        color:var(--purple);
+        font-weight: normal;
+        border: 3px solid #ff8983;
+        border-radius: 0px 0px 0px 15px;
+      }
+
+      /* about code */
+
       .about-main h1 {
         font-size: 42px;
-    }
+      }
 
       .education-text h2 {
         font-size: 32px;
-    }
+      }
       .education-text p {
         font-size: 24px;
-    }
+      }
 
       .experience h2 {
         font-size: 32px;
-    }
+      }
       .experience {
-        width: 40%;
-    }
+        width: 50%;
+      }
       .education-text {
         width: 40%;
-    }
+      }
 
-    td {
+      td {
         font-size: 24px;
-    }
-    th {
+      }
+      th {
         font-size: 24px;
-    }
+      }
 
-    .hobbies h2 {
+      .hobbies h2 {
         font-size: 32px;
-    }
-    #hobbies-icons li {
+      }
+      #hobbies-icons li {
         font-size: 24px;
-    }
-    .hobbies-img {
+      }
+      .hobbies-img {
         width: 85px; 
         height: auto;
-    }
-    #hobbies-icons li:nth-child(4) img {
+      }
+      #hobbies-icons li:nth-child(4) img {
         width: 105px;
         height: auto;
-    }
-    #hobbies-icons li:nth-child(5) img {
+      }
+      #hobbies-icons li:nth-child(5) img {
         width: 95px;
         height: auto;
-    }
+      }
     
 
     }

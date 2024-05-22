@@ -94,6 +94,10 @@ header {
 nav {
     z-index: 100;
 }
+#menu2{
+    display: none;
+}
+
 .off-screen-menu {
     background-color: var(--green);
     height:150vh;
@@ -451,6 +455,35 @@ footer p {
 @media screen and (min-width: 920px) {
 
     /* navigation code */
+
+    .nav{
+        display: none;
+    }
+
+    nav li:nth-child(1) {
+        margin-top: 0;
+    }
+
+    #menu2{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 50px;
+        padding-top: 40px;
+        margin-right: 35px;
+    }
+    #menu2 li a {
+        font-family: Impact;
+        font-size: 24px;
+        color: var(--green);
+        padding: 12px;
+    }
+    #menu2 li a:hover {
+        color:var(--purple);
+        font-weight: normal;
+        border: 3px solid #ff8983;
+        border-radius: 0px 0px 0px 15px;
+    }
 
     /* home-title */
 
