@@ -296,7 +296,7 @@ nav a:hover {
     border-radius: 50%;
     display: inline-block;
 } 
-.dot:active,
+.active-carousel,
 .dot:hover {
     background-color: var(--purple);
 }
