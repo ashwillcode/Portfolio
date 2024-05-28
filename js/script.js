@@ -24,3 +24,4 @@ function changeSlide(n) {
   imgs[currentImg].style.opacity = 1;
   dots[currentImg].className += ' active-carousel';
 }
+
