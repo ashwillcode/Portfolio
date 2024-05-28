@@ -327,7 +327,7 @@ nav a:hover {
     border-radius: 50%;
     display: inline-block;
 } 
-.dot:active {
+.active-carousel {
     background-color: #d0b4f1;
 } 
 .dot:hover {
