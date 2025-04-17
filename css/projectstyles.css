@@ -201,8 +201,6 @@ nav a:hover {
 
 .project-card {
     background-color: var(--white);
-    border: 5px solid var(--pink);
-    border-radius: 0px 15px 15px 15px;
     overflow: hidden;
     width: 100%;
     max-width: 1300px;
@@ -216,7 +214,26 @@ nav a:hover {
 .project-image img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.project-image img[src="images/moveapi.png"],
+.project-image img[src="images/film.png"],
+.project-image img[src="images/meet.png"],
+.project-image img[src="images/chat.JPEG"],
+.project-image img[src="images/myflix.png"] {
+    border: 1px solid #e0e0e0;
+}
+
+.project-card:has(img[src="images/chat.JPEG"]) .project-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image img[src="images/chat.JPEG"] {
+    max-width: 65%;
 }
 
 .project-content {
@@ -258,7 +275,7 @@ nav a:hover {
     font-family: var(--fontFamilyParagraph);
     font-size: 14px;
     padding: 5px 10px;
-    border-radius: 20px;
+    border-radius: 5px;
     font-weight: bold;
 }
 
@@ -454,11 +471,14 @@ footer p {
   .project-image {
     width: 40%;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
   }
 
   .project-image img {
-    height: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   .project-content {
