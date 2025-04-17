@@ -65,68 +65,52 @@
     </header>
     <main class="projects-main">
         <h1> My Projects</h1>
-        <section id="asu">
-            <h2>ASU</h2>
-            <div class="asu-wrapper">
-                <div class="asu-text">
-                    <a href="https://ashwillcode.github.io/wunderlust/" target="_blank"><img src="images/link-circle-svgrepo-com.svg" alt="link icon"></a>
-                    <p>This showcase project was the capstone of my website design course following a comprehensive brand guidebook and wireframe. The design integrates across three media screens, accommodating easy compatibility to a spectrum of screen sizes. It shows an aptitude for responsive design.</p>
+        
+        <section class="project-grid">
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/pokedex.png" alt="Pokédex application showing a list of Pokémon with a Charmander details modal">
                 </div>
-                <a href="https://ashwillcode.github.io/wunderlust/" target="_blank"><img src="images/ASUWebsite-01.jpg" class="asu-photo" alt="display of a website build for Wunderlust travel on a laptop"></a>
-            </div>
-        </section>
-        <section id="ashole">
-            <h2>Ashole World</h2>
-            <p>For my small business, I developed a line of plushies and stickers inspired by K-pop and anime references. Each product is meticulously crafted, focusing on high-quality materials and attention to detail. The designs aim to resonate with fans, providing them with unique collectibles that celebrate their favorite characters and idols. This venture highlights my ability to create engaging and culturally relevant merchandise, tailored to niche markets and fan communities.</p>
-            <div class="ashole-wrapper">
-                <div class="ashole-styleguide">
-                    <h3>Style Guide</h3>
-                    <img src="images/AsholeWorld-StyleGuide.jpg" alt="ashole world style guide">
-                </div>
-                <div class="ashole-stickerdesign">
-                    <h3>Sticker Designs</h3>
-                    <div class="sticker-carousel">
-                        <div class="slider">
-                            <img id="img-1" src="images/StickerDesigns1-01.jpg" alt="ashole world sticker designs, daechwita yoongi, mang cupcake">
-                            <img id="img-2" src="images/StickerDesigns2-01.jpg" alt="ashole world sticker designs, koya cupcake and chimmy cupcake">
-                            <img id="img-3" src="images/StickerDesigns3-01.jpg" alt="ashole world sticker designs, shooky cupcake and cooky cupcake">
-                            <img id="img-4" src="images/StickerDesigns4-01.jpg" alt="ashole world sticker designs, rj cupcake and tata cupcake">
-                        </div>
-                        <div class="navigation-button">
-                            <span class="dot active" onclick="changeSlide(0)"></span>
-                            <span class="dot" onclick="changeSlide(1)"></span>
-                            <span class="dot" onclick="changeSlide(2)"></span>
-                            <span class="dot" onclick="changeSlide(3)"></span>
-                        </div>
+                <div class="project-content">
+                    <h2>Simple Pokédex</h2>
+                    <p>A modern web application that provides an intuitive interface to explore the world of Pokémon, featuring infinite scroll loading, real-time search capabilities, and detailed Pokémon information in a clean, responsive design.</p>
+                    
+                    <h3>Technologies Used</h3>
+                    <ul class="tech-stack">
+                        <li>JavaScript (ES6+)</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Bootstrap 5.3.0</li>
+                        <li>PokeAPI</li>
+                    </ul>
+                    
+                    <h3>Key Features</h3>
+                    <ul class="features-list">
+                        <li>Infinite scroll loading for Pokémon catalog</li>
+                        <li>Real-time search functionality</li>
+                        <li>Interactive Pokémon cards with detailed information</li>
+                        <li>Responsive design for desktop and mobile</li>
+                        <li>Type-based color coding for Pokémon cards</li>
+                    </ul>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/ashwillcode/simple-pokedex" target="_blank" class="github-link">
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM7.5316 7.08431L7.53366 7.08355L7.53604 7.08267L7.54087 7.08091L7.55081 7.07737L7.57182 7.07025C7.58633 7.06549 7.60182 7.06074 7.6183 7.05608C7.65128 7.04675 7.68807 7.03782 7.72867 7.02994C8.20584 6.93729 9.0031 7.02006 10.1532 7.80058C10.1818 7.81993 10.2105 7.83971 10.2394 7.85992C10.2789 7.85029 10.3184 7.84099 10.3579 7.83202C11.4419 7.58611 12.5581 7.58611 13.6421 7.83202C13.6816 7.84099 13.7211 7.85028 13.7605 7.8599C13.7894 7.83969 13.8181 7.81993 13.8466 7.80058C14.9921 7.02276 15.7861 6.9371 16.2648 7.02957C16.3062 7.03756 16.3438 7.04667 16.3774 7.05621C16.3942 7.06098 16.41 7.06584 16.4248 7.07072L16.4462 7.07802L16.4564 7.08166L16.4613 7.08347L16.4637 7.08437L16.4649 7.08482L16.4661 7.08527C16.7354 7.1865 16.948 7.39879 17.0497 7.6679C17.0578 7.68938 17.0658 7.71087 17.0735 7.73236C17.3441 8.4823 17.4189 9.29796 17.297 10.0849C17.2897 10.1321 17.2816 10.1792 17.2729 10.2262C17.3025 10.2737 17.3312 10.3217 17.3591 10.3703C17.7894 11.1208 18.0102 11.9955 17.9996 12.8811C17.9985 14.7913 17.4961 16.151 16.5726 17.0527C15.6687 17.9353 14.517 18.2221 13.5643 18.3377L13.5629 18.3379C12.509 18.5143 11.488 18.5233 10.4308 18.366L10.4004 18.3619C9.45151 18.233 8.30946 17.9315 7.41451 17.0443C6.50083 16.1385 6.00148 14.7825 6.00036 12.8811C5.98983 11.9955 6.21063 11.1208 6.64093 10.3703C6.66873 10.3218 6.69739 10.2739 6.72693 10.2265C6.71815 10.1794 6.71008 10.1322 6.70271 10.0849C6.58079 9.30157 6.65298 8.48972 6.91854 7.74178C6.92686 7.71832 6.93539 7.69491 6.9441 7.67156C7.04549 7.39999 7.26002 7.18567 7.5316 7.08431Z" fill="#ff8983"/></svg>
+                            GitHub Repository
+                        </a>
+                        <a href="https://ashwillcode.github.io/simple-pokedex/" target="_blank" class="live-link">
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none">
+                                <g id="SVGRepo_iconCarrier">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355C22 19.0711 22 16.714 22 12C22 7.28595 22 4.92893 20.5355 3.46447C19.0711 2 16.714 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355ZM9.5 8.75C7.70507 8.75 6.25 10.2051 6.25 12C6.25 13.7949 7.70507 15.25 9.5 15.25C11.2949 15.25 12.75 13.7949 12.75 12C12.75 11.5858 13.0858 11.25 13.5 11.25C13.9142 11.25 14.25 11.5858 14.25 12C14.25 14.6234 12.1234 16.75 9.5 16.75C6.87665 16.75 4.75 14.6234 4.75 12C4.75 9.37665 6.87665 7.25 9.5 7.25C9.91421 7.25 10.25 7.58579 10.25 8C10.25 8.41421 9.91421 8.75 9.5 8.75ZM17.75 12C17.75 13.7949 16.2949 15.25 14.5 15.25C14.0858 15.25 13.75 15.5858 13.75 16C13.75 16.4142 14.0858 16.75 14.5 16.75C17.1234 16.75 19.25 14.6234 19.25 12C19.25 9.37665 17.1234 7.25 14.5 7.25C11.8766 7.25 9.75 9.37665 9.75 12C9.75 12.4142 10.0858 12.75 10.5 12.75C10.9142 12.75 11.25 12.4142 11.25 12C11.25 10.2051 12.7051 8.75 14.5 8.75C16.2949 8.75 17.75 10.2051 17.75 12Z" fill="#ff8983"/>
+                                </g>
+                            </svg>
+                            Live Demo
+                        </a>
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
-        <section id="serendipit">
-            <h2>Serendipit</h2>
-            <div class="serendipit-wrapper">
-                <div class="serendipit-text">
-                    <p>Explore this selection of marketing materials designed for web and print, all crafted using Adobe Suite. Each piece reflects my dedication to delivering effective visual solutions for diverse marketing requirements while adhering to specific brand guidelines. </p>
-                </div>
-                <div class="serendipit-flyer">
-                    <h3>Print Ads</h3>
-                    <img src="images/SerendipitFlyer-01.jpg" alt="Sienna House Flyer">
-                </div>
-            </div>
-            <div class="serendipit-businesscards">
-                <h3>Business Cards</h3>
-                <div class="businesscards-wrapper">
-                    <img src="images/SerendiptBusinessCard1-01.jpg" alt="business cards for Serendipit Marketing">
-                    <img src="images/SerendiptBusinessCard2-01.jpg" alt="business cards for serendipit marketing with puppy head">
-                </div>
-            </div>
-        </section>
-        <section id="sigma">
-            <h2>Sigma</h2>
-            <p>Throughout the package design internship, I held a pivotal role in refining layouts for existing products, ensuring to align them with brand specifications, as well as complying with FDA and USDA regulations. Consistently aimed to inject creativity and fresh perspectives into the designs and artwork, with the goal to elevate the overall quality and appeal of the packaging for the consumer.</p>
-            <img src="images/23_LaChona_9ozCrumbledSausagePouch_F.png" class="sigma-image" alt="lachona sausage crumble pouch">
-        </section>
-        <a href="files/AshleyWilliamsResume2024.pdf" id="cta-resume" target="_blank"> Download my resume</a>
     </main>
     <footer>
         <p>Connect With Me!</p>

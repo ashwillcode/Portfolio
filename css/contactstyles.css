@@ -377,12 +377,13 @@ footer p {
         font-size: 24px;
         color: var(--green);
         padding: 12px;
+        border: 3px solid transparent;
+        border-radius: 0px 0px 0px 15px;
       }
       #menu2 li a:hover {
         color:var(--purple);
         font-weight: normal;
-        border: 3px solid #ff8983;
-        border-radius: 0px 0px 0px 15px;
+        border-color: #ff8983;
       }
 
       /* contact code */
