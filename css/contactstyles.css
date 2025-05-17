@@ -194,7 +194,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     padding: 0 25px; 
-    margin: 35px 0;
+    margin: 15px 0;
 }
 .contact-details a, .contact-details p {
     text-decoration: none;
@@ -223,6 +223,7 @@ nav a:hover {
 .phone-details, .email-details {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
 }
 .phone-details {
     margin-bottom: 25px;
@@ -230,6 +231,10 @@ nav a:hover {
 .contact-details {
     display: flex;
     flex-direction: column;
+}
+.phone-details img,
+.email-details img {
+    margin-top: 3px;
 }
 
 /* form code */
@@ -241,12 +246,13 @@ nav a:hover {
 form {
     display: flex;
     flex-direction: column;
-    margin: 35px 0;
     width: 400px;
+    padding: 10px;
 }
 form label {
     font-family: var(--fontFamilyParagraph);
-    margin-top: 10px;
+    margin: 10px 0;
+    margin-top: 20px;
     font-size: 18px;
     color: var(--green);
 }
@@ -254,7 +260,14 @@ form input, form textarea {
     font-size: 18px;
     font-family: var(--fontFamilyParagraph);
     color: var(--green);
+    padding: 10px;
 }
+
+/* Smaller placeholder text */
+form input::placeholder, form textarea::placeholder {
+    color: #888;
+}
+
 .required {
     color: var(--red);
 }
