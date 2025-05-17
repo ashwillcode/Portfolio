@@ -221,7 +221,7 @@ nav a:hover {
     line-height: 1.25;
 }
 #university, #bootcamp {
-    color: var(--green);
+    color: var(--pink);
     text-transform: uppercase;
 }
 .locationtext {
@@ -233,7 +233,24 @@ nav a:hover {
 .bold {
     font-weight: bold;
 }
-
+.cert-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-left: 75px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: var(--fontFamilyParagraph);
+  color: var(--green);
+  font-size: 18px;
+}
+.cert-list li {
+  margin-bottom: 2px;
+}
+.cert-issued-text {
+  font-style: italic;
+  font-size: 16px;
+  font-weight: normal;
+}
 
 /* experience/table code */
 
