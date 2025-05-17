@@ -205,11 +205,14 @@ h1 {
     color: var(--green);
     padding-left: 25px;
     padding-bottom: 20px;
+    line-height: 1.25;
 }
 #home-title img {
+    position: relative;
+    top: 0;
+    margin-bottom: 10px;
     width: 100%;
     height: auto;
-    margin-bottom: 35px;
 }
 
 /*home-bio code */
@@ -511,7 +514,6 @@ footer p {
     }
     #home-title img {
         position: relative;
-        top: -30px;
         margin-bottom: 10px;
         width: 60%;
         height: auto;
