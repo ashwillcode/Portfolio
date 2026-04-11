@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import '@fontsource/oswald/700.css';
 import '@fontsource/anton/400.css';
+import girlAtDesk from './assets/girl_at_desk.PNG';
 
 function NavItem ({children, onClick, isActive }: {children: string; onClick: () => void; isActive: boolean }) {
   return (
@@ -22,28 +23,28 @@ function SectionHeading({ children}: { children: string}) {
   return <h2 className="text-5xl">{children}</h2>
 }
 
-function PetalDivider({ fillColor }: { fillColor: string }) {
+function PetalDivider({ fillColor, waveOffset }: { fillColor: string; waveOffset: number }) {
   return (
-    <div style={{ marginTop: '-2px' }}>
-      <svg 
-        viewBox="0 0 1440 100" 
-        className="w-full block"
-        style={{ height: '70px' }}
+    <div style={{ marginTop: '-2px', overflow: 'hidden' }}>
+      <svg
+        viewBox="0 0 1760 100"
+        className="block"
+        style={{
+          height: '70px',
+          width: 'calc(100% + 240px)',
+          marginLeft: '-120px',
+          transform: `translateX(${waveOffset}px)`,
+          transition: 'transform 0.3s ease-out',
+        }}
         preserveAspectRatio="none"
       >
-        <path 
+        <path
           fill={fillColor}
-          d="M0,100 
-             Q80,40 160,100 
-             Q240,40 320,100 
-             Q400,40 480,100 
-             Q560,40 640,100 
-             Q720,40 800,100 
-             Q880,40 960,100 
-             Q1040,40 1120,100 
-             Q1200,40 1280,100 
-             Q1360,40 1440,100 
-             L1440,100 L0,100 Z"
+          d="M0,100
+             Q80,40 160,100 Q240,40 320,100 Q400,40 480,100 Q560,40 640,100
+             Q720,40 800,100 Q880,40 960,100 Q1040,40 1120,100 Q1200,40 1280,100
+             Q1360,40 1440,100 Q1520,40 1600,100 Q1680,40 1760,100
+             L1760,100 L0,100 Z"
         />
       </svg>
     </div>
@@ -65,6 +66,9 @@ function App () {
   const [activeSection, setActiveSection] = useState('hello');
 
   const [heroOpacity, setHeroOpacity] = useState(1);
+
+  const [waveOffset, setWaveOffset] = useState(0);
+  const prevScrollY = useRef(0);
 
   useEffect(() => {
   const observer = new IntersectionObserver(
@@ -91,12 +95,18 @@ function App () {
   
   const handleScroll = () => {
     if (!mainElement) return;
-    
-    const scrollY = mainElement.scrollTop;
+
+    const currentScrollY = mainElement.scrollTop;
     const fadeEnd = 400;
-    const opacity = 1 - Math.min(scrollY / fadeEnd, 1);
-    
+    const opacity = 1 - Math.min(currentScrollY / fadeEnd, 1);
     setHeroOpacity(opacity);
+
+    const scrollDelta = currentScrollY - prevScrollY.current;
+    setWaveOffset(prev => {
+      const newOffset = prev + scrollDelta * 0.35;
+      return Math.max(-100, Math.min(100, newOffset));
+    });
+    prevScrollY.current = currentScrollY;
   };
 
   mainElement?.addEventListener('scroll', handleScroll);
@@ -144,11 +154,44 @@ function App () {
         </Section>
 
         <div className="bg-sage">
-          <PetalDivider fillColor="#A8DCC5" />
+          <PetalDivider fillColor="#A8DCC5" waveOffset={waveOffset} />
         </div>
 
         <Section bgColor="bg-mint" id="journey">
-          <SectionHeading>how i got here</SectionHeading>
+          <div className="flex flex-col lg:flex-row items-center gap-12 px-8 lg:px-16 py-16 max-w-6xl w-full">
+            {/* Left: illustration */}
+            <div className="flex-shrink-0 w-64 lg:w-80 xl:w-96">
+              <img src={girlAtDesk} alt="illustration of ash at her desk" className="w-full h-auto" />
+            </div>
+
+            {/* Right: text content */}
+            <div className="flex flex-col gap-6">
+              <p className="text-sm text-navy/50 uppercase tracking-widest" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                my story
+              </p>
+
+              <blockquote className="text-3xl lg:text-4xl text-navy leading-snug" style={{ fontFamily: 'Anton, sans-serif' }}>
+                "It's not just about the code. It's also about having a positive impact."
+              </blockquote>
+
+              <p className="text-base text-navy leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                I've always thought in color and feeling first. I started as an artist — drawing, designing brands, building things with my hands. Then I wanted to build things on screens too.
+              </p>
+
+              <p className="text-base text-navy leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                Today I sit at the intersection of design and engineering. I bring the artist's eye to every component I build.
+              </p>
+
+              {/* Hobby pills */}
+              <div className="flex flex-wrap gap-2 pt-2">
+                {['k-pop fan', 'boba obsessed', 'crochet master', 'digital illustrator', 'anime addict'].map(tag => (
+                  <span key={tag} className="bg-blush text-navy rounded-full px-3 py-1 text-sm" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </Section>
 
         <Section bgColor="bg-lavender" id="work">
