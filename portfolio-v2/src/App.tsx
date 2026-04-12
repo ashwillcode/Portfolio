@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import '@fontsource/oswald/700.css';
 import '@fontsource/oswald/400.css';
+import '@fontsource/oswald/500.css';
 import '@fontsource/anton/400.css';
 import girlAtDesk from './assets/girl_at_desk.PNG';
 
@@ -26,21 +27,35 @@ function SectionHeading({ children}: { children: string}) {
 
 const HOBBY_TAGS = ['k-pop fan', 'boba obsessed', 'crochet master', 'digital illustrator', 'anime addict'];
 
-function MarqueeTicker({ scrollDirection }: { scrollDirection: 'down' | 'up' }) {
-  const items = [...HOBBY_TAGS, ...HOBBY_TAGS];
+function Daisy({ color }: { color: string }) {
+  return (
+    <svg width="30" height="30" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {[0, 72, 144, 216, 288].map((angle) => (
+        <ellipse key={angle} cx="6" cy="3.5" rx="1.6" ry="2.5" fill={color} transform={`rotate(${angle} 6 6)`} />
+      ))}
+      <circle cx="6" cy="6" r="1.2" fill="#FFB6C1" />
+    </svg>
+  );
+}
+
+function MarqueeTicker() {
+  const items = [...HOBBY_TAGS, ...HOBBY_TAGS, ...HOBBY_TAGS];
   return (
     <div className="h-14 bg-blush overflow-hidden flex items-center">
-      <div className={`marquee-track${scrollDirection === 'up' ? ' reverse' : ''} flex whitespace-nowrap`}>
+      <div className="flex items-center" style={{ animation: 'marquee 60s linear infinite' }}>
         {items.map((tag, i) => (
-          <span
-            key={i}
-            className="text-sage uppercase tracking-widest text-sm px-6"
-            style={{ fontFamily: 'Oswald, sans-serif' }}
-          >
-            {tag} <span className="text-sage/60">✦</span>
+          <span key={i} className="flex items-center gap-3 text-sage text-base uppercase tracking-widest px-4 whitespace-nowrap" style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 500 }}>
+            {tag}
+            <Daisy color="#FFFCE7" />
           </span>
         ))}
       </div>
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(-33.33%); }
+          100% { transform: translateX(0); }
+        }
+      `}</style>
     </div>
   );
 }
@@ -55,8 +70,7 @@ function PetalDivider({ fillColor, waveOffset }: { fillColor: string; waveOffset
           height: '70px',
           width: 'calc(100% + 240px)',
           marginLeft: '-120px',
-          transform: `translateX(${waveOffset}px)`,
-          transition: 'transform 0.3s ease-out',
+          animation: 'petalSlide 8s ease-in-out infinite alternate',
         }}
         preserveAspectRatio="none"
       >
@@ -91,7 +105,6 @@ function App () {
   const [journeyOpacity, setJourneyOpacity] = useState(1);
 
   const [waveOffset, setWaveOffset] = useState(0);
-  const [scrollDirection, setScrollDirection] = useState<'down' | 'up'>('down');
   const prevScrollY = useRef(0);
 
   useEffect(() => {
@@ -129,8 +142,6 @@ function App () {
     setJourneyOpacity(journeyOpacity);
 
     const scrollDelta = currentScrollY - prevScrollY.current;
-    if (scrollDelta > 0) setScrollDirection('down');
-    else if (scrollDelta < 0) setScrollDirection('up');
     setWaveOffset(prev => {
       const newOffset = prev + scrollDelta * 0.35;
       return Math.max(-100, Math.min(100, newOffset));
@@ -234,7 +245,7 @@ function App () {
           </div>
         </Section>
 
-        <MarqueeTicker scrollDirection={scrollDirection} />
+        <MarqueeTicker />
 
         <Section bgColor="bg-lavender" id="work">
           <SectionHeading>the way i work</SectionHeading>
