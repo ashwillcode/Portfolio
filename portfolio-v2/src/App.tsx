@@ -11,9 +11,9 @@ function NavItem ({children, onClick, isActive }: {children: string; onClick: ()
   )
 }
 
-function Section({ children, bgColor, id}: {children: React.ReactNode; bgColor: string; id: string}) {
+function Section({ children, bgColor, id, className }: {children: React.ReactNode; bgColor: string; id: string; className?: string}) {
   return (
-  <section id={id} className={`min-h-screen flex items-center justify-center ${bgColor} relative`}> 
+  <section id={id} className={`min-h-screen flex items-center justify-center ${bgColor} relative ${className ?? ''}`}>
   {children}
   </section>
   )
@@ -21,6 +21,27 @@ function Section({ children, bgColor, id}: {children: React.ReactNode; bgColor: 
 
 function SectionHeading({ children}: { children: string}) {
   return <h2 className="text-5xl">{children}</h2>
+}
+
+const HOBBY_TAGS = ['k-pop fan', 'boba obsessed', 'crochet master', 'digital illustrator', 'anime addict'];
+
+function MarqueeTicker({ scrollDirection }: { scrollDirection: 'down' | 'up' }) {
+  const items = [...HOBBY_TAGS, ...HOBBY_TAGS];
+  return (
+    <div className="h-14 bg-blush overflow-hidden flex items-center">
+      <div className={`marquee-track${scrollDirection === 'up' ? ' reverse' : ''} flex whitespace-nowrap`}>
+        {items.map((tag, i) => (
+          <span
+            key={i}
+            className="text-sage uppercase tracking-widest text-sm px-6"
+            style={{ fontFamily: 'Oswald, sans-serif' }}
+          >
+            {tag} <span className="text-sage/60">✦</span>
+          </span>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 function PetalDivider({ fillColor, waveOffset }: { fillColor: string; waveOffset: number }) {
@@ -68,6 +89,7 @@ function App () {
   const [heroOpacity, setHeroOpacity] = useState(1);
 
   const [waveOffset, setWaveOffset] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState<'down' | 'up'>('down');
   const prevScrollY = useRef(0);
 
   useEffect(() => {
@@ -102,6 +124,8 @@ function App () {
     setHeroOpacity(opacity);
 
     const scrollDelta = currentScrollY - prevScrollY.current;
+    if (scrollDelta > 0) setScrollDirection('down');
+    else if (scrollDelta < 0) setScrollDirection('up');
     setWaveOffset(prev => {
       const newOffset = prev + scrollDelta * 0.35;
       return Math.max(-100, Math.min(100, newOffset));
@@ -129,7 +153,7 @@ function App () {
       <nav className={`${isMenuOpen ? 'flex' : 'hidden'} lg:flex w-1/3 lg:w-1/4 bg-taupe flex-col fixed lg:relative inset-0 lg:inset-auto z-40`}>
         <div className="p-4 pt-16 lg:pt-4">
           <h1 className="text-navy text-2xl font-bold">Ash</h1>
-          <p className="text-navy text-lg">Full-stack Developer</p>
+          <p className="text-navy text-lg">Frontend Engineer</p>
         </div>
 
         <ul className="flex flex-col flex-1 p-4 text-lg gap-4">
@@ -149,7 +173,7 @@ function App () {
               <h1 className="text-hero leading-tight pl-6">HELLO,</h1>
               <h2 className="text-hero-sub text-navy ">i'm ashley</h2>
             </div>
-            <p className="text-hero-body text-cream"> a full-stack devoloper</p>
+            <p className="text-hero-body text-cream"> a frontend engineer</p>
           </div>
         </Section>
 
@@ -157,42 +181,53 @@ function App () {
           <PetalDivider fillColor="#A8DCC5" waveOffset={waveOffset} />
         </div>
 
-        <Section bgColor="bg-mint" id="journey">
-          <div className="flex flex-col lg:flex-row items-center gap-12 px-8 lg:px-16 py-16 max-w-6xl w-full">
-            {/* Left: illustration */}
-            <div className="flex-shrink-0 w-64 lg:w-80 xl:w-96">
+        <Section bgColor="bg-mint" id="journey" className="overflow-hidden">
+          {/* Desktop: full-height illustration bleeding off the left edge */}
+          <div className="hidden lg:block absolute" style={{ left: '-75px', top: '25px', width: '65%', height: '100%' }}>
+            <img
+              src={girlAtDesk}
+              alt="illustration of ash at her desk"
+              className="h-full w-full object-contain object-bottom"
+            />
+          </div>
+
+          {/* Mobile: stacked illustration + card */}
+          <div className="flex flex-col lg:hidden items-center gap-8 px-6 py-16 w-full">
+            <div className="w-64 flex-shrink-0">
               <img src={girlAtDesk} alt="illustration of ash at her desk" className="w-full h-auto" />
             </div>
-
-            {/* Right: text content */}
-            <div className="flex flex-col gap-6">
-              <p className="text-sm text-navy/50 uppercase tracking-widest" style={{ fontFamily: 'Oswald, sans-serif' }}>
-                my story
-              </p>
-
-              <blockquote className="text-3xl lg:text-4xl text-navy leading-snug" style={{ fontFamily: 'Anton, sans-serif' }}>
+            <div className="bg-cream rounded-2xl p-8 shadow-xl flex flex-col gap-5 w-full">
+              <p className="text-sm text-navy/50 uppercase tracking-widest" style={{ fontFamily: 'Oswald, sans-serif' }}>my story</p>
+              <blockquote className="text-3xl text-navy leading-snug" style={{ fontFamily: 'Anton, sans-serif' }}>
                 "It's not just about the code. It's also about having a positive impact."
               </blockquote>
-
               <p className="text-base text-navy leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
                 I've always thought in color and feeling first. I started as an artist — drawing, designing brands, building things with my hands. Then I wanted to build things on screens too.
               </p>
-
               <p className="text-base text-navy leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
                 Today I sit at the intersection of design and engineering. I bring the artist's eye to every component I build.
               </p>
+            </div>
+          </div>
 
-              {/* Hobby pills */}
-              <div className="flex flex-wrap gap-2 pt-2">
-                {['k-pop fan', 'boba obsessed', 'crochet master', 'digital illustrator', 'anime addict'].map(tag => (
-                  <span key={tag} className="bg-blush text-navy rounded-full px-3 py-1 text-sm" style={{ fontFamily: 'Oswald, sans-serif' }}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
+          {/* Desktop: card overlapping the illustration on the right */}
+          <div className="hidden lg:flex w-full items-center justify-end pr-16 py-16" style={{ transform: 'translateX(25px)' }}>
+            <div className="relative z-10 bg-cream rounded-2xl p-10 shadow-2xl flex flex-col gap-5" style={{ width: '52%' }}>
+              <p className="text-sm text-navy/50 uppercase tracking-widest" style={{ fontFamily: 'Oswald, sans-serif' }}>my story</p>
+              <blockquote className="text-4xl text-navy leading-snug" style={{ fontFamily: 'Anton, sans-serif' }}>
+                "It's not just about the code. It's also about having a positive impact."
+              </blockquote>
+              <p className="text-base text-navy leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                I've always thought in color and feeling first. I started as an artist — drawing, designing brands, building things with my hands. Then I wanted to build things on screens too.
+              </p>
+              <p className="text-base text-navy leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                Today I sit at the intersection of design and engineering. I bring the artist's eye to every component I build.
+              </p>
             </div>
           </div>
         </Section>
+
+        <MarqueeTicker scrollDirection={scrollDirection} />
 
         <Section bgColor="bg-lavender" id="work">
           <SectionHeading>the way i work</SectionHeading>
