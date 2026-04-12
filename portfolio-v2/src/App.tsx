@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import '@fontsource/oswald/700.css';
+import '@fontsource/oswald/400.css';
 import '@fontsource/anton/400.css';
 import girlAtDesk from './assets/girl_at_desk.PNG';
 
@@ -87,6 +88,7 @@ function App () {
   const [activeSection, setActiveSection] = useState('hello');
 
   const [heroOpacity, setHeroOpacity] = useState(1);
+  const [journeyOpacity, setJourneyOpacity] = useState(1);
 
   const [waveOffset, setWaveOffset] = useState(0);
   const [scrollDirection, setScrollDirection] = useState<'down' | 'up'>('down');
@@ -119,9 +121,12 @@ function App () {
     if (!mainElement) return;
 
     const currentScrollY = mainElement.scrollTop;
-    const fadeEnd = 400;
+    const fadeEnd = 550;
     const opacity = 1 - Math.min(currentScrollY / fadeEnd, 1);
     setHeroOpacity(opacity);
+
+    const journeyOpacity = 1 - Math.min(Math.max((currentScrollY - 800) / 500, 0), 1);
+    setJourneyOpacity(journeyOpacity);
 
     const scrollDelta = currentScrollY - prevScrollY.current;
     if (scrollDelta > 0) setScrollDirection('down');
@@ -150,7 +155,7 @@ function App () {
         <div onClick={() => setIsMenuOpen (false)} className="lg:hidden fixed inset-0"></div>
       )}
 
-      <nav className={`${isMenuOpen ? 'flex' : 'hidden'} lg:flex w-1/3 lg:w-1/4 bg-taupe flex-col fixed lg:relative inset-0 lg:inset-auto z-40`}>
+      <nav className={`${isMenuOpen ? 'flex' : 'hidden'} lg:flex w-3/4 lg:w-1/4 bg-taupe flex-col fixed lg:relative inset-0 lg:inset-auto z-40`}>
         <div className="p-4 pt-16 lg:pt-4">
           <h1 className="text-navy text-2xl font-bold">Ash</h1>
           <p className="text-navy text-lg">Frontend Engineer</p>
@@ -182,47 +187,49 @@ function App () {
         </div>
 
         <Section bgColor="bg-mint" id="journey" className="overflow-hidden">
-          {/* Desktop: full-height illustration bleeding off the left edge */}
-          <div className="hidden lg:block absolute" style={{ left: '-75px', top: '25px', width: '65%', height: '100%' }}>
-            <img
-              src={girlAtDesk}
-              alt="illustration of ash at her desk"
-              className="h-full w-full object-contain object-bottom"
-            />
-          </div>
-
-          {/* Mobile: stacked illustration + card */}
-          <div className="flex flex-col lg:hidden items-center gap-8 px-6 py-16 w-full">
-            <div className="w-64 flex-shrink-0">
-              <img src={girlAtDesk} alt="illustration of ash at her desk" className="w-full h-auto" />
+          <div className="w-full" style={{ opacity: journeyOpacity }}>
+            {/* Desktop: full-height illustration bleeding off the left edge */}
+            <div className="hidden lg:block absolute" style={{ left: '-45px', top: '5px', width: '65%', height: '100%' }}>
+              <img
+                src={girlAtDesk}
+                alt="illustration of ash at her desk"
+                className="h-full w-full object-contain object-bottom"
+              />
             </div>
-            <div className="bg-cream rounded-2xl p-8 shadow-xl flex flex-col gap-5 w-full">
-              <p className="text-sm text-navy/50 uppercase tracking-widest" style={{ fontFamily: 'Oswald, sans-serif' }}>my story</p>
-              <blockquote className="text-3xl text-navy leading-snug" style={{ fontFamily: 'Anton, sans-serif' }}>
-                "It's not just about the code. It's also about having a positive impact."
-              </blockquote>
-              <p className="text-base text-navy leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
-                I've always thought in color and feeling first. I started as an artist — drawing, designing brands, building things with my hands. Then I wanted to build things on screens too.
-              </p>
-              <p className="text-base text-navy leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
-                Today I sit at the intersection of design and engineering. I bring the artist's eye to every component I build.
-              </p>
-            </div>
-          </div>
 
-          {/* Desktop: card overlapping the illustration on the right */}
-          <div className="hidden lg:flex w-full items-center justify-end pr-16 py-16" style={{ transform: 'translateX(25px)' }}>
-            <div className="relative z-10 bg-cream rounded-2xl p-10 shadow-2xl flex flex-col gap-5" style={{ width: '52%' }}>
-              <p className="text-sm text-navy/50 uppercase tracking-widest" style={{ fontFamily: 'Oswald, sans-serif' }}>my story</p>
-              <blockquote className="text-4xl text-navy leading-snug" style={{ fontFamily: 'Anton, sans-serif' }}>
-                "It's not just about the code. It's also about having a positive impact."
-              </blockquote>
-              <p className="text-base text-navy leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
-                I've always thought in color and feeling first. I started as an artist — drawing, designing brands, building things with my hands. Then I wanted to build things on screens too.
-              </p>
-              <p className="text-base text-navy leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
-                Today I sit at the intersection of design and engineering. I bring the artist's eye to every component I build.
-              </p>
+            {/* Mobile: full-width illustration with overlapping card */}
+            <div className="flex flex-col lg:hidden w-full pt-16 pb-12">
+              <div className="w-[90%] flex-shrink-0 mx-auto">
+                <img src={girlAtDesk} alt="illustration of ash at her desk" className="w-full h-auto" />
+              </div>
+              <div className="relative z-10 bg-cream rounded-2xl p-8 shadow-xl flex flex-col gap-5 mx-4" style={{ marginTop: '-60px' }}>
+                <p className="text-sm text-sage uppercase tracking-widest" style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 400 }}>my story</p>
+                <blockquote className="text-navy leading-snug" style={{ fontFamily: 'Anton, sans-serif', fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', color: 'transparent', WebkitTextStroke: '1.5px #1A2F3F', letterSpacing: '0.03em', lineHeight: '1.4' }}>
+                  "It's not just about the code. It's also about having a positive impact."
+                </blockquote>
+                <p className="text-base text-sage leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                  I came back to art in my mid-twenties, not for a career, but for my mental health. Drawing and crochet gave me somewhere to put my anxiety. Thriving in pop culture like BTS and One Piece, and creating my own style of art whether 2D or 3D, gave me an outlet to stay grounded.
+                </p>
+                <p className="text-base text-sage leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                  I learned to code to further my expression and build a better life. I changed careers and continue every day to grow. Now I am the person on the team who designs and builds. I move fast because I do not have to hand off. I can take something from a Figma file to a working component in the same breath. That is the intersection I live in, and I would not trade it.
+                </p>
+              </div>
+            </div>
+
+            {/* Desktop: card overlapping the illustration on the right */}
+            <div className="hidden lg:flex w-full items-center justify-end pr-16 py-16" style={{ transform: 'translateX(25px)' }}>
+              <div className="relative z-10 bg-cream rounded-2xl p-10 shadow-2xl flex flex-col gap-5" style={{ width: '52%' }}>
+                <p className="text-sm text-sage uppercase tracking-widest" style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 400 }}>my story</p>
+                <blockquote className="text-navy leading-snug" style={{ fontFamily: 'Anton, sans-serif', fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', color: 'transparent', WebkitTextStroke: '1.5px #1A2F3F', letterSpacing: '0.03em', lineHeight: '1.4' }}>
+                  "It's not just about the code. It's also about having a positive impact."
+                </blockquote>
+                <p className="text-base text-sage leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                  I came back to art in my mid-twenties, not for a career, but for my mental health. Drawing and crochet gave me somewhere to put my anxiety. Thriving in pop culture like BTS and One Piece, and creating my own style of art whether 2D or 3D, gave me an outlet to stay grounded.
+                </p>
+                <p className="text-base text-sage leading-relaxed" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                  I learned to code to further my expression and build a better life. I changed careers and continue every day to grow. Now I am the person on the team who designs and builds. I move fast because I do not have to hand off. I can take something from a Figma file to a working component in the same breath. That is the intersection I live in, and I would not trade it.
+                </p>
+              </div>
             </div>
           </div>
         </Section>
