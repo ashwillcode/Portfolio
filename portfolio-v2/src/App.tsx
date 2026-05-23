@@ -11,6 +11,8 @@ import {
   SiRubyonrails,
   SiGit, SiJira, SiSlack, SiClaude,
 } from 'react-icons/si';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+
 function AdobeIcon({ size }: { size: number }) {
   return (
     <svg fill="currentColor" width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +84,6 @@ function MarqueeTicker() {
   );
 }
 
-
 function PetalDivider({ fillColor }: { fillColor: string }) {
   return (
     <div className="petal-divider-wrapper">
@@ -94,6 +95,39 @@ function PetalDivider({ fillColor }: { fillColor: string }) {
              Q720,40 800,100 Q880,40 960,100 Q1040,40 1120,100 Q1200,40 1280,100
              Q1360,40 1440,100 Q1520,40 1600,100 Q1680,40 1760,100
              L1760,100 L0,100 Z"
+        />
+      </svg>
+    </div>
+  );
+}
+
+function ZigzagDivider({ fillColor }: { fillColor: string }) {
+  const toothW = 220;
+  const h = 48;
+  const count = 12;
+  let d = `M0,${h}`;
+  for (let i = 0; i < count; i++) {
+    const x = i * toothW;
+    d += ` L${x + toothW / 2},0 L${x + toothW},${h}`;
+  }
+  d += ` L${count * toothW},60 L0,60 Z`;
+  return (
+    <div className="zigzag-divider-wrapper">
+      <svg viewBox={`0 0 ${count * toothW} 60`} className="zigzag-divider-svg" preserveAspectRatio="none">
+        <path fill={fillColor} d={d} />
+      </svg>
+    </div>
+  );
+}
+
+function BlobDivider({ fillColor }: { fillColor: string }) {
+  return (
+    <div className="blob-divider-wrapper">
+      <svg viewBox="0 0 1760 120" className="blob-divider-svg" preserveAspectRatio="none">
+        <path
+          fill={fillColor}
+          d="M0,80 C120,30 280,110 500,60 C680,20 820,95 1050,50 C1220,18 1420,85 1600,45 C1680,28 1730,60 1760,55
+             L1760,120 L0,120 Z"
         />
       </svg>
     </div>
@@ -128,56 +162,154 @@ const TESTIMONIALS = [
   },
 ];
 
+const CARD_COLORS = ['#FFB6C1', '#7EB89E', '#C5B9DB', '#A8DCC5', '#C5B9DB'];
+
+const COLLAGE_WORDS = [
+  { text: 'RUMORS',   x: 4,   y: 8,   rotate: -14, size: 112, stroke: false, color: '#C5B9DB', yPx: -25 },
+  { text: 'TALK',     x: 62,  y: 4,   rotate: 9,   size: 160, stroke: true,  color: '#7EB89E', xPx: -200 },
+  { text: 'BUZZ',     x: 78,  y: 28,  rotate: -6,  size: 120, stroke: false, color: '#FFB6C1', yPx: -150 },
+  { text: 'WHISPERS', x: 28,  y: 82,  rotate: -9,  size: 96,  stroke: true,  color: '#A8DCC5', yPx: -45, xPx: -50 },
+  { text: 'CHATTER',  x: 52,  y: 74,  rotate: 16,  size: 108, stroke: false, color: '#FFB6C1', yPx: 50, xPx: 50 },
+  { text: 'GOSSIP',   x: 1,   y: 36,  rotate: 21,  size: 100, stroke: true,  color: '#1A2F3F' },
+  { text: 'MURMUR',   x: 60,  y: 48,  rotate: -17, size: 104, stroke: false, color: '#A8DCC5', xPx: 150, yPx: -50 },
+  { text: 'VOICES',   x: 18,  y: 88,  rotate: 11,  size: 116, stroke: false, color: '#C5B9DB', xPx: -200 },
+  { text: 'ECHO',     x: 83,  y: 58,  rotate: -8,  size: 140, stroke: true,  color: '#1A2F3F', xPx: -50, yPx: 50 },
+  { text: 'NEWS',     x: 0,   y: 62,  rotate: -15, size: 114, stroke: false, color: '#FFB6C1', xPx: -30, yPx: -25 },
+];
+
+function CollageBackground() {
+  return (
+    <div className="collage-bg" aria-hidden="true">
+      {COLLAGE_WORDS.map((w, i) => (
+        <span
+          key={i}
+          className="collage-word"
+          style={{
+            left: w.xPx ? `calc(${w.x}% + ${w.xPx}px)` : `${w.x}%`,
+            top: w.yPx ? `calc(${w.y}% + ${w.yPx}px)` : `${w.y}%`,
+            transform: `rotate(${w.rotate}deg)`,
+            fontSize: `${w.size}px`,
+            color: w.stroke ? 'transparent' : w.color,
+            WebkitTextStroke: w.stroke ? `2px ${w.color}` : 'none',
+          }}
+        >
+          {w.text}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 function TestimonialDeck() {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
   const interacted = useRef(false);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const n = TESTIMONIALS.length;
+
+  const startInterval = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      interacted.current = true;
+      setDirection(1);
+      setCurrent(i => (i + 1) % n);
+    }, 4000);
+  };
+
+  useEffect(() => {
+    startInterval();
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, []);
 
   const advance = (dir: number) => {
     interacted.current = true;
     setDirection(dir);
     setCurrent(i => (i + dir + n) % n);
+    startInterval();
   };
 
   return (
     <div className="testimonial-deck-wrapper">
       <div className="testimonial-stack">
-        <AnimatePresence custom={direction}>
-          {[0, 1, 2].map(stackPos => {
-            const cardIdx = (current + stackPos) % n;
-            return (
-              <motion.div
-                key={cardIdx}
-                custom={direction}
-                style={{ position: 'absolute', inset: 0, zIndex: 3 - stackPos }}
-                initial={interacted.current ? (dir: number) => ({ y: dir > 0 ? 80 : -80, scale: 0.9, opacity: 0 }) : false}
-                animate={{ y: stackPos * 18, scale: 1 - stackPos * 0.04, opacity: stackPos === 0 ? 1 : 0.7 }}
-                exit={(dir: number) => ({ y: dir > 0 ? -200 : 200, opacity: 0 })}
-                transition={{
-                  y: { duration: 0.8, ease: [0.2, 0, 0.4, 1] },
-                  scale: { duration: 0.8 },
-                  opacity: { duration: 0.3, delay: 0.5 },
-                }}
-                className="testimonial-card"
-              >
-                <blockquote className="testimonial-quote">"{TESTIMONIALS[cardIdx].quote}"</blockquote>
-                <div className="testimonial-meta">
-                  <p className="testimonial-name">{TESTIMONIALS[cardIdx].name}</p>
-                  <p className="testimonial-role">{TESTIMONIALS[cardIdx].role}</p>
-                </div>
-              </motion.div>
-            );
-          })}
+        <AnimatePresence>
+          <motion.div
+            key={current}
+            style={{ position: 'absolute', inset: 0, background: CARD_COLORS[current] }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            className="testimonial-card"
+          >
+            <span className="quote-mark-top">"</span>
+            <blockquote className="testimonial-quote">{TESTIMONIALS[current].quote}</blockquote>
+            <div className="testimonial-meta">
+              <p className="testimonial-name">{TESTIMONIALS[current].name}</p>
+              <p className="testimonial-role">{TESTIMONIALS[current].role}</p>
+            </div>
+            <span className="quote-mark-bottom">"</span>
+          </motion.div>
         </AnimatePresence>
       </div>
 
       <div className="testimonial-controls">
-        <button onClick={() => advance(-1)} className="testimonial-btn" aria-label="Previous">↑</button>
-        <span className="testimonial-count">{current + 1} / {n}</span>
-        <button onClick={() => advance(1)} className="testimonial-btn" aria-label="Next">↓</button>
+        <button onClick={() => advance(-1)} className="testimonial-btn" aria-label="Previous"><FiChevronLeft size={22} /></button>
+        <div className="testimonial-dots">
+          {Array.from({ length: n }).map((_, i) => (
+            <span key={i} className={`testimonial-dot${i === current ? ' testimonial-dot--active' : ''}`} />
+          ))}
+        </div>
+        <button onClick={() => advance(1)} className="testimonial-btn" aria-label="Next"><FiChevronRight size={22} /></button>
       </div>
     </div>
+  );
+}
+
+function ContactForm() {
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    const form = e.currentTarget;
+    const res = await fetch('https://formspree.io/f/xgoqygjq', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' },
+    });
+    setLoading(false);
+    if (res.ok) setSubmitted(true);
+  };
+
+  if (submitted) {
+    return (
+      <div className="contact-success">
+        <p className="contact-success-text">message sent — i'll be in touch soon!</p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="contact-form">
+      <div className="contact-row">
+        <div className="contact-field">
+          <label className="contact-label">name</label>
+          <input name="name" required className="contact-input" placeholder="your name" />
+        </div>
+        <div className="contact-field">
+          <label className="contact-label">email</label>
+          <input name="email" type="email" required className="contact-input" placeholder="your@email.com" />
+        </div>
+      </div>
+      <div className="contact-field">
+        <label className="contact-label">message</label>
+        <textarea name="message" required rows={5} className="contact-input contact-textarea" placeholder="what's on your mind?" />
+      </div>
+      <button type="submit" disabled={loading} className="contact-btn">
+        {loading ? 'sending...' : <span className="contact-btn-inner">send it <FiChevronRight size={18} /></span>}
+      </button>
+    </form>
   );
 }
 
@@ -187,7 +319,7 @@ const NAV_ITEMS = [
   { label: "and the way i work", id: "work" },
   { label: "plus the things i've made", id: "projects" },
   { label: "here is what the collaborators say", id: "testimonials" },
-  { label: "wanna say hello?", id: "contact" }
+  { label: "say hello?", id: "contact" },
 ];
 
 function Nav() {
@@ -290,12 +422,10 @@ function App() {
 
         <Section bgColor="bg-mint" id="journey" className="overflow-hidden">
           <div data-fade className="gpu-fade w-full">
-            {/* Desktop illustration */}
             <div className="journey-illustration hidden lg:block">
               <img src={girlAtDesk} alt="illustration of ash at her desk" className="h-full w-full object-contain object-bottom" />
             </div>
 
-            {/* Mobile layout */}
             <div className="flex flex-col lg:hidden w-full pt-16 pb-12">
               <div className="w-[90%] flex-shrink-0 mx-auto">
                 <img src={girlAtDesk} alt="illustration of ash at her desk" className="w-full h-auto" />
@@ -309,7 +439,6 @@ function App() {
               </div>
             </div>
 
-            {/* Desktop card */}
             <div className="journey-desktop-offset hidden lg:flex w-full items-center justify-end pr-16 py-16">
               <div className="journey-desktop-card blob relative z-10 bg-cream p-10 shadow-2xl flex flex-col gap-5">
                 <p className="font-oswald font-normal text-sm text-sage uppercase tracking-widest">my story</p>
@@ -365,7 +494,7 @@ function App() {
                       <div className="flex flex-wrap gap-2">
                         {tags.map(({ name, icon: Icon }) => (
                           <span key={name} className="icon-tooltip bg-cream rounded-full p-2.5 text-navy flex items-center justify-center" data-tooltip={name}>
-                            {Icon && <Icon size={22} />}
+                            <Icon size={22} />
                           </span>
                         ))}
                       </div>
@@ -377,19 +506,31 @@ function App() {
           </div>
         </Section>
 
+        <div className="bg-lavender">
+          <ZigzagDivider fillColor="#FFB6C1" />
+        </div>
+
         <Section bgColor="bg-blush" id="projects">
           <div data-fade className="gpu-fade"><SectionHeading>things i've made</SectionHeading></div>
         </Section>
 
         <Section bgColor="bg-cream" id="testimonials">
-          <div data-fade className="gpu-fade w-full flex flex-col items-center gap-10 py-16 px-6">
-            <SectionHeading>what collaborators say</SectionHeading>
+          <div data-fade className="gpu-fade" style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+            <CollageBackground />
+          </div>
+          <div data-fade className="gpu-fade w-full flex flex-col items-center gap-10 py-16 px-6 relative z-10">
             <TestimonialDeck />
           </div>
         </Section>
 
+        <div className="bg-cream">
+          <BlobDivider fillColor="#7EB89E" />
+        </div>
+
         <Section bgColor="bg-sage" id="contact">
-          <div data-fade className="gpu-fade"><SectionHeading>say hello?</SectionHeading></div>
+          <div data-fade className="gpu-fade w-full flex flex-col items-center gap-10 py-16 px-6">
+            <ContactForm />
+          </div>
         </Section>
       </main>
     </div>
