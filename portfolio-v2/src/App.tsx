@@ -405,7 +405,7 @@ function App() {
       </svg>
       <Nav />
 
-      <main className="w-full lg:w-3/4 overflow-y-auto">
+      <main className="w-full lg:w-3/4 overflow-y-auto overflow-x-hidden">
         <Section bgColor="bg-sage" id="hello">
           <div data-fade className="gpu-fade flex flex-col items-center gap-4 relative z-10">
             <div className="flex flex-col">
