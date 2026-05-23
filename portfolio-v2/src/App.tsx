@@ -9,7 +9,7 @@ import ashleyPhoto from './assets/ash-portfolio-img.JPEG';
 import resumePdf from './assets/ASHLEYWILLIAMS-Resume2026.pdf';
 import {
   SiFigma, SiStorybook,
-  SiReact, SiJavascript, SiHtml5, SiCss, SiTailwindcss,
+  SiReact, SiTypescript, SiJavascript, SiHtml5, SiCss, SiTailwindcss,
   SiRubyonrails,
   SiGit, SiJira, SiSlack, SiClaude,
   SiInstagram, SiGithub,
@@ -508,6 +508,7 @@ function App() {
                     ]},
                     { label: 'Frontend', tags: [
                       { name: 'React', icon: SiReact },
+                      { name: 'TypeScript', icon: SiTypescript },
                       { name: 'JavaScript', icon: SiJavascript },
                       { name: 'HTML', icon: SiHtml5 },
                       { name: 'CSS', icon: SiCss },
