@@ -5,13 +5,17 @@ import '@fontsource/oswald/400.css';
 import '@fontsource/oswald/500.css';
 import '@fontsource/anton/400.css';
 import girlAtDesk from './assets/girl_at_desk.PNG';
+import ashleyPhoto from './assets/ash-portfolio-img.JPEG';
+import resumePdf from './assets/ASHLEYWILLIAMS-Resume2026.pdf';
 import {
   SiFigma, SiStorybook,
   SiReact, SiJavascript, SiHtml5, SiCss, SiTailwindcss,
   SiRubyonrails,
   SiGit, SiJira, SiSlack, SiClaude,
+  SiInstagram, SiGithub,
 } from 'react-icons/si';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa6';
+import { FiChevronLeft, FiChevronRight, FiDownload } from 'react-icons/fi';
 
 function AdobeIcon({ size }: { size: number }) {
   return (
@@ -31,7 +35,10 @@ function CursorIcon({ size }: { size: number }) {
 
 function NavItem({ children, onClick, isActive }: { children: string; onClick: () => void; isActive: boolean }) {
   return (
-    <li onClick={onClick} className={`cursor-pointer transition-colors ${isActive ? 'text-blush font-bold' : 'text-navy hover:text-blush'}`}>
+    <li
+      onClick={onClick}
+      className={`cursor-pointer transition-colors ${isActive ? 'text-blush font-bold' : 'text-navy hover:text-blush'}`}
+    >
       {children}
     </li>
   );
@@ -57,9 +64,9 @@ const STORY_PARAGRAPHS = [
   'I learned to code to further my expression and build a better life. I changed careers and continue every day to grow. Now I am the person on the team who designs and builds. I move fast because I do not have to hand off. I can take something from a Figma file to a working component in the same breath. That is the intersection I live in, and I would not trade it.',
 ];
 
-function Daisy({ color }: { color: string }) {
+function Daisy({ color, size = 30 }: { color: string; size?: number }) {
   return (
-    <svg width="30" height="30" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size} height={size} viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
       {[0, 72, 144, 216, 288].map((angle) => (
         <ellipse key={angle} cx="6" cy="3.5" rx="1.6" ry="2.5" fill={color} transform={`rotate(${angle} 6 6)`} />
       ))}
@@ -202,7 +209,7 @@ function CollageBackground() {
 
 function TestimonialDeck() {
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(1);
+  const [, setDirection] = useState(1);
   const interacted = useRef(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const n = TESTIMONIALS.length;
@@ -322,6 +329,12 @@ const NAV_ITEMS = [
   { label: "say hello?", id: "contact" },
 ];
 
+const SOCIALS = [
+  { icon: SiInstagram, href: 'https://www.instagram.com/asholediaries/', label: 'Instagram' },
+  { icon: FaLinkedin,  href: 'https://www.linkedin.com/in/ashwillcode',   label: 'LinkedIn'  },
+  { icon: SiGithub,   href: 'https://github.com/amwill44',               label: 'GitHub'    },
+];
+
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hello');
@@ -344,7 +357,7 @@ function Nav() {
 
   return (
     <>
-      <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden fixed top-4 left-4 z-50 text-forest">
+      <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden fixed top-4 left-4 z-50 text-navy">
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -355,18 +368,40 @@ function Nav() {
       )}
 
       <nav className={`${isMenuOpen ? 'flex' : 'hidden'} lg:flex w-3/4 lg:w-1/4 bg-taupe flex-col fixed lg:relative inset-0 lg:inset-auto z-40`}>
-        <div className="p-4 pt-16 lg:pt-4">
-          <h1 className="text-navy text-2xl font-bold">Ash</h1>
-          <p className="text-navy text-lg">Frontend Engineer</p>
+
+        <div className="px-6 pt-16 lg:pt-8 pb-6 flex flex-row gap-4 items-end">
+          <div className="blob flex-shrink-0 w-32 h-32 overflow-hidden">
+            <img src={ashleyPhoto} alt="Ashley Williams" className="w-full h-full object-cover object-top" />
+          </div>
+          <div className="flex flex-col pb-1">
+            <h1 className="font-anton text-navy text-xl leading-tight">Ashley Williams</h1>
+            <p className="font-oswald text-navy text-xs uppercase tracking-widest">Frontend Engineer</p>
+          </div>
         </div>
+
         <ul className="flex flex-col flex-1 p-4 text-lg gap-4">
           {NAV_ITEMS.map(item => (
             <NavItem key={item.id}
               isActive={activeSection === item.id}
-              onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => {
+                document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+                setIsMenuOpen(false);
+              }}
             >{item.label}</NavItem>
           ))}
         </ul>
+
+        <div className="px-6 pb-8 flex flex-row gap-3 items-center">
+          {SOCIALS.map(({ icon: Icon, href, label }) => (
+            <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="nav-social-btn icon-tooltip" data-tooltip={label}>
+              <Icon size={17} />
+            </a>
+          ))}
+          <a href={resumePdf} download aria-label="Download Resume" className="nav-social-btn icon-tooltip" data-tooltip="Resume">
+            <FiDownload size={17} />
+          </a>
+        </div>
+
       </nav>
     </>
   );
