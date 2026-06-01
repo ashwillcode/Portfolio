@@ -203,6 +203,7 @@
 
 .zigzag-divider-wrapper {
   margin-top: -2px;
+  margin-bottom: -2px;
   overflow: hidden;
   transform: translateZ(0);
 }
@@ -573,13 +574,14 @@
 
 .cloud-divider-wrapper {
   margin-top: -2px;
+  margin-bottom: -2px;
   overflow: hidden;
   transform: translateZ(0);
 }
 
 .cloud-divider-svg {
   display: block;
-  height: 120px;
+  height: 60px;
   width: calc(100% + 320px);
   margin-left: -160px;
   animation: cloudSlide 10s ease-in-out infinite alternate;

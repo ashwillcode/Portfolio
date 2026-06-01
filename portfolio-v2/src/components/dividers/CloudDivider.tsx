@@ -2,7 +2,7 @@ export function CloudDivider({ fillColor }: { fillColor: string }) {
   return (
     <div className="cloud-divider-wrapper" style={{ lineHeight: 0 }}>
       <svg viewBox="0 0 1440 160" preserveAspectRatio="none"
-        className="cloud-divider-svg" style={{ display: 'block', height: '100px' }}>
+        className="cloud-divider-svg" style={{ display: 'block', height: '60px' }}>
         <path fill={fillColor} d="
           M0,160 L0,100
           C80,100 80,40 160,40
