@@ -10,7 +10,6 @@ import studentAssessmentView from '../assets/projects/student-assessment-view.pn
 import contentBuilderView from '../assets/projects/content-builder.png';
 import gamifiedMapImg from '../assets/projects/gamified-map.png';
 import portfolioImg from '../assets/projects/portfolio.png';
-import gamifiedMapVideo from '../assets/projects/Screen Recording 2026-01-09 at 4.17.44ΓÇ»PM.mov?url';
 import gamifiedMapFile from '../assets/projects/dashboard-map-file.tmj?url';
 
 export type ProjectSection = {
