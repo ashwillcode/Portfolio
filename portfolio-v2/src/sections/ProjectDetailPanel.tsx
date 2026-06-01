@@ -45,7 +45,8 @@ export function ProjectDetailPanel({ selectedProject, onClose }: {
         <img
           src={lightboxSrc}
           alt="enlarged screenshot"
-          className="w-full h-full object-contain p-4 md:p-8"
+          className="rounded-xl"
+          style={{ maxWidth: 'calc(100vw - 4rem)', maxHeight: 'calc(100vh - 4rem)', width: 'auto', height: 'auto' }}
           onClick={e => e.stopPropagation()}
         />
       </div>
