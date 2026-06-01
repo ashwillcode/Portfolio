@@ -73,7 +73,7 @@ export function ProjectDetailPanel({ selectedProject, onClose }: {
           <iframe
             src={`https://www.youtube.com/embed/${project.youtubeId}`}
             className="rounded-2xl w-full shadow-lg"
-            style={{ height: '420px' }}
+            style={{ aspectRatio: '17/9' }}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
