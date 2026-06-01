@@ -10,7 +10,7 @@ Error generating stack: `+i.message+`
              Q80,40 160,100 Q240,40 320,100 Q400,40 480,100 Q560,40 640,100
              Q720,40 800,100 Q880,40 960,100 Q1040,40 1120,100 Q1200,40 1280,100
              Q1360,40 1440,100 Q1520,40 1600,100 Q1680,40 1760,100
-             L1760,100 L0,100 Z`})})})}function F4({fillColor:a}){let c="M0,48";for(let d=0;d<12;d++){const h=d*220;c+=` L${h+220/2},0 L${h+220},48`}return c+=" L2640,60 L0,60 Z",T.jsx("div",{className:"zigzag-divider-wrapper",children:T.jsx("svg",{viewBox:"0 0 2640 60",className:"zigzag-divider-svg",preserveAspectRatio:"none",children:T.jsx("path",{fill:a,d:c})})})}function P4({fillColor:a}){return T.jsx("div",{className:"cloud-divider-wrapper",style:{lineHeight:0},children:T.jsx("svg",{viewBox:"0 0 1440 160",preserveAspectRatio:"none",className:"cloud-divider-svg",style:{display:"block",height:"100px"},children:T.jsx("path",{fill:a,d:`
+             L1760,100 L0,100 Z`})})})}function F4({fillColor:a}){let c="M0,48";for(let d=0;d<12;d++){const h=d*220;c+=` L${h+220/2},0 L${h+220},48`}return c+=" L2640,60 L0,60 Z",T.jsx("div",{className:"zigzag-divider-wrapper",children:T.jsx("svg",{viewBox:"0 0 2640 60",className:"zigzag-divider-svg",preserveAspectRatio:"none",children:T.jsx("path",{fill:a,d:c})})})}function P4({fillColor:a}){return T.jsx("div",{className:"cloud-divider-wrapper",style:{lineHeight:0},children:T.jsx("svg",{viewBox:"0 0 1440 160",preserveAspectRatio:"none",className:"cloud-divider-svg",style:{display:"block",height:"60px"},children:T.jsx("path",{fill:a,d:`
           M0,160 L0,100
           C80,100 80,40 160,40
           C200,40 220,60 240,60
