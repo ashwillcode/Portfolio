@@ -12,7 +12,26 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject: (id: str
               onClick={() => onSelectProject(project.id)}
               className="cursor-pointer hover:scale-105 transition-transform duration-200 flex flex-col gap-3"
             >
-              <div className="bg-lavender rounded-2xl w-full" style={{ height: '200px' }} />
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="rounded-2xl w-full object-cover"
+                  style={{ height: '200px' }}
+                />
+              ) : project.video ? (
+                <video
+                  src={project.video}
+                  className="rounded-2xl w-full object-cover"
+                  style={{ height: '200px' }}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              ) : (
+                <div className="bg-lavender rounded-2xl w-full" style={{ height: '200px' }} />
+              )}
               <p className="font-oswald font-bold text-navy text-lg">{project.title}</p>
               <p className="font-oswald text-sage text-sm">{project.description}</p>
             </div>
