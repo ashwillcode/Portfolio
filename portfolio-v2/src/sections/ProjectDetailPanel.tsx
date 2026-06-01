@@ -114,17 +114,30 @@ export function ProjectDetailPanel({ selectedProject, onClose }: {
               </ul>
             )}
             {section.images && (
-              <div className="flex gap-3 overflow-x-auto pb-2" style={{ scrollbarWidth: 'thin', scrollbarColor: '#FFB6C1 transparent' }}>
-                {section.images.map((src, i) => (
-                  <img
-                    key={i}
-                    src={src}
-                    alt={`${section.heading} screenshot ${i + 1}`}
-                    className="rounded-xl flex-shrink-0 object-cover shadow-md cursor-pointer hover:opacity-90 transition-opacity"
-                    style={{ height: '220px', width: 'auto' }}
-                    onClick={() => setLightboxSrc(src)}
-                  />
-                ))}
+              <div className="flex flex-col gap-1">
+                <div className="relative">
+                  <div
+                    className="flex gap-3 overflow-x-auto pb-3"
+                    style={{ scrollbarWidth: 'thin', scrollbarColor: '#FFB6C1 transparent' }}
+                  >
+                    {section.images.map((src, i) => (
+                      <img
+                        key={i}
+                        src={src}
+                        alt={`${section.heading} screenshot ${i + 1}`}
+                        className="rounded-xl flex-shrink-0 object-cover shadow-md cursor-pointer hover:opacity-90 transition-opacity"
+                        style={{ height: '220px', width: 'auto' }}
+                        onClick={() => setLightboxSrc(src)}
+                      />
+                    ))}
+                  </div>
+                </div>
+                {section.images.length > 1 && (
+                  <div className="flex items-center justify-end gap-2 md:hidden">
+                    <p className="font-oswald uppercase tracking-widest" style={{ color: '#FFB6C1', fontSize: '10px' }}>scroll</p>
+                    <div className="scroll-arrow-h" />
+                  </div>
+                )}
               </div>
             )}
           </div>
