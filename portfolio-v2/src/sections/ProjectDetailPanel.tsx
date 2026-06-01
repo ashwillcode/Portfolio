@@ -69,13 +69,13 @@ export function ProjectDetailPanel({ selectedProject, onClose }: {
           </h2>
         </div>
 
-        {project?.video ? (
-          <video
-            src={project.video}
-            className="rounded-2xl w-full object-cover shadow-lg"
-            style={{ maxHeight: '420px' }}
-            controls
-            playsInline
+        {project?.youtubeId ? (
+          <iframe
+            src={`https://www.youtube.com/embed/${project.youtubeId}`}
+            className="rounded-2xl w-full shadow-lg"
+            style={{ height: '420px' }}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
           />
         ) : project?.image ? (
           <img

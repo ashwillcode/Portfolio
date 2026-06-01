@@ -19,16 +19,6 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject: (id: str
                   className="rounded-2xl w-full object-cover"
                   style={{ height: '200px' }}
                 />
-              ) : project.video ? (
-                <video
-                  src={project.video}
-                  className="rounded-2xl w-full object-cover"
-                  style={{ height: '200px' }}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                />
               ) : (
                 <div className="bg-lavender rounded-2xl w-full" style={{ height: '200px' }} />
               )}

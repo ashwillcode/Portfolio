@@ -24,7 +24,7 @@ export type Project = {
   title: string;
   description: string;
   image?: string;
-  video?: string;
+  youtubeId?: string;
   mapFile?: string;
   fullDescription?: string;
   sections?: ProjectSection[];
@@ -80,7 +80,7 @@ export const PROJECTS: Project[] = [
     title: 'Gamified Learning Map',
     description: 'Interactive Pokémon-style course navigation for kids',
     image: gamifiedMapImg,
-    video: gamifiedMapVideo,
+    youtubeId: 'g2uMHtvLCL4',
     mapFile: gamifiedMapFile,
     fullDescription: 'A pixel-art tile map built during a StrongMind internal hackathon, designed to reimagine how K–12 students (grades 6–12) navigate their learning platform. Instead of clicking through menus, students explore a Game Boy-style town where every building is a destination.',
     sections: [
