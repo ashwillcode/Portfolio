@@ -10,6 +10,11 @@ export function HeroSection() {
         </div>
         <p className="text-hero-body text-cream">a frontend engineer</p>
       </div>
+
+      <div data-fade className="scroll-indicator gpu-fade">
+        <p className="scroll-indicator-text">scroll me</p>
+        <div className="scroll-arrow" />
+      </div>
     </Section>
   );
 }
