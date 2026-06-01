@@ -23,9 +23,12 @@ function App() {
     const mainElement = document.querySelector('main');
     const handleScroll = () => {
       if (!mainElement) return;
-      const fadeDistance = window.innerWidth < 1024 ? 900 : 600;
+      const isMobile = window.innerWidth < 768;
       document.querySelectorAll<HTMLElement>('[data-fade]').forEach(el => {
         const section = el.closest('section') as HTMLElement ?? el;
+        const fadeDistance = isMobile
+          ? section.offsetHeight * (section.id === 'projects' ? 1.2 : section.id === 'journey' ? 1 : 0.8)
+          : 600;
         const scrolled = mainElement.scrollTop - section.offsetTop;
         const opacity = scrolled <= 0 ? 1 : Math.max(1 - scrolled / fadeDistance, 0);
         el.style.opacity = String(opacity);

@@ -375,7 +375,13 @@
 .testimonial-stack {
   position: relative;
   width: 100%;
-  height: 380px;
+  height: 580px;
+}
+
+@media (min-width: 768px) {
+  .testimonial-stack {
+    height: 380px;
+  }
 }
 
 .testimonial-card {
@@ -532,5 +538,6 @@
 
 .nav-social-btn:hover {
   background: transparent;
-  box-shadow: inset 0 0 0 2px #1A2F3F;
+  color: #FFFCE7;
+  box-shadow: inset 0 0 0 2px #FFFCE7;
 }

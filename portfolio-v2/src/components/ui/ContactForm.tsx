@@ -21,7 +21,7 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div className="contact-success">
-        <p className="contact-success-text">message sent — i'll be in touch soon!</p>
+        <p className="contact-success-text">Message sent — I'll be in touch soon!</p>
       </div>
     );
   }
@@ -31,7 +31,7 @@ export function ContactForm() {
       <div className="contact-row">
         <div className="contact-field">
           <label className="contact-label">name</label>
-          <input name="name" required className="contact-input" placeholder="your name" />
+          <input name="name" required className="contact-input" placeholder="Your name" />
         </div>
         <div className="contact-field">
           <label className="contact-label">email</label>
@@ -40,7 +40,7 @@ export function ContactForm() {
       </div>
       <div className="contact-field">
         <label className="contact-label">message</label>
-        <textarea name="message" required rows={5} className="contact-input contact-textarea" placeholder="what's on your mind?" />
+        <textarea name="message" required rows={5} className="contact-input contact-textarea" placeholder="What's on your mind?" />
       </div>
       <button type="submit" disabled={loading} className="contact-btn">
         {loading ? 'sending...' : <span className="contact-btn-inner">send it <FiChevronRight size={18} /></span>}
