@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { SiJavascript, SiHtml5, SiCss, SiBootstrap, SiRubyonrails, SiJson, SiReact, SiTypescript, SiTailwindcss, SiFramer, SiVite, SiFigma } from 'react-icons/si';
 import type { IconType } from 'react-icons';
 import { PROJECTS } from '../data/projects';
@@ -30,6 +30,17 @@ export function ProjectDetailPanel({ selectedProject, isClosing, onClose, onClos
 }) {
   const project = PROJECTS.find(p => p.id === selectedProject);
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        if (lightboxSrc) setLightboxSrc(null);
+        else onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightboxSrc, onClose]);
 
   return (
     <>

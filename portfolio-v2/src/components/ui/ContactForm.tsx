@@ -9,13 +9,18 @@ export function ContactForm() {
     e.preventDefault();
     setLoading(true);
     const form = e.currentTarget;
-    const res = await fetch('https://formspree.io/f/xgoqygjq', {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' },
-    });
-    setLoading(false);
-    if (res.ok) setSubmitted(true);
+    try {
+      const res = await fetch('https://formspree.io/f/xgoqygjq', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) setSubmitted(true);
+    } catch {
+      // network failure — button resets so user can retry
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {

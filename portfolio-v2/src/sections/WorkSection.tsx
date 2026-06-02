@@ -39,7 +39,7 @@ export function WorkSection() {
     <Section bgColor="bg-lavender" id="work" className="!items-start">
       <div data-fade className="gpu-fade w-full flex flex-col lg:flex-row min-h-[85vh] lg:pr-10 pt-4 pb-8 lg:py-16">
         <div className="flex-1 flex flex-col justify-center py-6 lg:py-16 px-6">
-          <p className="work-heading work-heading-outline work-left">I design it.</p>
+          <p className="work-heading work-heading-outline">I design it.</p>
           <p className="work-heading work-heading-fill work-right">I build it.</p>
           <p className="work-heading work-heading-outline work-left-sm">I ship it.</p>
         </div>

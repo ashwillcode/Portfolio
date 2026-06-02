@@ -37,7 +37,7 @@ export function TestimonialDeck() {
         <AnimatePresence>
           <motion.div
             key={current}
-            style={{ position: 'absolute', inset: 0, background: CARD_COLORS[current] }}
+            style={{ position: 'absolute', inset: 0, background: CARD_COLORS[current % CARD_COLORS.length] }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

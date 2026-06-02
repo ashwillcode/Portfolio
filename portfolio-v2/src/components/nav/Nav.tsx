@@ -26,7 +26,7 @@ export function Nav() {
           if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
-      { threshold: 0.25 }
+      { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
     );
     NAV_ITEMS.forEach((item) => {
       const el = document.getElementById(item.id);
