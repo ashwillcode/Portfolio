@@ -22,9 +22,11 @@ const TECH_ICONS: Record<string, IconType> = {
   'CSS':           SiCss,
 };
 
-export function ProjectDetailPanel({ selectedProject, onClose }: {
+export function ProjectDetailPanel({ selectedProject, isClosing, onClose, onClosed }: {
   selectedProject: string;
+  isClosing: boolean;
   onClose: () => void;
+  onClosed: () => void;
 }) {
   const project = PROJECTS.find(p => p.id === selectedProject);
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
@@ -53,7 +55,8 @@ export function ProjectDetailPanel({ selectedProject, onClose }: {
     )}
     <div
       className="fixed top-0 right-0 h-full bg-taupe z-50 shadow-2xl overflow-y-auto"
-      style={{ width: '100vw', animation: 'slideIn 0.4s ease-out' }}
+      style={{ width: '100vw', animation: isClosing ? 'slideOut 0.6s ease-in forwards' : 'slideIn 0.6s ease-out' }}
+      onAnimationEnd={isClosing ? onClosed : undefined}
     >
       <button
         onClick={onClose}

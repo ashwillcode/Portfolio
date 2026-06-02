@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import '@fontsource/oswald/700.css';
 import '@fontsource/oswald/400.css';
 import '@fontsource/oswald/500.css';
@@ -18,6 +18,39 @@ import { ContactSection } from './sections/ContactSection';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
+  const [isPanelClosing, setIsPanelClosing] = useState(false);
+  const closingInProgress = useRef(false);
+
+  const openProject = (id: string) => {
+    closingInProgress.current = false;
+    setIsPanelClosing(false);
+    setSelectedProject(id);
+    window.history.pushState({ project: id }, '');
+  };
+
+  const startClose = () => {
+    if (closingInProgress.current) return;
+    closingInProgress.current = true;
+    setIsPanelClosing(true);
+  };
+
+  const finishClose = () => {
+    setSelectedProject(null);
+    setIsPanelClosing(false);
+    window.history.back();
+    setTimeout(() => { closingInProgress.current = false; }, 100);
+  };
+
+  useEffect(() => {
+    const handlePopState = () => {
+      if (closingInProgress.current) return;
+      closingInProgress.current = true;
+      window.history.pushState(null, '');
+      setIsPanelClosing(true);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   useEffect(() => {
     const mainElement = document.querySelector('main');
@@ -51,7 +84,7 @@ function App() {
         </defs>
       </svg>
 
-      <Nav selectedProject={selectedProject} />
+      <Nav />
 
       <main className="w-full lg:w-3/4 overflow-y-auto overflow-x-hidden">
         <HeroSection />
@@ -60,7 +93,7 @@ function App() {
         <MarqueeTicker />
         <WorkSection />
         <div className="bg-lavender"><ZigzagDivider fillColor="#FFB6C1" /></div>
-        <ProjectsSection onSelectProject={setSelectedProject} />
+        <ProjectsSection onSelectProject={openProject} />
         <div className="bg-blush"><CloudDivider fillColor="#FFFCE7" /></div>
         <TestimonialsSection />
         <div className="bg-cream"><PetalDivider fillColor="#7EB89E" /></div>
@@ -70,7 +103,9 @@ function App() {
       {selectedProject && (
         <ProjectDetailPanel
           selectedProject={selectedProject}
-          onClose={() => setSelectedProject(null)}
+          isClosing={isPanelClosing}
+          onClose={startClose}
+          onClosed={finishClose}
         />
       )}
     </div>

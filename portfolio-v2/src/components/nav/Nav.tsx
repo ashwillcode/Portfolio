@@ -15,7 +15,7 @@ function NavItem({ children, onClick, isActive }: { children: string; onClick: (
   );
 }
 
-export function Nav({ selectedProject }: { selectedProject: string | null }) {
+export function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hello');
 
@@ -49,7 +49,6 @@ export function Nav({ selectedProject }: { selectedProject: string | null }) {
 
       <nav
         className={`${isMenuOpen ? 'flex' : 'hidden'} lg:flex w-3/4 lg:w-1/4 bg-taupe flex-col fixed lg:relative inset-0 lg:inset-auto z-40`}
-        style={{ width: selectedProject ? '0' : '', minWidth: selectedProject ? '0' : '', overflow: 'hidden', transition: 'all 0.5s ease' }}
       >
         <div className="px-6 pt-16 lg:pt-8 pb-6 flex flex-row gap-4 items-end">
           <div className="blob flex-shrink-0 w-32 h-32 overflow-hidden">
